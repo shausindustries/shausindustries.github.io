@@ -1,0 +1,373 @@
+*{  margin: 0;
+   padding: 0;
+   font-family: Century Gothic;
+}
+html{
+  scroll-behavior: smooth;
+}
+header{
+     height: 100vh;
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: none;
+}
+.logo img{
+     float: left;
+     width: 100px;
+     height: auto;
+}
+.des{
+  height: 70vh;
+  background-color: #000;
+  background-position: center;
+}
+.des h1{
+  font-size: 50px;
+  font-family: inherit;
+  font-variant: small-caps;
+  text-align: center;
+  text-decoration: underline;
+  color: #ccc;
+}
+.des p{
+  text-align: center;
+  font-size: 20px;
+  color: #ccc;
+}
+.gaming{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../blegh.jpg);
+  height: 70vh;
+  background-position: center;
+}
+.gaming h1{
+  font-size: 50px;
+  font-family: inherit;
+  font-variant: small-caps;
+  text-align: center;
+  text-decoration: underline;
+  color: #000;
+}
+.gaming p{
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+}
+.menu{
+  left: 10%;
+}
+ul{
+    float: left;
+    list-style-type: none;
+    margin-top: 75px;
+}
+
+ul li{
+      display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border: 1px solid;
+    transition-duration: 0.6s;
+}
+
+ul li a:hover{
+    background-color: #000;
+    color: #ccc;
+}
+
+ul li.active a{
+               background-color: #000;
+               color: #ccc;
+}
+.title{
+     position: absolute;
+     top: 60%;
+     left: 45%;
+     transform: translate(-50%,-50%);
+}
+
+.title h1{
+     color: #000;
+     font-size: 80px;
+     font-family: fantasy;
+}
+.btn{
+   border: 1px solid #000;
+   padding: 10px 30px;
+   color: #000;
+   text-decoration: none;
+   transition: 0.6s ease;
+}
+.btn:hover{
+          background-color: #000;
+          color: #ccc;
+}
+.gotop{
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: #808080;
+  bottom: 10px;
+  right: 5px;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-size: 22px;
+}
+
+@media only screen and (min-width:1080px){
+  html{
+    scroll-behavior: smooth;
+  }
+  header{
+       height: 100vh;
+       background-size: cover;
+       background-attachment: fixed;
+       background-position: center;
+       background-repeat: none;
+  }
+  ul{
+      float: right;
+      list-style-type: none;
+      margin-top: 25px;
+  }
+
+  ul li{
+        display: inline-block;
+  }
+
+  ul li a{
+      text-decoration:none;
+      color: #000;
+      padding: 5px 20px;
+      border: 1px solid transparent;
+      transition: 0.6s ease;
+  }
+
+  ul li a:hover{
+      background-color: #000;
+      color: #ccc;
+  }
+
+  ul li.active a{
+                 background-color: #000;
+                 color: #ccc;
+  }
+  .logo img{
+       float: left;
+       width: 180px;
+       height: auto;
+       top: 20px;
+  }
+  .main{
+       max-width: 1200px;
+       margin: auto;
+  }
+  .title{
+       position: absolute;
+       top: 55%;
+       left: 40%;
+       transform: translate(-50%,-50%);
+       width: auto;
+  }
+  .title h1{
+       color: #000;
+       font-size: 100px;
+       font-family: fantasy;
+  }
+  .des{
+    line-height: 140px;
+    height: 70vh;
+    background-color: #000;
+    background-position: center;
+  }
+  .des h1{
+    font-size: 50px;
+    font-family: inherit;
+    font-variant: small-caps;
+    text-align: center;
+    text-decoration: underline;
+    color: #ccc;
+  }
+  .des p{
+    line-height: 35px;
+    text-align: center;
+    font-size: 25px;
+    color: #ccc;
+    font-family: fantasy;
+  }
+  .gaming p{
+    margin: 70px;
+    font-size: 25px;
+    font-family: fantasy;
+  }
+  .gotop{
+    position: fixed;
+    width: 40px;
+    height: 30px;
+    background: #808080;
+    bottom: 30px;
+    right: 20px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 22px;
+  }
+  .projecthead{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: auto;
+  }
+  .projecthead h1{
+    color: #000;
+    font-size: 60px;
+    font-family: fantasy;
+  }
+  .cardimg img{
+    width: 100%;
+    border-radius:  5px;
+  }
+  .cards{
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    background-color: grey;
+    border-radius: 5px;
+    margin-top: 30vh;
+    margin-left: 20px;
+  }
+  .cards:hover{
+    box-shadow: 2px 2px 10px  black;
+  }
+  .cdtitle{
+    text-align: center;
+    margin: 10px;
+  }
+  .desbut{
+    text-align: center;
+  }
+  button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #000;
+    color: #ccc;
+    transition: 0.6s ease;
+  }
+  .aboutheads{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: auto;
+  }
+  .aboutheads h1{
+    color: #000;
+    font-size: 60px;
+    font-family: fantasy;
+  }
+  .abtimg img{
+    width: 100%;
+    border-radius:  5px;
+  }
+  .abtcards{
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    background-color: grey;
+    border-radius: 5px;
+    margin-top: 45vh;
+    margin-left: 55vh;
+  }
+  .abttitle{
+    text-align: center;
+    margin: 10px;
+  }
+  .abtimgp img{
+    width: 100%;
+    border-radius:  5px;
+  }
+  .abtcardsp{
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    background-color: grey;
+    border-radius: 5px;
+    margin-top: 20vh;
+    margin-left: 55vh;
+  }
+  .abttitlep{
+    text-align: center;
+    margin: 10px;
+  }
+  .abtimgc img{
+    width: 100%;
+    border-radius:  5px;
+  }
+  .abtcardsc{
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    background-color: grey;
+    border-radius: 5px;
+    margin-top: 20vh;
+    margin-left: 55vh;
+  }
+  .abttitlec{
+    text-align: center;
+    margin: 10px;
+  }
+  .ig{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    border-radius: 10px;
+    bottom: 30px;
+    right: 100vh;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 40px;
+  }
+  .ig:hover{
+    box-shadow: 2px 2px 10px  black;
+    transition: 0.6s;
+  }
+  .home{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: white;
+    bottom: 75vh;
+    left: 35px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    font-size: 40px;
+  }
+  .home:hover{
+    box-shadow: 2px 2px 10px  black;
+  }
+}
