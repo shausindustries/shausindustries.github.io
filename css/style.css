@@ -17,42 +17,6 @@ header{
      width: 100px;
      height: auto;
 }
-.des{
-  height: 70vh;
-  background-color: #000;
-  background-position: center;
-}
-.des h1{
-  font-size: 50px;
-  font-family: inherit;
-  font-variant: small-caps;
-  text-align: center;
-  text-decoration: underline;
-  color: #ccc;
-}
-.des p{
-  text-align: center;
-  font-size: 20px;
-  color: #ccc;
-}
-.gaming{
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../blegh.jpg);
-  height: 70vh;
-  background-position: center;
-}
-.gaming h1{
-  font-size: 50px;
-  font-family: inherit;
-  font-variant: small-caps;
-  text-align: center;
-  text-decoration: underline;
-  color: #000;
-}
-.gaming p{
-  text-align: center;
-  font-size: 20px;
-  color: #000;
-}
 .menu{
   left: 10%;
 }
@@ -181,32 +145,6 @@ ul li.active a{
        font-size: 100px;
        font-family: fantasy;
   }
-  .des{
-    line-height: 140px;
-    height: 70vh;
-    background-color: #000;
-    background-position: center;
-  }
-  .des h1{
-    font-size: 50px;
-    font-family: inherit;
-    font-variant: small-caps;
-    text-align: center;
-    text-decoration: underline;
-    color: #ccc;
-  }
-  .des p{
-    line-height: 35px;
-    text-align: center;
-    font-size: 25px;
-    color: #ccc;
-    font-family: fantasy;
-  }
-  .gaming p{
-    margin: 70px;
-    font-size: 25px;
-    font-family: fantasy;
-  }
   .gotop{
     position: fixed;
     width: 40px;
@@ -268,72 +206,7 @@ ul li.active a{
     color: #ccc;
     transition: 0.6s ease;
   }
-  .aboutheads{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: auto;
-  }
-  .aboutheads h1{
-    color: #000;
-    font-size: 60px;
-    font-family: fantasy;
-  }
-  .abtimg img{
-    width: 100%;
-    border-radius:  5px;
-  }
-  .abtcards{
-    height: 70vh;
-    position: relative;
-    overflow: hidden;
-    width: 50%;
-    background-color: grey;
-    border-radius: 5px;
-    margin-top: 45vh;
-    margin-left: 55vh;
-  }
-  .abttitle{
-    text-align: center;
-    margin: 10px;
-  }
-  .abtimgp img{
-    width: 100%;
-    border-radius:  5px;
-  }
-  .abtcardsp{
-    height: 70vh;
-    position: relative;
-    overflow: hidden;
-    width: 50%;
-    background-color: grey;
-    border-radius: 5px;
-    margin-top: 20vh;
-    margin-left: 55vh;
-  }
-  .abttitlep{
-    text-align: center;
-    margin: 10px;
-  }
-  .abtimgc img{
-    width: 100%;
-    border-radius:  5px;
-  }
-  .abtcardsc{
-    height: 70vh;
-    position: relative;
-    overflow: hidden;
-    width: 50%;
-    background-color: grey;
-    border-radius: 5px;
-    margin-top: 20vh;
-    margin-left: 55vh;
-  }
-  .abttitlec{
-    text-align: center;
-    margin: 10px;
-  }
+
   .ig{
     position: fixed;
     width: 40px;
@@ -369,5 +242,8 @@ ul li.active a{
   }
   .home:hover{
     box-shadow: 2px 2px 10px  black;
+  }
+  #particles-js{
+    height: 80vh;
   }
 }
