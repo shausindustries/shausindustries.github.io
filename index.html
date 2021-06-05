@@ -36,23 +36,28 @@
 
    <div class="slideshow-container">
   <div class="mySlides fade">
-    <div class="numbertext">1 / 4</div>
+    <div class="numbertext">1 / 5</div>
     <img src="electronics.jpg" style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 4</div>
+    <div class="numbertext">2 / 5</div>
     <img src="coding.jpg" style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 4</div>
+    <div class="numbertext">3 / 5</div>
     <img src="gaming.jpg" style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">4 / 4</div>
-    <img src="blogging.jpg" style="width:100%">
+    <div class="numbertext">4 / 5</div>
+    <img src="tech.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="blogging.jpg" style="width:100%" >
   </div>
 
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -72,7 +77,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 2500); // Change image every 2 seconds
 }
 </script>
 <style>
