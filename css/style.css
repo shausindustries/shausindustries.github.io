@@ -357,5 +357,8 @@ button:hover{
    flex-wrap: wrap;
    margin: 40px 0;
  }
- 
+ .tcontentbx{
+   color: #FFFFFF;
+   font-family: monospace;
+ }
 }
