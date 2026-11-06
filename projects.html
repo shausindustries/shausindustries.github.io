@@ -41,7 +41,7 @@
     <h1 class="h-xl" data-split>Pro<span class="outline">jects</span></h1>
     <div class="pj-row">
       <p>Silicon from RTL to layout, and builds from the YouTube channel. Open any project for its own 3D walkthrough.</p>
-      <div class="pj-count"><b data-odo>06</b><span>PROJECTS ON FILE</span></div>
+      <div class="pj-count"><b data-odo id="pjCount">00</b><script src="assets/projects.js"></script><script>document.getElementById('pjCount').textContent=String(PROJECTS.length).padStart(2,'0');</script><span>PROJECTS ON FILE</span></div>
     </div>
   </div>
 </section>
@@ -55,7 +55,6 @@
 <script>document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 <script src="assets/site.js"></script>
-<script src="assets/projects.js"></script>
 <script>
 SITE_particles();
 const grid=document.getElementById('pjGrid');

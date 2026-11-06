@@ -149,6 +149,13 @@
 @keyframes bar{from{height:10%}to{height:100%}}
 .lab-sub{margin-bottom:26px}
 @media (max-width:900px){.lab-grid{grid-template-columns:1fr}}
+
+/* ================= WORK BAND (replaces the home-page gallery) ================= */
+.work-band{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:34px 0;margin:20px 0 40px;transition:padding .45s var(--ease)}
+.work-band .wb-title{font:700 clamp(20px,2.4vw,32px)/1.15 var(--f-head);font-stretch:112%}
+.work-band .wb-title b{font-weight:800;border-bottom:2px solid var(--ink)}
+.work-band:hover{padding-left:18px;padding-right:18px}
+@media (max-width:760px){.work-band{grid-template-columns:1fr;gap:14px}}
 </style>
 </head>
 <body class="">
@@ -196,8 +203,6 @@
         <div class="ch-cta"><a class="btn solid" href="https://www.youtube.com/@shausindustries204" target="_blank" rel="noopener">Subscribe <span class="arr">↗</span></a><a class="btn" href="broadcast.html">Broadcast <span class="arr">→</span></a></div>
       </div>
     </div>
-    <div class="lab-sub"><div class="label">From the channel</div></div>
-    <div id="labVideos"></div>
   </div>
 </section>
 <section id="about">
@@ -217,15 +222,17 @@
 </section>
 
 
-<section id="projects">
+<section id="work" style="padding-top:0;padding-bottom:0">
   <div class="wrap">
-    <div class="sec-head stage3d"><span class="idx">03</span><div class="label">Selected work</div><h2 class="h-lg" data-split>The <span class="outline">projects</span></h2></div>
-    <div id="homeProjects"></div>
-    <div style="margin-top:44px"><a class="btn solid" href="projects.html">All projects <span class="arr">→</span></a></div>
+    <a class="work-band stage3d" href="projects.html">
+      <span class="label">Selected work</span>
+      <span class="wb-title">Silicon, robotics &amp; builds — <b id="workCount">all projects</b></span>
+      <span class="btn solid">Open projects <span class="arr">→</span></span>
+    </a>
   </div>
 </section><section id="experience">
   <div class="wrap">
-    <div class="sec-head stage3d"><span class="idx">04</span><div class="label">Experience</div><h2 class="h-lg" data-split>Service <span class="outline">record</span></h2></div>
+    <div class="sec-head stage3d"><span class="idx">03</span><div class="label">Experience</div><h2 class="h-lg" data-split>Service <span class="outline">record</span></h2></div>
     <div class="xp" data-stagger="70">
       <div class="xp-row" data-r3d="up"><span class="d">FEB 2026 — NOW</span><span class="r">Subject Matter Expert</span><span class="o">Schoolola Tutoring</span><span class="s live">ACTIVE</span></div>
       <div class="xp-row" data-r3d="up"><span class="d">AUG 2025 — NOW</span><span class="r">Head of Finance</span><span class="o">Tenacious</span><span class="s live">ACTIVE</span></div>
@@ -240,7 +247,7 @@
 
 <section id="capabilities" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head stage3d"><span class="idx">05</span><div class="label">Capabilities · hover to flip</div><h2 class="h-lg" data-split>The <span class="outline">toolkit</span></h2></div>
+    <div class="sec-head stage3d"><span class="idx">04</span><div class="label">Capabilities · hover to flip</div><h2 class="h-lg" data-split>The <span class="outline">toolkit</span></h2></div>
     <div class="flips" id="flips"></div>
     <div class="certs" data-stagger="80">
       <div data-r3d="up"><span>Certification</span>Certified Ethical Hacker (CEH)</div>
@@ -254,7 +261,7 @@
 
 <section id="record" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head stage3d"><span class="idx">06</span><div class="label">Education · honours · languages</div><h2 class="h-lg" data-split>On <span class="outline">file</span></h2></div>
+    <div class="sec-head stage3d"><span class="idx">05</span><div class="label">Education · honours · languages</div><h2 class="h-lg" data-split>On <span class="outline">file</span></h2></div>
     <div class="record" data-stagger="140">
       <div data-r3d="left">
         <h3>Education</h3>
@@ -281,7 +288,7 @@
 
 <section id="contact">
   <div class="wrap stage3d">
-    <div class="label">07 — Contact</div>
+    <div class="label">06 — Contact</div>
     <a class="mail spin-hover" data-split href="mailto:shauryagupta270804@gmail.com" id="mail">shauryagupta270804@gmail.com</a>
     <button class="copy" data-copy="shauryagupta270804@gmail.com">COPY EMAIL</button>
     <div class="links" data-stagger="70">
@@ -423,8 +430,7 @@ document.querySelector('.copy').addEventListener('click', async e => {
   })();
 })();
 
-renderProjects(document.getElementById('homeProjects'), '', 'silicon');
-renderProjects(document.getElementById('labVideos'), '', 'youtube');
+document.getElementById('workCount').textContent=PROJECTS.length+' projects';
 /* hero wordmark: blocks drop into place one by one */
 document.querySelectorAll('.wm-hero rect, .wm-hero polygon').forEach((el,i)=>el.style.setProperty('--i',i));
 </script></body></html>

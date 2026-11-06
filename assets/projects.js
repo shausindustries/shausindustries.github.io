@@ -2,6 +2,17 @@
    SHAU'S INDUSTRIES — project registry + 3D project cards
    Edit PROJECTS to add / reorder projects. `page` is relative to the site root.
    ========================================================= */
+/* ---------------------------------------------------------
+   HOW TO ADD A PROJECT — add one object to this list.
+     id     unique short name
+     code   label on the card, e.g. 'P-05' (silicon) or 'Y-03' (YouTube)
+     kind   'silicon' or 'youtube'  (drives the Projects-page filters)
+     viz    card drawing: 'chip' 'soc' 'cell' 'bits' 'arm' 'hilt' 'video' or 'stack' (generic)
+     thumb  OPTIONAL image path, shown instead of the drawing, e.g. 'assets/img/my-thumb.jpg'
+     page   the project's page, e.g. 'projects/my-project.html' (copy projects/_template.html)
+     title, line, tags, stat:[big value, small label], repo or yt (optional)
+   The card appears on the Projects page automatically, in list order.
+   --------------------------------------------------------- */
 window.PROJECTS = [
   { id:'mips32', code:'P-01', kind:'silicon', viz:'chip', page:'projects/mips32.html',
     title:'MIPS32 Core', line:'A 32-bit processor that grows from single-cycle to Tomasulo out-of-order, with SIMD lanes and an L1 cache.',
@@ -48,6 +59,9 @@ window.PROJECTS = [
     hilt:`<g class="l1"><rect x="34" y="66" width="104" height="18" class="fill"/></g>
           <g class="l2"><rect x="40" y="64" width="40" height="22" class="solid"/>${[0,1,2,3,4,5,6].map(i=>`<path d="M${44+i*5} 64 V86" class="rib"/>`).join('')}<rect x="92" y="63" width="8" height="24"/><rect x="112" y="63" width="8" height="24"/><path d="M138 64 L148 60 V90 L138 86"/><rect x="24" y="64" width="10" height="22"/></g>
           <g class="l3"><path d="M150 75 H190" class="beam"/><circle cx="104" cy="60" r="2.5" class="rec"/></g>`,
+    stack:`<g class="l1"><path d="M100 96 L160 76 L100 56 L40 76 Z" class="fill"/></g>
+            <g class="l2"><path d="M100 82 L160 62 L100 42 L40 62 Z" class="fill"/><path d="M70 62 L100 52 L130 62 L100 72 Z" class="dash"/></g>
+            <g class="l3"><path d="M100 68 L160 48 L100 28 L40 48 Z"/><circle cx="100" cy="48" r="3" class="dot"/></g>`,
     video:`<g class="l1"><rect x="30" y="28" width="140" height="94" class="fill"/></g>
            <g class="l2"><path d="M88 55 L120 75 L88 95 Z" class="solid"/><path d="M30 110 H170" class="dash"/></g>
            <g class="l3"><rect x="30" y="28" width="140" height="94" class="scanbox"/><circle cx="44" cy="40" r="3" class="rec"/><text x="52" y="43">REC</text></g>`
@@ -103,7 +117,7 @@ window.PROJECTS = [
     box.classList.add('pcards');
     box.innerHTML = list.map((p,i) => `
       <a class="pcard tilt" data-tilt="6" data-r3d="up" style="--d:${i*90}ms" href="${root}${p.page}">
-        <div class="viz"><svg viewBox="0 0 200 150">${V[p.viz]}</svg></div>
+        <div class="viz">${p.thumb ? `<img src="${root}${p.thumb}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1)">` : `<svg viewBox="0 0 200 150">${V[p.viz]||V.stack}</svg>`}</div>
         <div class="meta"><span>${p.code}</span><span>${p.kind === 'youtube' ? 'YOUTUBE' : 'SILICON'}</span></div>
         <div class="bd"><h3>${p.title}</h3><p>${p.line}</p><div class="tg">${p.tags.map(t=>'<span>'+t+'</span>').join('')}</div></div>
         <div class="go"><span><b>${p.stat[0]}</b> ${p.stat[1].toUpperCase()}</span><i>OPEN →</i></div>
