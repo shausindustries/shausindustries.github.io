@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumin — Forging the Hilt — Shau's Industries</title>
+<meta name="description" content="Lumin by Shaurya Gupta — an electronic light-and-sound hilt with a custom KiCad PCB, from the Shau's Industries YouTube channel.">
+<link rel="icon" type="image/png" href="../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"><link rel="stylesheet" href="../assets/proj.css">
+<style></style>
+</head>
+<body class="proj darkbody">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="logo" viewBox="0 0 100 100"><path fill-rule="evenodd" d="M44.77 0.00 L39.46 0.85 L31.54 3.23 L26.46 5.54 L21.69 8.62 L16.77 12.46 L13.23 15.77 L11.15 18.23 L7.85 22.77 L5.54 26.69 L3.23 31.62 L1.69 36.15 L0.85 39.46 L0.00 45.00 L0.08 54.92 L0.85 60.15 L2.38 65.85 L3.92 69.85 L6.31 74.54 L8.69 78.38 L10.92 81.38 L15.08 85.85 L18.62 89.00 L22.77 92.00 L26.69 94.31 L31.92 96.69 L36.31 98.23 L37.77 98.46 L39.31 99.08 L45.31 99.85 L55.31 99.77 L60.46 99.08 L63.31 98.31 L69.85 95.92 L74.31 93.69 L78.08 91.38 L81.85 88.54 L84.85 85.85 L89.08 81.31 L92.08 77.15 L96.00 70.00 L98.23 63.69 L98.54 61.85 L99.08 60.46 L99.92 55.00 L99.85 44.92 L99.00 39.38 L97.54 34.08 L96.00 30.00 L94.31 26.62 L92.00 22.69 L88.92 18.46 L86.15 15.23 L81.77 11.31 L78.23 8.62 L73.46 5.54 L70.15 3.92 L65.85 2.38 L60.54 0.85 L56.08 0.08ZM68.15 89.31 L68.15 89.69 L67.15 90.38 L62.31 92.23 L59.38 93.00 L54.15 93.69 L53.69 93.15 L53.85 91.69 L55.92 84.15 L56.69 83.62 L60.08 82.85 L61.31 82.31 L62.15 82.38 L63.08 83.23ZM31.62 89.31 L37.38 82.38 L38.38 82.31 L43.69 84.00 L44.46 86.23 L46.08 93.23 L45.85 93.62 L45.31 93.77 L40.15 92.92 L33.38 90.69 L31.85 89.92ZM85.15 74.85 L85.46 75.23 L85.31 76.08 L81.62 80.38 L77.15 84.46 L75.54 85.54 L74.92 85.54 L72.23 78.77 L72.23 75.54 L72.62 74.77 L75.62 71.69 L76.54 71.54ZM14.77 74.69 L23.54 71.54 L24.38 72.08 L27.08 74.77 L27.69 75.69 L27.69 78.15 L25.23 84.77 L24.77 85.31 L24.08 85.38 L22.62 84.38 L18.15 80.23 L14.62 76.08 L14.38 75.08ZM6.62 53.85 L7.69 53.85 L15.69 56.00 L16.15 56.46 L17.54 60.23 L17.15 61.23 L10.31 67.85 L9.31 66.85 L7.77 62.46 L6.23 54.31ZM93.15 53.69 L93.69 54.08 L93.77 54.85 L92.23 62.38 L90.46 67.23 L89.77 68.00 L89.38 68.00 L82.54 61.23 L82.23 60.00 L83.31 56.85 L84.08 56.00ZM10.38 32.08 L17.08 38.62 L17.54 39.69 L16.15 43.46 L15.69 43.92 L7.69 46.08 L6.62 46.15 L6.15 45.62 L7.69 37.54 L9.23 33.15 L9.92 32.23ZM89.46 31.92 L89.85 32.00 L90.54 32.92 L92.15 37.54 L93.69 45.62 L93.23 46.15 L92.08 46.08 L87.31 44.69 L85.62 44.46 L83.85 43.77 L83.31 43.08 L82.23 39.92 L82.54 38.69ZM24.69 42.38 L26.38 38.23 L29.31 33.54 L32.92 30.00 L36.92 27.08 L42.62 24.69 L47.38 23.85 L52.23 23.85 L57.08 24.69 L62.62 27.00 L66.08 29.38 L70.46 33.69 L72.92 37.54 L75.23 43.31 L75.92 47.31 L76.00 51.69 L75.38 55.62 L74.77 56.23 L67.38 56.15 L66.85 55.62 L66.85 50.77 L66.38 49.62 L65.69 49.23 L61.69 49.23 L61.15 48.92 L61.08 48.62 L63.08 45.00 L63.54 44.62 L64.62 44.85 L70.15 48.08 L70.85 48.08 L72.08 46.77 L73.62 43.92 L73.69 43.31 L71.77 40.77 L65.46 34.54 L61.62 31.62 L57.38 29.31 L56.31 29.46 L55.54 30.38 L52.08 36.77 L52.31 37.62 L52.77 38.08 L56.08 40.08 L56.15 41.00 L50.54 50.77 L49.62 51.85 L48.54 50.92 L41.54 40.23 L41.15 38.23 L37.92 33.77 L37.08 33.62 L31.69 37.08 L30.92 37.92 L30.92 38.69 L34.00 43.23 L36.54 45.38 L43.23 55.23 L43.31 55.85 L43.00 56.08 L39.62 56.15 L38.69 55.54 L34.38 46.54 L33.62 46.08 L32.54 46.38 L32.38 47.69 L36.23 55.31 L36.15 55.85 L35.69 56.15 L34.00 56.15 L33.46 55.92 L31.31 51.62 L30.31 51.31 L29.54 51.92 L29.46 52.69 L30.69 55.23 L30.54 56.00 L24.77 56.08 L24.31 55.46 L23.92 53.85 L23.69 50.54 L23.85 46.46ZM24.85 14.69 L25.23 15.15 L28.23 23.31 L27.85 24.38 L23.54 28.38 L14.62 25.15 L14.38 24.77 L14.62 23.92 L18.31 19.54 L22.77 15.46 L23.92 14.62ZM74.92 14.38 L75.54 14.38 L77.15 15.46 L80.92 18.85 L83.54 21.62 L85.31 23.92 L85.46 24.62 L85.15 25.08 L76.77 28.31 L75.92 28.38 L71.62 24.15 L71.54 22.92ZM53.69 6.69 L54.15 6.23 L54.92 6.23 L62.46 7.77 L66.69 9.31 L67.92 10.00 L68.15 10.54 L62.31 17.46 L61.31 17.62 L60.15 17.08 L56.46 16.23 L55.92 15.77 L53.85 8.31ZM46.08 6.69 L43.77 15.85 L43.00 16.31 L39.85 17.00 L38.38 17.62 L37.38 17.54 L31.69 10.62 L31.92 10.00 L33.46 9.23 L37.54 7.77 L45.62 6.23Z"/></symbol></defs></svg>
+
+<div class="shutter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <svg class="mark" viewBox="0 0 100 100"><use href="#logo"/></svg>
+  <svg class="wordmark mark-wm" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg>
+</div>
+<nav class="nav">
+  <a href="../index.html" class="brand"><svg viewBox="0 0 100 100"><use href="#logo"/></svg><svg class="wordmark" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg></a>
+  <button class="nav-toggle" aria-label="Menu">MENU</button>
+  <ul><li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../broadcast.html">Broadcast ↗</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+</nav>
+<main>
+<section class="big" id="story" style="height:940vh">
+  <div class="big-sticky">
+    <canvas id="bigCanvas"></canvas>
+    <div class="chip-labels" id="stLabels"></div>
+    <div class="big-hud" id="bigHud">CHAPTER // <b>I</b> · BUILD // <b>HILT</b><br>STATE // <b class="state">FORGING</b></div>
+    <div class="states" id="states"><span>OFF</span><span>IGNITING</span><span>ON</span><span>IDLE</span></div>
+    <div class="big-hero" id="bigHero">
+      <div class="kicker"><a href="../projects.html">← Projects</a><span>Y-02 · YouTube · Chapter I</span></div>
+      <h1 data-split>Lu<span class="outline">min</span></h1>
+      <p class="vt">From the video <b>“Chapter I: Before the Kyber calls — Forging the Hilt”</b>. An electronic, light-and-sound hilt built from a Nano, a DFPlayer Mini, a LiPo power stage, a custom PCB and PVC.</p>
+      <div class="p-tools"><span class="tag">ARDUINO NANO</span><span class="tag">DFPLAYER MINI</span><span class="tag">TP4056</span><span class="tag">MCP1640</span><span class="tag">KICAD</span><span class="tag">PVC</span></div>
+      <div class="p-cta"><a class="btn solid" href="https://www.youtube.com/watch?v=Q3F3UJN1tBo" target=_blank rel=noopener>Watch on YouTube <span class="arr">↗</span></a><a class="btn" href="#watch">Footage <span class="arr">↓</span></a></div>
+    </div>
+    <div class="big-cue" id="bigCue">SCROLL TO BUILD<i></i></div>
+    <div class="big-panel" id="bigPanel">
+      <div class="gen-info">
+        <div class="count"><span id="stCount"></span><span class="leds" id="stLeds"></span></div>
+        <div class="gen-body"><div class="gen-card" id="stCard"></div></div>
+        <div class="gen-hint">SCROLL — 8 CHAPTERS</div>
+      </div>
+    </div>
+  </div>
+  <div id="stScroll" style="position:absolute;left:0;top:100vh;bottom:0;width:1px;pointer-events:none"></div>
+</section>
+<section id="watch">
+  <div class="wrap">
+    <div class="sec-head stage3d"><span class="idx">02</span><div class="label" style="color:#8c8c88">From the footage</div><h2 class="h-lg" data-split>On the <span class="outline">bench</span></h2></div>
+    <div class="footage">
+      <div class="loopv" data-r3d="up"><video src="../assets/vid/hilt-loop.mp4" autoplay muted loop playsinline></video><div class="cap"><span>FINAL ASSEMBLY</span><span>LOOP · MUTED</span></div></div>
+      <div class="still tall" data-r3d="up"><img src="../assets/img/hilt-238.jpg" alt="Assembled hilt"><div class="cap"><span>Assembled hilt</span><span>01</span></div></div>
+    </div>
+    <div class="stills" data-stagger="90"><div class="still" data-r3d="up"><img src="../assets/img/hilt-56.jpg" alt="Nano + DFPlayer on the breadboard" loading="lazy"><div class="cap"><span>Nano + DFPlayer on the breadboard</span><span>02</span></div></div><div class="still" data-r3d="up"><img src="../assets/img/hilt-63.jpg" alt="Sound and LED test" loading="lazy"><div class="cap"><span>Sound and LED test</span><span>03</span></div></div><div class="still" data-r3d="up"><img src="../assets/img/hilt-108.jpg" alt="KiCad schematic" loading="lazy"><div class="cap"><span>KiCad schematic</span><span>04</span></div></div><div class="still" data-r3d="up"><img src="../assets/img/hilt-140.jpg" alt="Cutting the PVC body" loading="lazy"><div class="cap"><span>Cutting the PVC body</span><span>05</span></div></div><div class="still" data-r3d="up"><img src="../assets/img/hilt-168.jpg" alt="Emitter in CAD" loading="lazy"><div class="cap"><span>Emitter in CAD</span><span>06</span></div></div><div class="still" data-r3d="up"><img src="../assets/img/hilt-203.jpg" alt="Fitting the grip" loading="lazy"><div class="cap"><span>Fitting the grip</span><span>07</span></div></div></div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="wrap">
+    
+    <div class="prose stage3d"><h3>Inside the hilt</h3><div>
+      <p><b>Control:</b> an Arduino Nano reads the switch on D2 and steps through off, igniting, on and idle, playing the matching sound on a <b>DFPlayer Mini</b> and lighting an RGB LED.</p>
+      <p><b>The floating-pin fix:</b> a <b>10 kΩ pull-down</b> from D2 to GND, plus a 500 ms start-up grace period before any state change is acted on.</p>
+      <p><b>Power:</b> a LiPo pouch cell, charged over USB-C by a <b>TP4056</b> board and boosted to 5 V by an <b>MCP1640</b>.</p>
+      <p><b>Board:</b> the perfboard prototype redrawn in <b>KiCad</b> — power interface, sockets for the Nano and DFPlayer, and a gyro header.</p>
+      <p><b>Body:</b> white PVC pipe with window cut-outs, a black ribbed grip, black bands, a metal push button with a lit ring, and 3D-printed end pieces.</p>
+    </div></div>
+    <div class="sec-head stage3d" style="margin-top:90px"><span class="idx">03</span><div class="label" style="color:#8c8c88">The full video</div><h2 class="h-lg" data-split>Watch the <span class="outline">build</span></h2></div>
+    <div class="screen-stage"><a class="screen" id="screen" data-vid="Q3F3UJN1tBo" href="https://www.youtube.com/watch?v=Q3F3UJN1tBo" target="_blank" rel="noopener">
+      <div class="glow"></div><div class="back"></div>
+      <div class="face"><img src="../assets/img/hilt-238.jpg" alt=""></div>
+      <span class="rec">CHAPTER I: BEFORE THE KYBER CALLS — FORGING THE HILT</span>
+      <span class="play"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg></span>
+    </a></div>
+    <a class="p-next" href="mips32.html" style="margin-top:80px"><span class="label">Next project · 01 / 06</span><b>MIPS32 Core</b></a>
+  </div>
+</section></main><footer class="dark"><span>© <span class="yr"></span> SHAU'S INDUSTRIES</span><span>DESIGNED &amp; BUILT BY SHAURYA GUPTA</span><a href="../index.html#contact">CONTACT →</a></footer>
+<script>document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../assets/site.js"></script>
+<script src="../assets/proj.js"></script>
+
+<style>
+.screen-sec{padding-top:40px}
+.screen-stage{perspective:1800px;max-width:1100px;margin:0 auto}
+.screen{position:relative;aspect-ratio:16/9;transform-style:preserve-3d;transform:rotateX(14deg) rotateY(-16deg);transition:transform 1.2s var(--ease);display:block}
+.screen .face{position:absolute;inset:0;border:1px solid #fff;background:#111 center/cover no-repeat;overflow:hidden}
+.screen .face img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1);transition:filter .8s}
+.screen:hover .face img{filter:none}
+.screen .face::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.25) 0 1px,transparent 1px 3px);pointer-events:none}
+.screen .fallback{position:absolute;inset:0;display:none;align-items:flex-end;padding:30px;font:800 clamp(24px,4vw,56px)/1 var(--f-head);font-stretch:118%;text-transform:uppercase;
+  background:linear-gradient(rgba(244,244,241,.05) 1px,transparent 1px) 0 0/26px 26px,linear-gradient(90deg,rgba(244,244,241,.05) 1px,transparent 1px) 0 0/26px 26px,#111}
+.screen.noimg .fallback{display:flex}.screen.noimg img{display:none}
+.screen .back{position:absolute;inset:0;transform:translateZ(-60px);border:1px solid rgba(255,255,255,.25)}
+.screen .glow{position:absolute;inset:-6%;transform:translateZ(-120px);background:radial-gradient(closest-side,rgba(255,255,255,.12),transparent);filter:blur(20px)}
+.screen .play{position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-48px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;transform:translateZ(80px);background:rgba(11,11,11,.5);transition:.4s}
+.screen .play svg{width:30px;fill:#fff;margin-left:6px}
+.screen:hover .play{background:#fff}.screen:hover .play svg{fill:#0b0b0b}
+.screen .rec{position:absolute;left:16px;top:14px;transform:translateZ(40px);font:11px var(--f-mono);letter-spacing:.16em;display:flex;gap:8px;align-items:center}
+.screen .rec::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--live);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.player{position:absolute;inset:0;transform:translateZ(1px)}
+.player iframe{width:100%;height:100%;border:0}
+</style><script>
+SITE_particles();
+(function(){ /* hero fades out, chapter panel fades in */
+  const sec=document.getElementById('story'), hero=document.getElementById('bigHero'), panel=document.getElementById('bigPanel'), hud=document.getElementById('bigHud'), cue=document.getElementById('bigCue');
+  function f(){ const p=Math.max(0,Math.min(1,-sec.getBoundingClientRect().top/innerHeight));
+    hero.style.opacity=1-p*1.6; hero.style.transform=`translateY(${-p*80}px) perspective(800px) rotateX(${p*25}deg)`; hero.style.pointerEvents=p>.4?'none':'auto';
+    cue.style.opacity=1-p*3; panel.style.opacity=Math.max(0,(p-.55)/.45); hud.style.opacity=Math.max(0,(p-.55)/.45); const lb=document.getElementById('stLabels'); if(lb) lb.style.opacity=Math.max(0,(p-.45)/.3); window.HERO_P=p; }
+  addEventListener('scroll',f,{passive:true}); f();
+})();
+</script><script>
+(function(){ const sc=document.getElementById('screen'); if(!sc) return;
+  addEventListener('mousemove',e=>{ const x=e.clientX/innerWidth-.5, y=e.clientY/innerHeight-.5; if(!sc.dataset.playing) sc.style.transform=`rotateX(${10-y*10}deg) rotateY(${-12+x*18}deg)`; });
+  sc.addEventListener('click',e=>{
+    if(!(/github\.io$|localhost|127\.0\.0\.1/.test(location.hostname))) return;
+    e.preventDefault(); sc.dataset.playing=1; sc.style.transform='none';
+    const p=document.createElement('div'); p.className='player'; p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+sc.dataset.vid+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    sc.querySelector('.face').appendChild(p); sc.querySelector('.play').style.display='none';
+  });
+})();
+</script><script>
+(function(){
+const STEPS=[{"k": "01", "name": "Breadboard brain", "sub": "Arduino Nano \u00b7 DFPlayer Mini \u00b7 speaker", "text": "An Arduino Nano runs the show. A DFPlayer Mini plays the sound effects from a microSD card through a small speaker, and an RGB LED gives the first light.", "tags": ["Arduino Nano", "DFPlayer Mini", "microSD", "RGB LED"]}, {"k": "02", "name": "The floating pin", "sub": "10 k\u03a9 pull-down \u00b7 500 ms grace", "text": "The switch pin floated and triggered on its own. The fix: a 10 k\u03a9 pull-down from D2 to GND, plus a 500 ms start-up grace period before any state change. Then the state machine runs cleanly \u2014 off, igniting, on, idle.", "tags": ["D2 \u2192 10 k\u03a9 \u2192 GND", "STARTUP_GRACE 500", "state machine"]}, {"k": "03", "name": "Power", "sub": "LiPo \u2192 TP4056 \u2192 MCP1640 \u2192 5 V", "text": "A small LiPo pouch cell charges over USB-C through a TP4056 board, and an MCP1640 boost converter lifts it to the 5 V the electronics need.", "tags": ["LiPo", "TP4056 USB-C", "MCP1640 boost"]}, {"k": "04", "name": "Perfboard to PCB", "sub": "KiCad", "text": "The hand-soldered perfboard became a custom KiCad board: a power section around the MCP1640, sockets for the Nano and the DFPlayer, and a header for a gyro.", "tags": ["KiCad", "power interface", "gyro header"]}, {"k": "05", "name": "Cutting the body", "sub": "PVC \u00b7 rotary tool", "text": "The body is white PVC pipe, cut to length and given its window cut-outs with a rotary tool, then sanded smooth.", "tags": ["PVC", "rotary tool", "window cut-outs"]}, {"k": "06", "name": "Printed parts", "sub": "CAD \u00b7 3D printing", "text": "The emitter ring and end pieces were modelled in CAD and 3D-printed to fit the tube.", "tags": ["CAD", "3D printing"]}, {"k": "07", "name": "Assembly", "sub": "Grip \u00b7 bands \u00b7 ring button", "text": "The electronics slide into the tube. Black ribs go on for the grip, black bands go over the joints, and a metal push button with a lit ring sits on top.", "tags": ["ribbed grip", "bands", "illuminated button"]}, {"k": "08", "name": "Ignition", "sub": "Chapter I", "text": "Press the button: the ring lights, the sound kicks in and the blade extends. Chapter I ends here \u2014 Lumin will return.", "tags": ["Chapter I", "to be continued"]}];
+const wrap=document.querySelector('.big-sticky'), canvas=document.getElementById('bigCanvas'), labelBox=document.getElementById('stLabels');
+let cur=0;
+const stepper=Stepper({steps:STEPS, card:document.getElementById('stCard'), count:document.getElementById('stCount'), leds:document.getElementById('stLeds'), scroller:document.getElementById('stScroll'), forceScroll:true, onChange:i=>{cur=i; if(window.onStep) onStep(i);}});
+
+const st=Stage(canvas,wrap,{shift:.1,fov:30,onResize:s=>{ s.cam.fov=s.w<700?58:30; }});
+if(!st) return;
+const {scene,cam,renderer}=st;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+scene.add(new THREE.HemisphereLight(0xffffff,0x202020,.65));
+const key=new THREE.DirectionalLight(0xffffff,1.0); key.position.set(-5,8,10); scene.add(key);
+const rim=new THREE.DirectionalLight(0xffffff,.8); rim.position.set(6,3,-8); scene.add(rim);
+const glowL=new THREE.PointLight(0xff3030,0,14); scene.add(glowL);
+const V=(x,y,z)=>new THREE.Vector3(x,y,z);
+const M=(c,r,m)=>new THREE.MeshStandardMaterial({color:c,roughness:r==null?.5:r,metalness:m||.1,transparent:true});
+const ED=()=>new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.35});
+const edge=(m,o)=>{ const l=new THREE.LineSegments(new THREE.EdgesGeometry(m.geometry,25),ED()); l.material.opacity=o==null?.35:o; m.add(l); return m; };
+const X=(geo)=>{ geo.rotateZ(Math.PI/2); return geo; };
+const world=new THREE.Group(); scene.add(world);
+const hilt=new THREE.Group(); world.add(hilt);   // hilt axis = X
+const L=(t)=>{ const e=document.createElement('span'); e.textContent=t; labelBox.appendChild(e); return e; };
+const pieces=[];
+// each piece: assembled pos (inside hilt), bench pos (exploded, on the bench), visible-from step
+function piece(m,a,b,step,lab){ m.userData={a:V(...a),b:V(...b),step,show:0,lab:lab?L(lab):null}; hilt.add(m); pieces.push(m); return m; }
+// ---------- electronics ----------
+const nano=edge(new THREE.Mesh(new THREE.BoxGeometry(1.8,.08,.5),M(0x1d3f8f,.4)),.5);
+const nchip=new THREE.Mesh(new THREE.BoxGeometry(.38,.06,.3),M(0x0b0b0b,.3)); nchip.position.set(0,.07,0); nano.add(nchip);
+const usb=new THREE.Mesh(new THREE.BoxGeometry(.22,.12,.3),M(0xbdbdb8,.2,.8)); usb.position.set(-.9,.08,0); nano.add(usb);
+piece(nano,[-.4,0,0],[-1.2,1.1,.6],0,'ARDUINO NANO');
+const dfp=edge(new THREE.Mesh(new THREE.BoxGeometry(.8,.1,.8),M(0x2a2a2a,.4)),.5);
+const sd=new THREE.Mesh(new THREE.BoxGeometry(.45,.05,.4),M(0xd9d9d4)); sd.position.set(-.1,.08,0); dfp.add(sd);
+piece(dfp,[.9,0,0],[1.1,1.0,-.4],0,'DFPLAYER MINI · microSD');
+const spk=edge(new THREE.Mesh(X(new THREE.CylinderGeometry(.45,.45,.22,40)),M(0x161616,.3,.4)),.5);
+const cone=new THREE.Mesh(X(new THREE.ConeGeometry(.36,.18,40,1,true)),M(0x555555,.6)); cone.position.x=.18; cone.rotation.z=Math.PI; spk.add(cone);
+piece(spk,[-3.75,0,0],[-3.4,.9,-.6],0,'SPEAKER');
+const rgb=new THREE.Mesh(new THREE.SphereGeometry(.16,20,20),new THREE.MeshBasicMaterial({color:0xffffff}));
+piece(rgb,[3.0,0,0],[2.6,1.2,.5],0,'RGB LED');
+const res=new THREE.Group(); const rb=new THREE.Mesh(X(new THREE.CylinderGeometry(.08,.08,.42,16)),M(0xc9b48a,.5)); res.add(rb);
+[-.12,-.04,.04].forEach((x,i)=>{ const b=new THREE.Mesh(X(new THREE.CylinderGeometry(.085,.085,.035,16)),M([0x7a4b2a,0x111111,0xd04020][i])); b.position.x=x; res.add(b); });
+[-1,1].forEach(s=>{ const lg=new THREE.Mesh(X(new THREE.CylinderGeometry(.015,.015,.4,6)),M(0xbdbdb8,.3,.8)); lg.position.x=s*.4; res.add(lg); });
+piece(res,[.15,-.12,.2],[-.2,1.5,.9],1,'10 kΩ PULL-DOWN · D2 → GND');
+const lipo=edge(new THREE.Mesh(new THREE.BoxGeometry(1.5,.18,.75),M(0xd9d9d4,.35,.3)),.3);
+const lipoL=new THREE.Mesh(new THREE.BoxGeometry(.6,.01,.5),M(0x3a3a3a)); lipoL.position.y=.1; lipo.add(lipoL);
+piece(lipo,[-2.3,0,0],[-3.2,-.9,.7],2,'LIPO CELL');
+const tp=edge(new THREE.Mesh(new THREE.BoxGeometry(.7,.06,.5),M(0x2b5fd9,.4)),.5);
+const tpu=new THREE.Mesh(new THREE.BoxGeometry(.18,.12,.3),M(0xbdbdb8,.2,.8)); tpu.position.set(-.33,.08,0); tp.add(tpu);
+piece(tp,[-1.45,0,.15],[-1.7,-1.2,-.4],2,'TP4056 · USB-C');
+const boost=edge(new THREE.Mesh(new THREE.BoxGeometry(.5,.06,.38),M(0x2a2a2a,.4)),.5);
+const ind=new THREE.Mesh(new THREE.CylinderGeometry(.08,.08,.08,12),M(0x555555)); ind.position.set(.1,.07,0); boost.add(ind);
+piece(boost,[-1.45,0,-.2],[-.4,-1.3,.2],2,'MCP1640 BOOST · 5 V');
+// perfboard (step 3 only) → PCB (from step 3, replaces perfboard)
+const perf=new THREE.Mesh(new THREE.BoxGeometry(3.4,.06,.68),M(0x8a5a2a,.7)); edge(perf,.25);
+for(let i=0;i<30;i++){ const h=new THREE.Mesh(new THREE.CylinderGeometry(.02,.02,.07,6),M(0xd9b46a,.3,.6)); h.position.set(-1.6+(i%15)*.23,0,i<15?-.2:.2); perf.add(h); }
+piece(perf,[-.2,-.14,0],[-.2,-.5,0],3,'PERFBOARD');
+const pcb=new THREE.Mesh(new THREE.BoxGeometry(3.4,.06,.68),M(0x14301f,.5)); edge(pcb,.6);
+for(let i=0;i<12;i++){ const tr=new THREE.Mesh(new THREE.BoxGeometry(.9+Math.random()*1.4,.01,.025),new THREE.MeshBasicMaterial({color:0xb08a3a})); tr.position.set(-1+Math.random()*2,.035,-.27+i*.05); pcb.add(tr); }
+[[-.4,'J2/J3'],[.9,'J5'],[1.55,'J4']].forEach(([x])=>{ const so=new THREE.Mesh(new THREE.BoxGeometry(x<0?1.8:.5,.12,.08),M(0x111111)); so.position.set(x,.09,.24); pcb.add(so); });
+piece(pcb,[-.2,-.14,0],[-.2,-.5,0],3,'KICAD PCB');
+// ---------- body ----------
+const tube=edge(new THREE.Mesh(X(new THREE.CylinderGeometry(.56,.56,7.0,56,1,true)),M(0xf0f0ec,.45)),.12); tube.material.side=THREE.DoubleSide;
+piece(tube,[-.35,0,0],[-.35,0,0],4,'PVC TUBE');
+const windows=[]; [[1.9,0],[2.55,0],[1.9,Math.PI],[2.55,Math.PI]].forEach(([x,a])=>{ const w=new THREE.Mesh(new THREE.BoxGeometry(.45,.04,.3),M(0x0b0b0b,.8)); w.position.set(x-.35,Math.cos(a)*.565,Math.sin(a)*.565); w.rotation.x=a; tube.add(w); windows.push(w); });
+const grip=new THREE.Group(); for(let i=0;i<14;i++){ const a=i/14*Math.PI*2; const rbx=new THREE.Mesh(new THREE.BoxGeometry(2.7,.1,.13),M(0x121212,.5)); rbx.position.set(0,Math.cos(a)*.6,Math.sin(a)*.6); rbx.rotation.x=-a; grip.add(rbx); }
+piece(grip,[-2.05,0,0],[-2.05,0,2.4],6,'RIBBED GRIP');
+const band=(x)=>piece(edge(new THREE.Mesh(X(new THREE.CylinderGeometry(.62,.62,.3,48)),M(0x111111,.4,.3)),.4),[x,0,0],[x,2.0,0],6);
+band(-.5); band(1.25); band(3.0);
+const btn=new THREE.Group(); const bbody=new THREE.Mesh(new THREE.CylinderGeometry(.17,.17,.16,28),M(0xbdbdb8,.25,.85)); btn.add(bbody);
+const ringM=new THREE.MeshBasicMaterial({color:0x3a2a20}); const bring=new THREE.Mesh(new THREE.TorusGeometry(.12,.025,8,32),ringM); bring.rotation.x=Math.PI/2; bring.position.y=.085; btn.add(bring);
+piece(btn,[.4,.6,0],[.4,1.9,0],6,'METAL BUTTON · LIT RING');
+// printed parts (step 5): emitter ring + pommel
+const prof=[]; for(let i=0;i<=12;i++){ const y=i/12*.9; prof.push(new THREE.Vector2(.58+(i>9?.14:Math.pow(i/12,2)*.1), y)); }
+const emG=new THREE.LatheGeometry(prof,56); emG.rotateZ(-Math.PI/2);
+const emitter=piece(edge(new THREE.Mesh(emG,M(0x222222,.5)),.25),[3.15,0,0],[4.6,0,0],5,'PRINTED EMITTER'); emitter.material.side=THREE.DoubleSide;
+const pom=piece(edge(new THREE.Mesh(X(new THREE.CylinderGeometry(.66,.6,.5,48)),M(0x1a1a1a,.4,.3)),.4),[-4.1,0,0],[-5.4,0,0],5,'PRINTED POMMEL');
+// ---------- effects ----------
+const blade=new THREE.Group(); blade.position.x=4.05; hilt.add(blade);
+const core=new THREE.Mesh(X(new THREE.CylinderGeometry(.16,.16,1,24)),new THREE.MeshBasicMaterial({color:0xffffff})); core.geometry.translate(.5,0,0); blade.add(core);
+const halo=new THREE.Mesh(X(new THREE.CylinderGeometry(.42,.42,1,24)),new THREE.MeshBasicMaterial({color:0xff2a2a,transparent:true,opacity:.28,blending:THREE.AdditiveBlending,depthWrite:false})); halo.geometry.translate(.5,0,0); blade.add(halo);
+const halo2=new THREE.Mesh(X(new THREE.CylinderGeometry(.8,.8,1,24)),new THREE.MeshBasicMaterial({color:0xff1a1a,transparent:true,opacity:.1,blending:THREE.AdditiveBlending,depthWrite:false})); halo2.geometry.translate(.5,0,0); blade.add(halo2);
+blade.scale.x=.001;
+const waves=[0,1,2].map(()=>{ const w=new THREE.Mesh(new THREE.TorusGeometry(.5,.015,8,64),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true})); w.rotation.y=Math.PI/2; hilt.add(w); return w; });
+// D2 signal trace: noisy (floating) vs clean
+const sigGeo=new THREE.BufferGeometry(); const sigLine=new THREE.Line(sigGeo,new THREE.LineBasicMaterial({color:0xffe14d})); hilt.add(sigLine);
+const lSig=L('D2');
+// power flow
+const pkts=[0,1,2,3].map(()=>{ const m=new THREE.Mesh(new THREE.SphereGeometry(.07,10,10),new THREE.MeshBasicMaterial({color:0xffe14d})); hilt.add(m); return m; });
+// rotary tool + sparks
+const disc=new THREE.Mesh(X(new THREE.CylinderGeometry(.9,.9,.04,48)),M(0xbdbdb8,.3,.8)); hilt.add(disc); edge(disc,.4);
+const NS=260, sg=new THREE.BufferGeometry(), sp=new Float32Array(NS*3); sg.setAttribute('position',new THREE.BufferAttribute(sp,3));
+const sparks=new THREE.Points(sg,new THREE.PointsMaterial({color:0xffd9a0,size:.06,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false})); world.add(sparks);
+const life=new Float32Array(NS), vel=[]; for(let i=0;i<NS;i++) vel.push(V(0,0,0));
+const states=document.getElementById('states'), stS=states?[...states.children]:[];
+const hudState=document.querySelector('#bigHud .state');
+let ign=0, ry=0, rx=0, camZ=19, camX=0;
+const tmp=V(0,0,0);
+st.run((dt,t)=>{
+  const mobile=st.w<900, hp=window.HERO_P||0, story=hp>.5, k=story?cur:7;
+  const zT=mobile?24:(k<=3?13:(k>=7?22:19)), xT=k<=3?0:(k>=7?2.2:-.4); camZ+=(zT-camZ)*.05; camX+=(xT-camX)*.05;
+  cam.position.set(camX+Math.sin(st.mx*.3)*2, 1.6-st.my*1.2, camZ); cam.lookAt(camX,mobile?-1:0,0);
+  ry+=((-.35+stepper.prog*.9+st.mx*.5+(story?0:Math.sin(t*.3)*.2))-ry)*.05; rx+=((.28+st.my*.3)-rx)*.05;
+  hilt.rotation.set(rx,ry,(!story)?.18:0);
+  // layout: chapters 1–4 lay the electronics out on the bench (exploded), 5+ the body, 7+ assembled
+  const benchMode=k<=3, f=benchMode?1:(k<=5?.6:0);
+  pieces.forEach(p=>{ const u=p.userData;
+    let vis=u.step<=k;
+    if(p===perf) vis=k===3&&(t%4)<2;           // perfboard flips to the PCB
+    if(p===pcb) vis=(k===3&&(t%4)>=2)||k>=6;
+    if(benchMode && u.step>=4) vis=false;
+    u.show+=((vis?1:0)-u.show)*Math.min(1,dt*4); p.visible=u.show>.01; p.scale.setScalar(Math.max(.001,u.show));
+    tmp.copy(u.a).lerp(u.b,f); p.position.lerp(tmp,Math.min(1,dt*3.5));
+    const inside=u.step<=3 && k>=6; p.traverse(o=>{ if(o.material&&o.material.opacity!==undefined&&o.material.transparent&&!o.isLineSegments) o.material.opacity=inside?.25:1; });
+    if(u.lab){ const on=story&&p.visible&&u.show>.6&&((k<=3&&u.step===k)||(k===3&&(p===perf||p===pcb))||(k===6&&u.step===6)||(k===5&&u.step===5)||(k===4&&p===tube)); u.lab.classList.toggle('on',on); if(on) st.label(u.lab,p.getWorldPosition(V(0,0,0)).add(V(0,.5,0))); }
+  });
+  tube.material.opacity=k===6?.55:1; windows.forEach(w=>w.visible=k>=4&&(k>4||(t%3)>1.2));
+  // printed parts grow layer by layer
+  if(k===5){ const g=(t%3)/3; [emitter,pom].forEach(p=>p.scale.set(Math.min(1,.05+g*1.2),1,1)); }
+  // LED / button ring / state chips
+  let ledOn=0, ph=0;
+  if(k===1){ ph=Math.floor(t/1.3)%4; ledOn=[0,.5+.5*Math.sin(t*20),1,.35][ph]; stS.forEach((s,i)=>s.classList.toggle('hot',i===ph)); }
+  else if(k===0) ledOn=.5+.5*Math.sin(t*4); else if(k>=7) ledOn=1;
+  rgb.material.color.setRGB(.2+.8*ledOn,.2+.3*ledOn,.25+.2*ledOn);
+  const ringOn=k>=7||(k===6&&Math.sin(t*3)>0); ringM.color.setHex(ringOn?0xff6a3a:0x3a2a20);
+  states&&states.classList.toggle('on',k===1&&story);
+  if(hudState) hudState.textContent=['BREADBOARD','DEBUGGING D2','POWER','PCB','BODY','PRINTING','ASSEMBLY','IGNITED'][k]||'FORGING';
+  // sound waves from the speaker
+  waves.forEach((w,i)=>{ w.visible=k<=1||k>=7; const s=((t*.8)+i/3)%1; w.scale.setScalar(.6+s*2.4); w.material.opacity=(1-s)*.6; w.position.copy(spk.position).add(V(-.3,0,0)); });
+  // D2 trace above the resistor
+  sigLine.visible=k===1; lSig.classList.toggle('on',k===1&&story);
+  if(k===1){ const clean=(t%4)>2, pts=[]; for(let i=0;i<=60;i++){ const x=i/60*2.4-1.2; let y=clean?(i>20&&i<40?.25:0):(Math.random()-.5)*.35; pts.push(V(x+.15,1.25+y+res.position.y,.9)); } sigGeo.setFromPoints(pts); sigLine.material.color.setHex(clean?0xffffff:0xffe14d); lSig.textContent=clean?'D2 · PULLED LOW · CLEAN':'D2 · FLOATING'; st.label(lSig,V(.15,1.75+res.position.y,.9).applyMatrix4(hilt.matrixWorld)); }
+  // power flow: LiPo → TP4056 → MCP1640 → Nano
+  const chain=[lipo,tp,boost,nano];
+  pkts.forEach((p,i)=>{ p.visible=k===2; if(!p.visible) return; const u=((t*.6)+i/4)%1, seg=Math.min(2,Math.floor(u*3)), fr=u*3-seg; p.position.lerpVectors(chain[seg].position,chain[seg+1].position,fr); p.position.y+=.2; });
+  // rotary tool + sparks
+  const cutting=k===4&&story; disc.visible=cutting; const cutX=-.35+Math.sin(t*.7)*2.6;
+  if(cutting){ disc.position.set(cutX,-1.45,0); disc.rotation.x+=dt*40; }
+  const src=V(cutX,-.56,0); hilt.localToWorld(src); world.worldToLocal(src);
+  for(let i=0;i<NS;i++){ life[i]-=dt; if(life[i]<=0&&cutting){ life[i]=.3+Math.random()*.6; sp[i*3]=src.x; sp[i*3+1]=src.y; sp[i*3+2]=src.z; vel[i].set((Math.random()-.3)*5,-Math.random()*1.5+1.5,(Math.random()-.5)*4); }
+    if(life[i]>0){ vel[i].y-=9*dt; sp[i*3]+=vel[i].x*dt; sp[i*3+1]+=vel[i].y*dt; sp[i*3+2]+=vel[i].z*dt; } else sp[i*3+1]=-999; }
+  sg.attributes.position.needsUpdate=true; sparks.visible=cutting;
+  // blade
+  ign+=(((k>=7)?1:0)-ign)*Math.min(1,dt*(k>=7?2.2:6));
+  blade.scale.x=Math.max(.001,ign*9); const flick=1+Math.sin(t*40)*.03+Math.sin(t*7)*.02;
+  halo.material.opacity=.28*flick*ign; halo2.material.opacity=.1*flick*ign; blade.visible=ign>.01;
+  glowL.intensity=ign*3*flick; glowL.position.copy(V(6,0,0).applyMatrix4(hilt.matrixWorld));
+});
+
+})();
+</script></body></html>

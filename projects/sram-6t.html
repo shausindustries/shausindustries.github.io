@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6T SRAM Bitcell — Shau's Industries</title>
+<meta name="description" content="6T SRAM bitcell by Shaurya Gupta — a full-custom transistor-level layout in Magic VLSI on SkyWater 130nm, shown in 3D.">
+<link rel="icon" type="image/png" href="../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"><link rel="stylesheet" href="../assets/proj.css">
+<style></style>
+</head>
+<body class="proj darkbody">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="logo" viewBox="0 0 100 100"><path fill-rule="evenodd" d="M44.77 0.00 L39.46 0.85 L31.54 3.23 L26.46 5.54 L21.69 8.62 L16.77 12.46 L13.23 15.77 L11.15 18.23 L7.85 22.77 L5.54 26.69 L3.23 31.62 L1.69 36.15 L0.85 39.46 L0.00 45.00 L0.08 54.92 L0.85 60.15 L2.38 65.85 L3.92 69.85 L6.31 74.54 L8.69 78.38 L10.92 81.38 L15.08 85.85 L18.62 89.00 L22.77 92.00 L26.69 94.31 L31.92 96.69 L36.31 98.23 L37.77 98.46 L39.31 99.08 L45.31 99.85 L55.31 99.77 L60.46 99.08 L63.31 98.31 L69.85 95.92 L74.31 93.69 L78.08 91.38 L81.85 88.54 L84.85 85.85 L89.08 81.31 L92.08 77.15 L96.00 70.00 L98.23 63.69 L98.54 61.85 L99.08 60.46 L99.92 55.00 L99.85 44.92 L99.00 39.38 L97.54 34.08 L96.00 30.00 L94.31 26.62 L92.00 22.69 L88.92 18.46 L86.15 15.23 L81.77 11.31 L78.23 8.62 L73.46 5.54 L70.15 3.92 L65.85 2.38 L60.54 0.85 L56.08 0.08ZM68.15 89.31 L68.15 89.69 L67.15 90.38 L62.31 92.23 L59.38 93.00 L54.15 93.69 L53.69 93.15 L53.85 91.69 L55.92 84.15 L56.69 83.62 L60.08 82.85 L61.31 82.31 L62.15 82.38 L63.08 83.23ZM31.62 89.31 L37.38 82.38 L38.38 82.31 L43.69 84.00 L44.46 86.23 L46.08 93.23 L45.85 93.62 L45.31 93.77 L40.15 92.92 L33.38 90.69 L31.85 89.92ZM85.15 74.85 L85.46 75.23 L85.31 76.08 L81.62 80.38 L77.15 84.46 L75.54 85.54 L74.92 85.54 L72.23 78.77 L72.23 75.54 L72.62 74.77 L75.62 71.69 L76.54 71.54ZM14.77 74.69 L23.54 71.54 L24.38 72.08 L27.08 74.77 L27.69 75.69 L27.69 78.15 L25.23 84.77 L24.77 85.31 L24.08 85.38 L22.62 84.38 L18.15 80.23 L14.62 76.08 L14.38 75.08ZM6.62 53.85 L7.69 53.85 L15.69 56.00 L16.15 56.46 L17.54 60.23 L17.15 61.23 L10.31 67.85 L9.31 66.85 L7.77 62.46 L6.23 54.31ZM93.15 53.69 L93.69 54.08 L93.77 54.85 L92.23 62.38 L90.46 67.23 L89.77 68.00 L89.38 68.00 L82.54 61.23 L82.23 60.00 L83.31 56.85 L84.08 56.00ZM10.38 32.08 L17.08 38.62 L17.54 39.69 L16.15 43.46 L15.69 43.92 L7.69 46.08 L6.62 46.15 L6.15 45.62 L7.69 37.54 L9.23 33.15 L9.92 32.23ZM89.46 31.92 L89.85 32.00 L90.54 32.92 L92.15 37.54 L93.69 45.62 L93.23 46.15 L92.08 46.08 L87.31 44.69 L85.62 44.46 L83.85 43.77 L83.31 43.08 L82.23 39.92 L82.54 38.69ZM24.69 42.38 L26.38 38.23 L29.31 33.54 L32.92 30.00 L36.92 27.08 L42.62 24.69 L47.38 23.85 L52.23 23.85 L57.08 24.69 L62.62 27.00 L66.08 29.38 L70.46 33.69 L72.92 37.54 L75.23 43.31 L75.92 47.31 L76.00 51.69 L75.38 55.62 L74.77 56.23 L67.38 56.15 L66.85 55.62 L66.85 50.77 L66.38 49.62 L65.69 49.23 L61.69 49.23 L61.15 48.92 L61.08 48.62 L63.08 45.00 L63.54 44.62 L64.62 44.85 L70.15 48.08 L70.85 48.08 L72.08 46.77 L73.62 43.92 L73.69 43.31 L71.77 40.77 L65.46 34.54 L61.62 31.62 L57.38 29.31 L56.31 29.46 L55.54 30.38 L52.08 36.77 L52.31 37.62 L52.77 38.08 L56.08 40.08 L56.15 41.00 L50.54 50.77 L49.62 51.85 L48.54 50.92 L41.54 40.23 L41.15 38.23 L37.92 33.77 L37.08 33.62 L31.69 37.08 L30.92 37.92 L30.92 38.69 L34.00 43.23 L36.54 45.38 L43.23 55.23 L43.31 55.85 L43.00 56.08 L39.62 56.15 L38.69 55.54 L34.38 46.54 L33.62 46.08 L32.54 46.38 L32.38 47.69 L36.23 55.31 L36.15 55.85 L35.69 56.15 L34.00 56.15 L33.46 55.92 L31.31 51.62 L30.31 51.31 L29.54 51.92 L29.46 52.69 L30.69 55.23 L30.54 56.00 L24.77 56.08 L24.31 55.46 L23.92 53.85 L23.69 50.54 L23.85 46.46ZM24.85 14.69 L25.23 15.15 L28.23 23.31 L27.85 24.38 L23.54 28.38 L14.62 25.15 L14.38 24.77 L14.62 23.92 L18.31 19.54 L22.77 15.46 L23.92 14.62ZM74.92 14.38 L75.54 14.38 L77.15 15.46 L80.92 18.85 L83.54 21.62 L85.31 23.92 L85.46 24.62 L85.15 25.08 L76.77 28.31 L75.92 28.38 L71.62 24.15 L71.54 22.92ZM53.69 6.69 L54.15 6.23 L54.92 6.23 L62.46 7.77 L66.69 9.31 L67.92 10.00 L68.15 10.54 L62.31 17.46 L61.31 17.62 L60.15 17.08 L56.46 16.23 L55.92 15.77 L53.85 8.31ZM46.08 6.69 L43.77 15.85 L43.00 16.31 L39.85 17.00 L38.38 17.62 L37.38 17.54 L31.69 10.62 L31.92 10.00 L33.46 9.23 L37.54 7.77 L45.62 6.23Z"/></symbol></defs></svg>
+
+<div class="shutter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <svg class="mark" viewBox="0 0 100 100"><use href="#logo"/></svg>
+  <svg class="wordmark mark-wm" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg>
+</div>
+<nav class="nav">
+  <a href="../index.html" class="brand"><svg viewBox="0 0 100 100"><use href="#logo"/></svg><svg class="wordmark" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg></a>
+  <button class="nav-toggle" aria-label="Menu">MENU</button>
+  <ul><li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../broadcast.html">Broadcast ↗</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+</nav>
+<main>
+<section class="big" id="story" style="height:840vh">
+  <div class="big-sticky">
+    <canvas id="bigCanvas"></canvas>
+    <div class="chip-labels" id="stLabels"></div>
+    <div class="big-hud" id="bigHud">SOURCE // <b>srambc1.mag</b><br>PDK // <b>SKY130A</b> · DRC // <b>CLEAN</b></div>
+    
+    <div class="big-hero" id="bigHero">
+      <div class="kicker"><a href="../projects.html">← Projects</a><span>P-03 · Silicon</span></div>
+      <h1 data-split>6T SRAM <span class="outline">Bitcell</span></h1>
+      <p class="vt">A full-custom, transistor-level layout of a six-transistor static RAM cell, drawn by hand in Magic VLSI on the open-source SkyWater 130nm process.</p>
+      <div class="p-tools"><span class="tag">MAGIC VLSI</span><span class="tag">SKYWATER 130NM</span><span class="tag">NGSPICE</span><span class="tag">CUSTOM LAYOUT</span><span class="tag">DRC CLEAN</span></div>
+      <div class="p-cta"><a class="btn solid" href="https://github.com/shausindustries/6TSRAMBitcell" target=_blank rel=noopener>View on GitHub <span class="arr">↗</span></a><a class="btn" href="#details">Details <span class="arr">↓</span></a></div>
+    </div>
+    <div class="big-cue" id="bigCue">SCROLL TO EXPLORE<i></i></div>
+    <div class="big-panel" id="bigPanel">
+      <div class="gen-info">
+        <div class="count"><span id="stCount"></span><span class="leds" id="stLeds"></span></div>
+        <div class="gen-body"><div class="gen-card" id="stCard"></div></div>
+        <div class="gen-hint">SCROLL — 7 CHAPTERS</div>
+      </div>
+    </div>
+  </div>
+  <div id="stScroll" style="position:absolute;left:0;top:100vh;bottom:0;width:1px;pointer-events:none"></div>
+</section>
+<section id="details" style="padding-top:clamp(70px,10vh,120px)">
+  <div class="wrap">
+    <div class="sec-head stage3d"><span class="idx">02</span><div class="label" style="color:#8c8c88">Under the hood</div><h2 class="h-lg" data-split>The <span class="outline">details</span></h2></div>
+  </div>
+  <div class="wrap">
+    <div class="prose stage3d"><h3>Circuit</h3><div>
+      <p>Two cross-coupled CMOS inverters (<b>M1–M4</b>) form a bistable latch that stores the bit on nodes <b>Q</b> and <b>QB</b>. Two NMOS access transistors (<b>M5, M6</b>), gated by the wordline, connect those nodes to the bitlines <b>BL</b> and <b>BLB</b>.</p>
+      <pre class="block">        VDD                 VDD
+         │                   │
+       [M2] PMOS           [M4] PMOS
+ BL      │     Q     QB      │      BLB
+  │──[M5]┤──────┐ ┌──────├[M6]──│
+  │      │      └─┼─┐    │      │
+       [M1] NMOS  │ │  [M3] NMOS
+         │        WL         │
+        GND                 GND</pre>
+    </div></div>
+    <div class="prose stage3d"><h3>Sizing rules</h3><div>
+      <p><b>Read stability — cell ratio.</b> Pull-down (M1, M3) over access (M5, M6) is kept above about 1.2–1.5, so a read never lifts the stored-0 node past the opposite inverter's trip point.</p>
+      <p><b>Writeability — pull-up ratio.</b> Pull-up (M2, M4) over access is kept below 1.0, so the access transistor can pull the node down against the PMOS during a write.</p>
+    </div></div>
+    <div class="prose stage3d"><h3>Flow</h3><div>
+      <p>Drawn in <b>Magic VLSI</b> on the SkyWater 130nm PDK, <b>100% DRC clean</b>. The netlist is extracted with <code class="code">ext2spice</code> and simulated in <b>Ngspice</b>.</p>
+    </div></div>
+    <div class="vis-grid" style="margin:50px 0 90px">
+      <div class="vis stage3d"><div class="img" style="aspect-ratio:1155/872"><img class="gray" src="../assets/img/sram-layout.jpg" alt="6T SRAM bitcell layout in Magic VLSI"></div><div class="cap"><b>Layout in Magic VLSI — hover for colour</b><span>SRAMBC1.MAG</span></div></div>
+    </div>
+  </div>
+
+  <div class="wrap"><a class="p-next" href="toy-processor.html" style="margin-top:80px"><span class="label">Next project · 04 / 06</span><b>Toy Processor</b></a></div>
+</section></main><footer class="dark"><span>© <span class="yr"></span> SHAU'S INDUSTRIES</span><span>DESIGNED &amp; BUILT BY SHAURYA GUPTA</span><a href="../index.html#contact">CONTACT →</a></footer>
+<script>document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../assets/site.js"></script>
+<script src="../assets/proj.js"></script>
+<script>
+SITE_particles();
+(function(){ /* hero fades out, chapter panel fades in */
+  const sec=document.getElementById('story'), hero=document.getElementById('bigHero'), panel=document.getElementById('bigPanel'), hud=document.getElementById('bigHud'), cue=document.getElementById('bigCue');
+  function f(){ const p=Math.max(0,Math.min(1,-sec.getBoundingClientRect().top/innerHeight));
+    hero.style.opacity=1-p*1.6; hero.style.transform=`translateY(${-p*80}px) perspective(800px) rotateX(${p*25}deg)`; hero.style.pointerEvents=p>.4?'none':'auto';
+    cue.style.opacity=1-p*3; panel.style.opacity=Math.max(0,(p-.55)/.45); hud.style.opacity=Math.max(0,(p-.55)/.45); const lb=document.getElementById('stLabels'); if(lb) lb.style.opacity=Math.max(0,(p-.45)/.3); window.HERO_P=p; }
+  addEventListener('scroll',f,{passive:true}); f();
+})();
+</script><script>
+(function(){
+const STEPS=[{"k": "01", "name": "Well & diffusion", "sub": "nwell \u00b7 ndiff \u00b7 pdiff", "text": "The active regions: N-diffusion for the four NMOS devices, and P-diffusion inside the N-well for the two PMOS pull-ups.", "tags": ["nwell", "ndiff", "pdiff", "tap"]}, {"k": "02", "name": "Polysilicon gates", "sub": "poly \u00b7 six transistors", "text": "Wherever poly crosses diffusion, a transistor forms \u2014 two cross-coupled inverters (M1\u2013M4) and two access devices (M5, M6) gated by the wordline.", "tags": ["poly", "nmos", "pmos"]}, {"k": "03", "name": "Contacts & local interconnect", "sub": "licon \u00b7 li1", "text": "Contacts drop from the local-interconnect layer onto diffusion and poly, wiring the two inverters into a latch.", "tags": ["licon", "li1", "polycont"]}, {"k": "04", "name": "Metal 1 & metal 2", "sub": "m1 \u00b7 m2 \u00b7 vias", "text": "Metal 1 carries the local routing; metal 2 carries the power rails and the bitlines across the cell.", "tags": ["mcon", "met1", "via1", "met2"]}, {"k": "05", "name": "Hold", "sub": "WL = 0", "text": "The access transistors are off, so the cross-coupled inverters hold the stored bit indefinitely through positive feedback.", "tags": ["M1\u2013M4 latch"]}, {"k": "06", "name": "Read", "sub": "Bitlines precharged \u00b7 WL = 1", "text": "Both bitlines precharge to VDD and the wordline rises; the side storing a 0 pulls its bitline down through the access and pull-down transistors.", "tags": ["BL", "BLB", "sense"]}, {"k": "07", "name": "Write", "sub": "BL / BLB driven \u00b7 WL = 1", "text": "The bitlines are driven to opposite values and the wordline rises, overpowering the latch and flipping the stored bit.", "tags": ["BL", "BLB", "flip"]}];
+const wrap=document.querySelector('.big-sticky'), canvas=document.getElementById('bigCanvas'), labelBox=document.getElementById('stLabels');
+let cur=0;
+const stepper=Stepper({steps:STEPS, card:document.getElementById('stCard'), count:document.getElementById('stCount'), leds:document.getElementById('stLeds'), scroller:document.getElementById('stScroll'), forceScroll:true, onChange:i=>{cur=i; if(window.onStep) onStep(i);}});
+const L={"nwell":[[-75,-35,245,200]],"nmos":[[-115,-180,-100,-120],[0,-180,15,-120],[165,-180,180,-120],[280,-180,295,-120]],"pmos":[[0,-15,15,80],[165,-15,180,80]],"ndiff":[[-150,-130,-115,-120],[-150,-170,-145,-130],[-125,-170,-115,-130],[-150,-180,-115,-170],[-100,-130,-65,-120],[-100,-170,-90,-130],[-70,-170,-65,-130],[-100,-180,-65,-170],[-35,-130,0,-120],[-35,-170,-30,-130],[-10,-170,0,-130],[-35,-180,0,-170],[15,-130,50,-120],[15,-170,25,-130],[45,-170,50,-130],[15,-180,50,-170],[130,-130,165,-120],[130,-170,135,-130],[155,-170,165,-130],[130,-180,165,-170],[180,-130,215,-120],[180,-170,190,-130],[210,-170,215,-130],[180,-180,215,-170],[245,-130,280,-120],[245,-170,250,-130],[270,-170,280,-130],[245,-180,280,-170],[295,-130,330,-120],[295,-170,305,-130],[325,-170,330,-130],[295,-180,330,-170]],"pdiff":[[-40,65,0,80],[-40,0,-30,65],[-10,0,0,65],[-40,-15,0,0],[15,65,55,80],[15,0,25,65],[45,0,55,65],[15,-15,55,0],[125,65,165,80],[125,0,135,65],[155,0,165,65],[125,-15,165,0],[180,65,220,80],[180,0,190,65],[210,0,220,65],[180,-15,220,0]],"ndiffc":[[-145,-170,-125,-130],[-90,-170,-70,-130],[-30,-170,-10,-130],[25,-170,45,-130],[135,-170,155,-130],[190,-170,210,-130],[250,-170,270,-130],[305,-170,325,-130]],"pdiffc":[[-30,0,-10,65],[25,0,45,65],[135,0,155,65],[190,0,210,65]],"psubdiff":[[-45,-215,225,-210],[-45,-245,-30,-215],[210,-245,225,-215],[-45,-250,225,-245]],"nsubdiff":[[-55,175,225,180],[-55,145,-40,175],[210,145,225,175],[-55,135,225,145]],"psubdiffcont":[[-30,-245,210,-215]],"nsubdiffcont":[[-40,145,210,175]],"poly":[[0,80,15,95],[165,80,180,95],[0,-60,15,-15],[-40,-65,15,-60],[-40,-85,-30,-65],[-10,-85,15,-65],[-40,-90,15,-85],[-115,-120,-100,-105],[0,-120,15,-90],[165,-35,180,-15],[165,-40,220,-35],[165,-60,190,-40],[210,-60,220,-40],[165,-65,220,-60],[165,-120,180,-65],[280,-120,295,-105],[-115,-270,-100,-180],[0,-195,15,-180],[165,-195,180,-180],[280,-270,295,-180],[-115,-285,295,-270],[50,-290,125,-285],[50,-315,60,-290],[115,-315,125,-290],[50,-320,125,-315]],"polycont":[[-30,-85,-10,-65],[190,-60,210,-40],[60,-315,115,-290]],"locali":[[-55,175,225,180],[-55,145,-40,175],[210,145,225,175],[-55,135,225,145],[-30,75,-10,135],[190,75,215,135],[-35,65,-5,75],[-35,0,-30,65],[-10,0,-5,65],[-35,-10,-5,0],[20,65,50,75],[20,0,25,65],[45,0,50,65],[20,-40,50,0],[20,-60,25,-40],[45,-60,50,-40],[-95,-65,0,-60],[-95,-85,-30,-65],[-10,-85,0,-65],[-95,-90,0,-85],[-250,-125,-120,-120],[-250,-175,-240,-125],[-215,-130,-120,-125],[-215,-170,-145,-130],[-125,-170,-120,-130],[-215,-175,-120,-170],[-250,-180,-120,-175],[-95,-130,-65,-90],[-95,-170,-90,-130],[-70,-170,-65,-130],[-95,-180,-65,-170],[-35,-130,-5,-120],[-35,-170,-30,-130],[-10,-170,-5,-130],[-35,-180,-5,-170],[20,-130,50,-60],[20,-170,25,-130],[45,-170,50,-130],[20,-180,50,-170],[130,65,160,75],[130,0,135,65],[155,0,160,65],[130,-90,160,0],[185,65,215,75],[185,0,190,65],[210,0,215,65],[185,-10,215,0],[180,-40,275,-35],[180,-60,190,-40],[210,-60,275,-40],[180,-65,275,-60],[130,-110,135,-90],[155,-110,160,-90],[130,-130,160,-110],[130,-170,135,-130],[155,-170,160,-130],[130,-180,160,-170],[185,-130,215,-120],[185,-170,190,-130],[210,-170,215,-130],[185,-180,215,-170],[245,-130,275,-65],[245,-170,250,-130],[270,-170,275,-130],[245,-180,275,-170],[300,-125,430,-120],[300,-130,395,-125],[300,-170,305,-130],[325,-170,395,-130],[300,-175,395,-170],[420,-175,430,-125],[300,-180,430,-175],[-30,-210,-10,-180],[190,-210,210,-180],[-45,-215,225,-210],[-45,-245,-30,-215],[210,-245,225,-215],[-45,-250,225,-245],[50,-290,125,-285],[50,-315,60,-290],[115,-315,125,-290],[50,-320,125,-315]],"viali":[[-40,145,210,175],[25,-60,45,-40],[-240,-175,-215,-125],[135,-110,155,-90],[395,-175,420,-125],[-30,-245,210,-215]],"metal1":[[-55,175,225,180],[-55,145,-40,175],[210,145,225,175],[-55,135,225,145],[-250,-125,-205,105],[20,-35,50,-30],[20,-40,210,-35],[20,-60,25,-40],[45,-60,210,-40],[-40,-90,0,-60],[20,-65,210,-60],[20,-70,50,-65],[130,-90,160,-80],[-40,-110,135,-90],[155,-110,160,-90],[130,-120,160,-110],[-250,-175,-240,-125],[-215,-175,-205,-125],[-250,-250,-205,-175],[385,-125,430,105],[385,-175,395,-125],[420,-175,430,-125],[-45,-215,225,-210],[-45,-245,-30,-215],[210,-245,225,-215],[-45,-250,225,-245],[385,-250,430,-175],[50,-340,125,-285],[-175,-380,355,-340]],"via1":[[-40,145,210,175],[-30,-245,210,-215]],"metal2":[[-180,175,375,180],[-180,145,-40,175],[210,145,375,175],[-180,135,375,145],[-165,-215,345,-210],[-165,-245,-30,-215],[210,-245,345,-215],[-165,-250,345,-245]],"end":[]};
+
+const st=Stage(canvas,wrap,{shift:.17,fov:30,onResize:s=>{s.cam.fov=s.w<520?42:30;}});
+if(!st) return;
+const {scene,cam}=st; cam.position.set(0,20.5,21.5); cam.lookAt(0,-.6,0);
+scene.add(new THREE.AmbientLight(0xffffff,.6)); const dl=new THREE.DirectionalLight(0xffffff,.8); dl.position.set(-6,14,8); scene.add(dl);
+const cell=new THREE.Group(); scene.add(cell);
+// real Magic layout units -> scene units, centred
+const S=0.0145, CX=90, CY=-90;
+// [layer names, step it appears in, z0, thickness, colour, opacity]
+const STACK=[
+ [['nwell'],0,0,.06,0x3a3a3a,.35],
+ [['ndiff','pdiff','psubdiff','nsubdiff'],0,.06,.16,0x6a6a66,.95],
+ [['nmos','pmos'],1,.06,.2,0xffffff,.95],
+ [['poly'],1,.3,.14,0xbdbdb8,.95],
+ [['ndiffc','pdiffc','polycont','psubdiffcont','nsubdiffcont'],2,.22,.62,0xffffff,.95],
+ [['locali'],2,.84,.12,0x8f8f8a,.85],
+ [['viali'],3,.96,.42,0xffffff,.95],
+ [['metal1'],3,1.38,.14,0xd9d9d4,.6],
+ [['via1'],3,1.52,.42,0xffffff,.95],
+ [['metal2'],3,1.94,.16,0xf4f4f1,.5]];
+const groups=[];
+STACK.forEach(([names,step,z0,th,col,op],gi)=>{
+  const g=new THREE.Group(); g.userData={step,z0,th,lift:0,show:0};
+  const mat=new THREE.MeshStandardMaterial({color:col,roughness:.55,metalness:.1,transparent:true,opacity:op});
+  names.forEach(n=>(L[n]||[]).forEach(([x1,y1,x2,y2])=>{
+    const w=(x2-x1)*S, d=(y2-y1)*S; if(w<=0||d<=0) return;
+    const m=new THREE.Mesh(new THREE.BoxGeometry(w,th,d),mat);
+    m.position.set(((x1+x2)/2-CX)*S, th/2, -((y1+y2)/2-CY)*S);
+    m.add(new THREE.LineSegments(new THREE.EdgesGeometry(m.geometry),new THREE.LineBasicMaterial({color:0x0b0b0b,transparent:true,opacity:.55})));
+    g.add(m);
+  }));
+  g.userData.mat=mat; g.userData.names=names; cell.add(g); groups.push(g);
+});
+// substrate
+const sub=new THREE.Mesh(new THREE.BoxGeometry(10.6,.12,9.4),new THREE.MeshStandardMaterial({color:0x151515}));
+sub.position.y=-.1; cell.add(sub); st.edges(sub,0xffffff,.25);
+// storage nodes Q / QB for the operation steps
+const node=(x)=>{ const m=new THREE.Mesh(new THREE.SphereGeometry(.22,20,20),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true})); m.position.set(x,3.4,0); cell.add(m); return m; };
+const Q=node(-1.3), QB=node(1.3);
+const lab=(t)=>{ const e=document.createElement('span'); e.textContent=t; labelBox.appendChild(e); return e; };
+const lQ=lab('Q'), lQB=lab('QB'), lWL=lab('WL'), lBL=lab('BL / BLB');
+const polyG=groups[3], m2G=groups[9];
+let ry=-.5, rx=0, bit=1, lastW=-1;
+st.run((dt,t)=>{
+  const layerPhase=cur<=3, explode=layerPhase?1.0+stepper.prog*3.2:0.55;
+  ry+=((-.5+stepper.prog*1.4+st.mx*.4)-ry)*.05; rx+=((st.my*.15)-rx)*.05; cell.rotation.set(rx,ry,0);
+  groups.forEach((g,i)=>{
+    const u=g.userData, on=u.step<=cur;
+    u.show+=((on?1:0)-u.show)*Math.min(1,dt*5);
+    g.visible=u.show>.01; g.scale.y=Math.max(.01,u.show);
+    const tgt=u.z0*explode+(on?0:2.5); u.lift+=(tgt-u.lift)*Math.min(1,dt*4); g.position.y=u.lift;
+    const fresh=layerPhase && u.step===cur;
+    u.mat.emissive=u.mat.emissive||new THREE.Color(0); u.mat.emissive.setScalar(fresh?.25+.15*Math.sin(t*4):0);
+  });
+  // operation signals
+  const op=cur-4; // 0 hold, 1 read, 2 write
+  const wl = op>=1 ? (Math.sin(t*2.2)>-.2?1:0) : 0;
+  polyG.userData.mat.emissive.setScalar(op>=0 ? wl*.6 : polyG.userData.mat.emissive.r);
+  m2G.userData.mat.emissive.setScalar(op===1 ? .5*(.5+.5*Math.sin(t*2.2+1)) : op===2 ? .6 : (op>=0?0:m2G.userData.mat.emissive.r));
+  if(op===2 && wl && lastW!==Math.floor(t*2.2/(Math.PI*2))){ lastW=Math.floor(t*2.2/(Math.PI*2)); bit^=1; }
+  const showN=op>=0; Q.visible=QB.visible=showN;
+  Q.material.opacity=bit?1:.18; QB.material.opacity=bit?.18:1;
+  Q.position.y=QB.position.y=3.1+explode*.2;
+  [[lQ,Q],[lQB,QB]].forEach(([e,m])=>{ e.classList.toggle('on',showN); if(showN) st.label(e,m.getWorldPosition(new THREE.Vector3())); });
+  lWL.classList.toggle('on',op>=1 && wl===1); if(op>=1) st.label(lWL,new THREE.Vector3(-4.2,1.2,2.6).applyMatrix4(cell.matrixWorld));
+  lBL.classList.toggle('on',op>=1); if(op>=1) st.label(lBL,new THREE.Vector3(3.6,2.6,-2).applyMatrix4(cell.matrixWorld));
+});
+
+})();
+</script></body></html>

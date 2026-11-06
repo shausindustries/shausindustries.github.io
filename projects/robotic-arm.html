@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robotic Arm — Shau's Industries</title>
+<meta name="description" content="Robotic Arm by Shaurya Gupta — a 3D-printed six-servo arm (MG996R + SG90) with ESP-NOW gesture control, from the Shau's Industries YouTube channel.">
+<link rel="icon" type="image/png" href="../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"><link rel="stylesheet" href="../assets/proj.css">
+<style></style>
+</head>
+<body class="proj darkbody">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="logo" viewBox="0 0 100 100"><path fill-rule="evenodd" d="M44.77 0.00 L39.46 0.85 L31.54 3.23 L26.46 5.54 L21.69 8.62 L16.77 12.46 L13.23 15.77 L11.15 18.23 L7.85 22.77 L5.54 26.69 L3.23 31.62 L1.69 36.15 L0.85 39.46 L0.00 45.00 L0.08 54.92 L0.85 60.15 L2.38 65.85 L3.92 69.85 L6.31 74.54 L8.69 78.38 L10.92 81.38 L15.08 85.85 L18.62 89.00 L22.77 92.00 L26.69 94.31 L31.92 96.69 L36.31 98.23 L37.77 98.46 L39.31 99.08 L45.31 99.85 L55.31 99.77 L60.46 99.08 L63.31 98.31 L69.85 95.92 L74.31 93.69 L78.08 91.38 L81.85 88.54 L84.85 85.85 L89.08 81.31 L92.08 77.15 L96.00 70.00 L98.23 63.69 L98.54 61.85 L99.08 60.46 L99.92 55.00 L99.85 44.92 L99.00 39.38 L97.54 34.08 L96.00 30.00 L94.31 26.62 L92.00 22.69 L88.92 18.46 L86.15 15.23 L81.77 11.31 L78.23 8.62 L73.46 5.54 L70.15 3.92 L65.85 2.38 L60.54 0.85 L56.08 0.08ZM68.15 89.31 L68.15 89.69 L67.15 90.38 L62.31 92.23 L59.38 93.00 L54.15 93.69 L53.69 93.15 L53.85 91.69 L55.92 84.15 L56.69 83.62 L60.08 82.85 L61.31 82.31 L62.15 82.38 L63.08 83.23ZM31.62 89.31 L37.38 82.38 L38.38 82.31 L43.69 84.00 L44.46 86.23 L46.08 93.23 L45.85 93.62 L45.31 93.77 L40.15 92.92 L33.38 90.69 L31.85 89.92ZM85.15 74.85 L85.46 75.23 L85.31 76.08 L81.62 80.38 L77.15 84.46 L75.54 85.54 L74.92 85.54 L72.23 78.77 L72.23 75.54 L72.62 74.77 L75.62 71.69 L76.54 71.54ZM14.77 74.69 L23.54 71.54 L24.38 72.08 L27.08 74.77 L27.69 75.69 L27.69 78.15 L25.23 84.77 L24.77 85.31 L24.08 85.38 L22.62 84.38 L18.15 80.23 L14.62 76.08 L14.38 75.08ZM6.62 53.85 L7.69 53.85 L15.69 56.00 L16.15 56.46 L17.54 60.23 L17.15 61.23 L10.31 67.85 L9.31 66.85 L7.77 62.46 L6.23 54.31ZM93.15 53.69 L93.69 54.08 L93.77 54.85 L92.23 62.38 L90.46 67.23 L89.77 68.00 L89.38 68.00 L82.54 61.23 L82.23 60.00 L83.31 56.85 L84.08 56.00ZM10.38 32.08 L17.08 38.62 L17.54 39.69 L16.15 43.46 L15.69 43.92 L7.69 46.08 L6.62 46.15 L6.15 45.62 L7.69 37.54 L9.23 33.15 L9.92 32.23ZM89.46 31.92 L89.85 32.00 L90.54 32.92 L92.15 37.54 L93.69 45.62 L93.23 46.15 L92.08 46.08 L87.31 44.69 L85.62 44.46 L83.85 43.77 L83.31 43.08 L82.23 39.92 L82.54 38.69ZM24.69 42.38 L26.38 38.23 L29.31 33.54 L32.92 30.00 L36.92 27.08 L42.62 24.69 L47.38 23.85 L52.23 23.85 L57.08 24.69 L62.62 27.00 L66.08 29.38 L70.46 33.69 L72.92 37.54 L75.23 43.31 L75.92 47.31 L76.00 51.69 L75.38 55.62 L74.77 56.23 L67.38 56.15 L66.85 55.62 L66.85 50.77 L66.38 49.62 L65.69 49.23 L61.69 49.23 L61.15 48.92 L61.08 48.62 L63.08 45.00 L63.54 44.62 L64.62 44.85 L70.15 48.08 L70.85 48.08 L72.08 46.77 L73.62 43.92 L73.69 43.31 L71.77 40.77 L65.46 34.54 L61.62 31.62 L57.38 29.31 L56.31 29.46 L55.54 30.38 L52.08 36.77 L52.31 37.62 L52.77 38.08 L56.08 40.08 L56.15 41.00 L50.54 50.77 L49.62 51.85 L48.54 50.92 L41.54 40.23 L41.15 38.23 L37.92 33.77 L37.08 33.62 L31.69 37.08 L30.92 37.92 L30.92 38.69 L34.00 43.23 L36.54 45.38 L43.23 55.23 L43.31 55.85 L43.00 56.08 L39.62 56.15 L38.69 55.54 L34.38 46.54 L33.62 46.08 L32.54 46.38 L32.38 47.69 L36.23 55.31 L36.15 55.85 L35.69 56.15 L34.00 56.15 L33.46 55.92 L31.31 51.62 L30.31 51.31 L29.54 51.92 L29.46 52.69 L30.69 55.23 L30.54 56.00 L24.77 56.08 L24.31 55.46 L23.92 53.85 L23.69 50.54 L23.85 46.46ZM24.85 14.69 L25.23 15.15 L28.23 23.31 L27.85 24.38 L23.54 28.38 L14.62 25.15 L14.38 24.77 L14.62 23.92 L18.31 19.54 L22.77 15.46 L23.92 14.62ZM74.92 14.38 L75.54 14.38 L77.15 15.46 L80.92 18.85 L83.54 21.62 L85.31 23.92 L85.46 24.62 L85.15 25.08 L76.77 28.31 L75.92 28.38 L71.62 24.15 L71.54 22.92ZM53.69 6.69 L54.15 6.23 L54.92 6.23 L62.46 7.77 L66.69 9.31 L67.92 10.00 L68.15 10.54 L62.31 17.46 L61.31 17.62 L60.15 17.08 L56.46 16.23 L55.92 15.77 L53.85 8.31ZM46.08 6.69 L43.77 15.85 L43.00 16.31 L39.85 17.00 L38.38 17.62 L37.38 17.54 L31.69 10.62 L31.92 10.00 L33.46 9.23 L37.54 7.77 L45.62 6.23Z"/></symbol></defs></svg>
+
+<div class="shutter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <svg class="mark" viewBox="0 0 100 100"><use href="#logo"/></svg>
+  <svg class="wordmark mark-wm" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg>
+</div>
+<nav class="nav">
+  <a href="../index.html" class="brand"><svg viewBox="0 0 100 100"><use href="#logo"/></svg><svg class="wordmark" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg></a>
+  <button class="nav-toggle" aria-label="Menu">MENU</button>
+  <ul><li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../broadcast.html">Broadcast ↗</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+</nav>
+<main>
+<section class="big" id="story" style="height:940vh">
+  <div class="big-sticky">
+    <canvas id="bigCanvas"></canvas>
+    <div class="chip-labels" id="stLabels"></div>
+    <div class="big-hud" id="bigHud">DOF // <b>6</b> · LINK // <b>ESP-NOW</b><br>FILTER // <b class="mode">SMOOTHED · CLAMPED</b></div>
+    <div class="pad" id="pad"><div></div><div class="t">MODE</div><div></div><div></div><div class="t">GRIPPER</div><div></div>
+<div class="st">Mode:1 | Grip:Open</div>
+<div class="b"></div><div></div><div></div><div class="b"></div><div></div>
+<div></div><div></div><div class="b"></div><div></div><div class="b"></div>
+<div class="b"></div><div></div><div></div><div class="b"></div><div></div></div>
+    <div class="big-hero" id="bigHero">
+      <div class="kicker"><a href="../projects.html">← Projects</a><span>Y-01 · YouTube</span></div>
+      <h1 data-split>Robotic <span class="outline">Arm</span></h1>
+      <p class="vt">From the video <b>“I built a Robotic Arm because my real one is lazy”</b>. A 3D-printed, six-servo arm — gesture-controlled over ESP-NOW, then driven from an on-screen gamepad.</p>
+      <div class="p-tools"><span class="tag">MG996R × 3</span><span class="tag">SG90 × 3</span><span class="tag">NODEMCU</span><span class="tag">ESP32-C3</span><span class="tag">MPU-6050</span><span class="tag">ESP-NOW</span></div>
+      <div class="p-cta"><a class="btn solid" href="https://www.youtube.com/watch?v=pII1wAtHmyI" target=_blank rel=noopener>Watch on YouTube <span class="arr">↗</span></a><a class="btn" href="#watch">Footage <span class="arr">↓</span></a></div>
+    </div>
+    <div class="big-cue" id="bigCue">SCROLL TO BUILD<i></i></div>
+    <div class="big-panel" id="bigPanel">
+      <div class="gen-info">
+        <div class="count"><span id="stCount"></span><span class="leds" id="stLeds"></span></div>
+        <div class="gen-body"><div class="gen-card" id="stCard"></div></div>
+        <div class="gen-hint">SCROLL — 8 CHAPTERS</div>
+      </div>
+    </div>
+  </div>
+  <div id="stScroll" style="position:absolute;left:0;top:100vh;bottom:0;width:1px;pointer-events:none"></div>
+</section>
+<section id="watch">
+  <div class="wrap">
+    <div class="sec-head stage3d"><span class="idx">02</span><div class="label" style="color:#8c8c88">From the footage</div><h2 class="h-lg" data-split>On the <span class="outline">bench</span></h2></div>
+    <div class="footage">
+      <div class="loopv" data-r3d="up"><video src="../assets/vid/arm-loop.mp4" autoplay muted loop playsinline></video><div class="cap"><span>PICK AND PLACE</span><span>LOOP · MUTED</span></div></div>
+      <div class="still tall" data-r3d="up"><img src="../assets/img/arm-66.jpg" alt="Assembled arm"><div class="cap"><span>Assembled arm</span><span>01</span></div></div>
+    </div>
+    <div class="stills" data-stagger="90"><div class="still" data-r3d="up"><img src="../assets/img/arm-36.jpg" alt="Servo bench test" loading="lazy"><div class="cap"><span>Servo bench test</span><span>02</span></div></div><div class="still" data-r3d="up"><img src="../assets/img/arm-168.jpg" alt="Wiring it up" loading="lazy"><div class="cap"><span>Wiring it up</span><span>03</span></div></div><div class="still" data-r3d="up"><img src="../assets/img/arm-294.jpg" alt="Gamepad control" loading="lazy"><div class="cap"><span>Gamepad control</span><span>04</span></div></div><div class="still" data-r3d="up"><img src="../assets/img/arm-336.jpg" alt="Pick and place" loading="lazy"><div class="cap"><span>Pick and place</span><span>05</span></div></div></div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="wrap">
+    
+    <div class="prose stage3d"><h3>The stack</h3><div>
+      <p><b>Joints:</b> three MG996R metal-gear servos for the base, shoulder and elbow; three SG90 micro servos for wrist pitch, wrist roll and the gear-driven gripper.</p>
+      <p><b>Transmitter:</b> an ESP32-C3 reads raw accelerometer and gyro data from an <b>MPU-6050</b>, converts it to roll and pitch, and sends it over <b>ESP-NOW</b>.</p>
+      <p><b>Receiver:</b> a NodeMCU (ESP-12E) maps the angles onto six servo targets, then smooths and clamps each one before writing it. The servos run from a <b>bench power supply</b> with a common ground.</p>
+      <p><b>Control:</b> gesture mode first, then an on-screen gamepad with a mode switch, a gripper toggle and directional pads.</p>
+    </div></div>
+    <div class="sec-head stage3d" style="margin-top:90px"><span class="idx">03</span><div class="label" style="color:#8c8c88">The full video</div><h2 class="h-lg" data-split>Watch the <span class="outline">build</span></h2></div>
+    <div class="screen-stage"><a class="screen" id="screen" data-vid="pII1wAtHmyI" href="https://www.youtube.com/watch?v=pII1wAtHmyI" target="_blank" rel="noopener">
+      <div class="glow"></div><div class="back"></div>
+      <div class="face"><img src="../assets/img/arm-66.jpg" alt=""></div>
+      <span class="rec">I BUILT A ROBOTIC ARM BECAUSE MY REAL ONE IS LAZY</span>
+      <span class="play"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg></span>
+    </a></div>
+    <a class="p-next" href="lumin-hilt.html" style="margin-top:80px"><span class="label">Next project · 06 / 06</span><b>Lumin — The Hilt</b></a>
+  </div>
+</section></main><footer class="dark"><span>© <span class="yr"></span> SHAU'S INDUSTRIES</span><span>DESIGNED &amp; BUILT BY SHAURYA GUPTA</span><a href="../index.html#contact">CONTACT →</a></footer>
+<script>document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../assets/site.js"></script>
+<script src="../assets/proj.js"></script>
+
+<style>
+.screen-sec{padding-top:40px}
+.screen-stage{perspective:1800px;max-width:1100px;margin:0 auto}
+.screen{position:relative;aspect-ratio:16/9;transform-style:preserve-3d;transform:rotateX(14deg) rotateY(-16deg);transition:transform 1.2s var(--ease);display:block}
+.screen .face{position:absolute;inset:0;border:1px solid #fff;background:#111 center/cover no-repeat;overflow:hidden}
+.screen .face img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1);transition:filter .8s}
+.screen:hover .face img{filter:none}
+.screen .face::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.25) 0 1px,transparent 1px 3px);pointer-events:none}
+.screen .fallback{position:absolute;inset:0;display:none;align-items:flex-end;padding:30px;font:800 clamp(24px,4vw,56px)/1 var(--f-head);font-stretch:118%;text-transform:uppercase;
+  background:linear-gradient(rgba(244,244,241,.05) 1px,transparent 1px) 0 0/26px 26px,linear-gradient(90deg,rgba(244,244,241,.05) 1px,transparent 1px) 0 0/26px 26px,#111}
+.screen.noimg .fallback{display:flex}.screen.noimg img{display:none}
+.screen .back{position:absolute;inset:0;transform:translateZ(-60px);border:1px solid rgba(255,255,255,.25)}
+.screen .glow{position:absolute;inset:-6%;transform:translateZ(-120px);background:radial-gradient(closest-side,rgba(255,255,255,.12),transparent);filter:blur(20px)}
+.screen .play{position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-48px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;transform:translateZ(80px);background:rgba(11,11,11,.5);transition:.4s}
+.screen .play svg{width:30px;fill:#fff;margin-left:6px}
+.screen:hover .play{background:#fff}.screen:hover .play svg{fill:#0b0b0b}
+.screen .rec{position:absolute;left:16px;top:14px;transform:translateZ(40px);font:11px var(--f-mono);letter-spacing:.16em;display:flex;gap:8px;align-items:center}
+.screen .rec::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--live);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.player{position:absolute;inset:0;transform:translateZ(1px)}
+.player iframe{width:100%;height:100%;border:0}
+</style><script>
+SITE_particles();
+(function(){ /* hero fades out, chapter panel fades in */
+  const sec=document.getElementById('story'), hero=document.getElementById('bigHero'), panel=document.getElementById('bigPanel'), hud=document.getElementById('bigHud'), cue=document.getElementById('bigCue');
+  function f(){ const p=Math.max(0,Math.min(1,-sec.getBoundingClientRect().top/innerHeight));
+    hero.style.opacity=1-p*1.6; hero.style.transform=`translateY(${-p*80}px) perspective(800px) rotateX(${p*25}deg)`; hero.style.pointerEvents=p>.4?'none':'auto';
+    cue.style.opacity=1-p*3; panel.style.opacity=Math.max(0,(p-.55)/.45); hud.style.opacity=Math.max(0,(p-.55)/.45); const lb=document.getElementById('stLabels'); if(lb) lb.style.opacity=Math.max(0,(p-.45)/.3); window.HERO_P=p; }
+  addEventListener('scroll',f,{passive:true}); f();
+})();
+</script><script>
+(function(){ const sc=document.getElementById('screen'); if(!sc) return;
+  addEventListener('mousemove',e=>{ const x=e.clientX/innerWidth-.5, y=e.clientY/innerHeight-.5; if(!sc.dataset.playing) sc.style.transform=`rotateX(${10-y*10}deg) rotateY(${-12+x*18}deg)`; });
+  sc.addEventListener('click',e=>{
+    if(!(/github\.io$|localhost|127\.0\.0\.1/.test(location.hostname))) return;
+    e.preventDefault(); sc.dataset.playing=1; sc.style.transform='none';
+    const p=document.createElement('div'); p.className='player'; p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+sc.dataset.vid+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    sc.querySelector('.face').appendChild(p); sc.querySelector('.play').style.display='none';
+  });
+})();
+</script><script>
+(function(){
+const STEPS=[{"k": "01", "name": "A doodle that waved", "sub": "Concept \u00b7 6 degrees of freedom", "text": "It started as a sketch of an arm saying hi: a rotating base, a shoulder, an elbow, a two-axis wrist and a gripper \u2014 six servos in all.", "tags": ["6 DOF", "gripper"]}, {"k": "02", "name": "Six servos", "sub": "3 \u00d7 MG996R \u00b7 3 \u00d7 SG90", "text": "Metal-gear MG996Rs carry the heavy joints \u2014 base, shoulder and elbow. Blue SG90 micro servos handle wrist pitch, wrist roll and the gripper. Each one was checked on the bench, its PWM pulse on the oscilloscope.", "tags": ["MG996R", "SG90", "PWM \u00b7 50 Hz"]}, {"k": "03", "name": "Printed parts", "sub": "CAD \u00b7 3D printing \u00b7 assembly", "text": "Every structural part was modelled and 3D-printed: a hollow base on three feet, a turntable disc, an angled hexagonal shoulder mount, an upper-arm link with a servo pocket, a box-section forearm housing, and the wrist and gripper brackets.", "tags": ["CAD", "3D printing", "7 printed parts"]}, {"k": "04", "name": "Wiring the receiver", "sub": "NodeMCU \u00b7 bench PSU \u00b7 common ground", "text": "A NodeMCU (ESP-12E) on the breadboard drives all six PWM lines. The servos run from the bench power supply, sharing a common ground with the board.", "tags": ["NodeMCU", "bench PSU", "6 \u00d7 PWM"]}, {"k": "05", "name": "Gesture control", "sub": "ESP32-C3 + MPU-6050 \u2192 ESP-NOW", "text": "The transmitter \u2014 an ESP32-C3 reading an MPU-6050 \u2014 turns accelerometer and gyro data into roll and pitch, and sends it over ESP-NOW to the NodeMCU, which maps it onto the joints.", "tags": ["ESP32-C3", "MPU-6050", "ESP-NOW"]}, {"k": "06", "name": "What broke", "sub": "Jitter \u00b7 mapping \u00b7 dropouts \u00b7 surges \u00b7 power", "text": "Jittery motion, mapping issues, the ESP not receiving signals, surging values and power issues. Every servo target is now smoothed and clamped to its limits before it is written.", "tags": ["smoothAlpha", "servoMin / Max", "I2C 0x68"]}, {"k": "07", "name": "Gamepad control", "sub": "Mode \u00b7 Gripper \u00b7 pads", "text": "Control moved to an on-screen gamepad: a mode switch, a gripper toggle and directional pads, with the live mode and grip state on screen.", "tags": ["Mode", "Gripper", "D-pad"]}, {"k": "08", "name": "Pick and place", "sub": "Baby steps", "text": "First real job: pick up a roll of tape and put it down somewhere else \u2014 power issues and all. This isn't over yet.", "tags": ["pick & place", "to be continued"]}];
+const wrap=document.querySelector('.big-sticky'), canvas=document.getElementById('bigCanvas'), labelBox=document.getElementById('stLabels');
+let cur=0;
+const stepper=Stepper({steps:STEPS, card:document.getElementById('stCard'), count:document.getElementById('stCount'), leds:document.getElementById('stLeds'), scroller:document.getElementById('stScroll'), forceScroll:true, onChange:i=>{cur=i; if(window.onStep) onStep(i);}});
+
+const st=Stage(canvas,wrap,{shift:.15,fov:34,onResize:s=>{ s.cam.fov=s.w<700?54:34; }});
+if(!st) return;
+const {scene,cam,renderer}=st;
+renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+scene.fog=new THREE.Fog(0x0b0b0b,26,60);
+scene.add(new THREE.HemisphereLight(0xffffff,0x333333,.85));
+const key=new THREE.DirectionalLight(0xffffff,1.05); key.position.set(5,16,12); key.castShadow=true; key.shadow.mapSize.set(2048,2048);
+Object.assign(key.shadow.camera,{left:-14,right:14,top:14,bottom:-14}); scene.add(key);
+const rim=new THREE.DirectionalLight(0xffffff,.7); rim.position.set(-8,6,-8); scene.add(rim);
+const world=new THREE.Group(); scene.add(world);
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(90,90),new THREE.ShadowMaterial({opacity:.35})); floor.rotation.x=-Math.PI/2; floor.receiveShadow=true; world.add(floor);
+const grid=new THREE.GridHelper(44,44,0x3a3a3a,0x1f1f1f); grid.position.y=.002; world.add(grid);
+const V=(x,y,z)=>new THREE.Vector3(x,y,z);
+const M=(c,r,m)=>new THREE.MeshStandardMaterial({color:c,roughness:r==null?.55:r,metalness:m||.12,side:THREE.DoubleSide});
+const PRINT=M(0x2f2f2f,.6), MG=M(0x141414,.35), SG=M(0x2b5fd9,.4), HORN=M(0xe9e9e4,.5), WHITE=M(0xe9e9e4,.5);
+const ED=new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.42});
+const parts=[], printed=[];
+function add(geo,mat,parent,pos,ex,noEdge){ const m=new THREE.Mesh(geo,mat); m.castShadow=m.receiveShadow=true; m.position.copy(pos); m.userData.home=pos.clone(); m.userData.ex=ex||V(0,0,0);
+  if(!noEdge) m.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo,28),ED)); parent.add(m); parts.push(m); return m; }
+const L=(t)=>{ const e=document.createElement('span'); e.textContent=t; labelBox.appendChild(e); return e; };
+function printedPart(m,name){ printed.push({m,e:L(name)}); return m; }
+// ---- servo models (output horn faces +Z of the group) ----
+function mg996(parent,pos,rot,ex){ const g=new THREE.Group(); g.position.copy(pos); if(rot) g.rotation.copy(rot); g.userData.home=pos.clone(); g.userData.ex=ex||V(0,0,0); parent.add(g); parts.push(g);
+  add(new THREE.BoxGeometry(.82,.42,.78),MG,g,V(0,0,0));
+  add(new THREE.BoxGeometry(1.12,.42,.06),MG,g,V(0,0,.17),null,true);
+  const sp=add(new THREE.CylinderGeometry(.09,.09,.16,16),HORN,g,V(.2,0,.47),null,true); sp.rotation.x=Math.PI/2;
+  const hn=add(new THREE.CylinderGeometry(.24,.24,.05,24),HORN,g,V(.2,0,.55),null,true); hn.rotation.x=Math.PI/2; return g; }
+function sg90(parent,pos,rot,ex){ const g=new THREE.Group(); g.position.copy(pos); if(rot) g.rotation.copy(rot); g.userData.home=pos.clone(); g.userData.ex=ex||V(0,0,0); parent.add(g); parts.push(g);
+  add(new THREE.BoxGeometry(.46,.24,.44),SG,g,V(0,0,0));
+  add(new THREE.BoxGeometry(.64,.24,.04),SG,g,V(0,0,.1),null,true);
+  add(new THREE.BoxGeometry(.38,.07,.04),HORN,g,V(.1,0,.26),null,true); return g; }
+// shape helpers: a 2D profile in (z, y), extruded across X with thickness th
+function sideProfile(shape,th){ const g=new THREE.ExtrudeGeometry(shape,{depth:th,bevelEnabled:false,curveSegments:20}); g.translate(0,0,-th/2); g.rotateY(-Math.PI/2); return g; }
+// ---- arm geometry (forward = +Z, toward the viewer) ----
+const H0=2.75, L1=3.0, L2=2.6, L3=1.55;
+const arm=new THREE.Group(); world.add(arm);
+// 1. base: hollow cylinder with three feet
+const baseG=new THREE.CylinderGeometry(1.25,1.25,1.3,48,1,true); const base=add(baseG,PRINT,arm,V(0,.65,0),V(0,-.4,0)); printedPart(base,'PRINTED · BASE');
+add(new THREE.CylinderGeometry(1.24,1.24,.06,48),PRINT,base,V(0,-.62,0),null,true);
+add(new THREE.CylinderGeometry(1.265,1.265,.34,48,1,true),WHITE,base,V(0,-.05,0),null,true);          // tape band
+for(let i=0;i<3;i++){ const a=i*Math.PI*2/3+Math.PI/6; const sh=new THREE.Shape([new THREE.Vector2(0,0),new THREE.Vector2(.75,0),new THREE.Vector2(0,.5)]);
+  const f=new THREE.Mesh(new THREE.ExtrudeGeometry(sh,{depth:.14,bevelEnabled:false}),PRINT); f.geometry.translate(1.2,0,-.07); f.rotation.y=-a; f.position.y=-.65; f.castShadow=true; base.add(f); }
+const sBase=mg996(arm,V(0,1.0,-.2),new THREE.Euler(-Math.PI/2,0,0),V(0,.3,1.8));
+const yaw=new THREE.Group(); yaw.position.y=1.3; arm.add(yaw);
+// 2. turntable disc
+const disc=add(new THREE.CylinderGeometry(1.1,1.1,.2,48),PRINT,yaw,V(0,.1,0),V(0,.7,0)); printedPart(disc,'PRINTED · TURNTABLE');
+// 3. shoulder mount: tilted hexagonal shell
+const hexO=new THREE.Shape(), hexI=new THREE.Path();
+[[-1.0,0],[-.55,.5],[.55,.5],[1.0,0],[.55,-.5],[-.55,-.5]].forEach((p,i)=>i?hexO.lineTo(p[0],p[1]):hexO.moveTo(p[0],p[1]));
+[[-.78,0],[-.42,.32],[.42,.32],[.78,0],[.42,-.32],[-.42,-.32]].forEach((p,i)=>i?hexI.lineTo(p[0],p[1]):hexI.moveTo(p[0],p[1])); hexO.holes.push(hexI);
+const mountG=sideProfile(hexO,.95); const mount=add(mountG,PRINT,yaw,V(0,.9,-.05),V(0,1.3,-1.4)); mount.rotation.x=-.85; printedPart(mount,'PRINTED · SHOULDER MOUNT');
+const sSh=mg996(yaw,V(-.2,H0-1.3,.2),new THREE.Euler(0,Math.PI/2,0),V(-1.8,.4,0));
+const sh=new THREE.Group(); sh.position.set(0,H0-1.3,0); yaw.add(sh);
+// 4. upper arm link: round boss at the shoulder, servo pocket at the elbow
+const up=new THREE.Shape(); up.moveTo(-.4,0); up.lineTo(-.4,L1+.48); up.lineTo(.4,L1+.48); up.lineTo(.4,0); up.absarc(0,0,.4,0,Math.PI,true);
+const pocket=new THREE.Path(); pocket.moveTo(-.29,L1-.46); pocket.lineTo(.29,L1-.46); pocket.lineTo(.29,L1+.36); pocket.lineTo(-.29,L1+.36); pocket.lineTo(-.29,L1-.46); up.holes.push(pocket);
+const upper=add(sideProfile(up,.34),PRINT,sh,V(.36,0,0),V(1.6,.6,0)); printedPart(upper,'PRINTED · UPPER ARM LINK');
+const sEl=mg996(sh,V(-.2,L1,.2),new THREE.Euler(0,Math.PI/2,0),V(-1.8,.8,0));
+const el=new THREE.Group(); el.position.set(0,L1,0); sh.add(el);
+// 5. forearm housing: hollow rectangular tube along +Z
+const fo=new THREE.Shape(); fo.moveTo(-.33,-.3); fo.lineTo(.33,-.3); fo.lineTo(.33,.3); fo.lineTo(-.33,.3); fo.lineTo(-.33,-.3);
+const fi=new THREE.Path(); fi.moveTo(-.25,-.22); fi.lineTo(.25,-.22); fi.lineTo(.25,.22); fi.lineTo(-.25,.22); fi.lineTo(-.25,-.22); fo.holes.push(fi);
+const foreG=new THREE.ExtrudeGeometry(fo,{depth:L2-.1,bevelEnabled:false}); foreG.translate(0,0,.1);
+const fore=add(foreG,PRINT,el,V(.05,0,0),V(0,1.4,.6)); printedPart(fore,'PRINTED · FOREARM HOUSING');
+const sWp=sg90(el,V(-.06,0,L2-.1),new THREE.Euler(0,Math.PI/2,0),V(-1.2,1.6,1.2));
+const wp=new THREE.Group(); wp.position.set(0,0,L2); el.add(wp);
+// 6. wrist bracket + roll servo
+const wbr=add(new THREE.BoxGeometry(.52,.16,.6),PRINT,wp,V(0,0,.28),V(0,.6,1.6)); printedPart(wbr,'PRINTED · WRIST BRACKET');
+const sWr=sg90(wp,V(-.1,.22,.3),new THREE.Euler(0,0,0),V(0,1.4,1.8));
+const wr=new THREE.Group(); wr.position.set(0,0,.55); wp.add(wr);
+// 7. gripper: U bracket, SG90, gear pair, two fingers
+const gb=add(new THREE.BoxGeometry(.9,.42,.12),PRINT,wr,V(0,0,.12),V(0,.5,2.4)); printedPart(gb,'PRINTED · GRIPPER BRACKET');
+const sGr=sg90(wr,V(0,.34,.28),new THREE.Euler(-Math.PI/2,0,0),V(0,1.2,2.6));
+const gear=(x)=>{ const g=add(new THREE.CylinderGeometry(.16,.16,.08,14),HORN,wr,V(x,0,.3),V(x*3,.4,2.6),true); for(let i=0;i<10;i++){ const tth=new THREE.Mesh(new THREE.BoxGeometry(.06,.08,.06),HORN); const a=i/10*Math.PI*2; tth.position.set(Math.cos(a)*.18,0,Math.sin(a)*.18); g.add(tth); } return g; };
+const gA=gear(-.17), gB=gear(.17);
+const fL=add(new THREE.BoxGeometry(.1,.32,.82),WHITE,wr,V(-.3,0,.72),V(-.9,0,2.9)), fR=add(new THREE.BoxGeometry(.1,.32,.82),WHITE,wr,V(.3,0,.72),V(.9,0,2.9));
+const SERVOS=[[sBase,'S1 · BASE · MG996R'],[sSh,'S2 · SHOULDER · MG996R'],[sEl,'S3 · ELBOW · MG996R'],[sWp,'S4 · WRIST PITCH · SG90'],[sWr,'S5 · WRIST ROLL · SG90'],[sGr,'S6 · GRIPPER · SG90']].map(([g,n])=>({g,e:L(n)}));
+// ---- inverse kinematics: wrist-down grasp at a point (x, y, z) in arm space ----
+function ik(x,y,z){ const yawA=Math.atan2(x,z), r=Math.hypot(x,z), dx=r, dy=(y+L3)-H0;
+  let D=Math.hypot(dx,dy); D=Math.min(D,L1+L2-.01); let c=(D*D-L1*L1-L2*L2)/(2*L1*L2); c=Math.max(-1,Math.min(1,c));
+  const q2=-Math.acos(c), q1=Math.atan2(dy,dx)-Math.atan2(L2*Math.sin(q2),L1+L2*Math.cos(q2));
+  const s=Math.PI/2-q1, e=-q2-Math.PI/2; return {yaw:yawA, sh:s, el:e, wp:Math.PI/2-s-e}; }
+// ---- bench: breadboard + NodeMCU + bench PSU ----
+const bench=new THREE.Group(); bench.position.set(-5.2,0,2.6); world.add(bench);
+const bb=new THREE.Mesh(new THREE.BoxGeometry(3.4,.18,1.15),M(0xefefea,.7)); bb.position.y=.09; bb.castShadow=true; bench.add(bb);
+for(let i=0;i<2;i++){ const ch=new THREE.Mesh(new THREE.BoxGeometry(3.3,.02,.04),M(0x999999)); ch.position.set(0,.19,i?.48:-.48); bench.add(ch); }
+const mcu=new THREE.Mesh(new THREE.BoxGeometry(1.5,.08,.66),M(0x1b1b1b,.4)); mcu.position.set(-.3,.28,0); bench.add(mcu); mcu.add(new THREE.LineSegments(new THREE.EdgesGeometry(mcu.geometry),ED));
+const shield=new THREE.Mesh(new THREE.BoxGeometry(.55,.06,.45),M(0xbdbdb8,.25,.8)); shield.position.set(.4,.07,0); mcu.add(shield);
+const psu=new THREE.Group(); psu.position.set(-8.2,0,-1.4); psu.rotation.y=.5; world.add(psu);
+const pbox=new THREE.Mesh(new THREE.BoxGeometry(2.6,1.4,1.8),M(0x1a1a1a,.5)); pbox.position.y=.7; pbox.castShadow=true; psu.add(pbox); pbox.add(new THREE.LineSegments(new THREE.EdgesGeometry(pbox.geometry),ED));
+const lcdC=document.createElement('canvas'); lcdC.width=256; lcdC.height=96; const lcdX=lcdC.getContext('2d'); const lcdT=new THREE.CanvasTexture(lcdC);
+const lcd=new THREE.Mesh(new THREE.PlaneGeometry(1.1,.42),new THREE.MeshBasicMaterial({map:lcdT})); lcd.position.set(-.5,.95,.91); psu.add(lcd);
+function drawLCD(v,a){ lcdX.fillStyle='#050505'; lcdX.fillRect(0,0,256,96); lcdX.fillStyle='#ff4a3d'; lcdX.font='bold 40px monospace'; lcdX.fillText(v.toFixed(1).padStart(4,'0')+'V',12,44); lcdX.fillStyle='#d9d9d4'; lcdX.font='30px monospace'; lcdX.fillText(a.toFixed(2)+'A',12,84); lcdT.needsUpdate=true; }
+drawLCD(5.0,.70);
+[[.45,0xd63a3a],[.85,0x111111]].forEach(([x,c])=>{ const t=new THREE.Mesh(new THREE.CylinderGeometry(.13,.13,.22,16),M(c,.4)); t.rotation.x=Math.PI/2; t.position.set(x,.55,.95); psu.add(t); });
+// wires: PSU -> breadboard rails, breadboard -> each servo
+const wire=(pts,col,op)=>{ const c=new THREE.CatmullRomCurve3(pts); const m=new THREE.Mesh(new THREE.TubeGeometry(c,48,.03,6),new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:op})); world.add(m); return {c,m}; };
+const pRed=wire([V(-8.2+.45*Math.cos(.5)+.4,.55,-1.4+.9),V(-7,.2,0),V(-6.6,.25,2.1),V(-6.7,.22,2.1)],0xd63a3a,.8);
+const pBlk=wire([V(-7.5,.55,-.6),V(-6.8,.15,.6),V(-6.6,.25,3.1),V(-6.7,.22,3.1)],0x777777,.8);
+const sig=SERVOS.map((s,i)=>{ const w={c:null,m:null,i}; w.dyn=true; const geo=new THREE.BufferGeometry(); const line=new THREE.Line(geo,new THREE.LineBasicMaterial({color:0xffc04d,transparent:true,opacity:.0})); world.add(line); w.line=line; return w; });
+const sigPk=SERVOS.map(()=>{ const m=new THREE.Mesh(new THREE.SphereGeometry(.07,8,8),new THREE.MeshBasicMaterial({color:0xffffff})); world.add(m); return m; });
+const lMCU=L('NODEMCU · ESP-12E'), lPSU=L('BENCH PSU · 5 V'), lGND=L('COMMON GND');
+// ---- transmitter: ESP32-C3 + MPU-6050 ----
+const tx=new THREE.Group(); tx.position.set(-3.4,5.4,4.2); world.add(tx);
+const txb=new THREE.Mesh(new THREE.BoxGeometry(1.7,.1,.9),M(0xefefea,.6)); tx.add(txb);
+const c3=new THREE.Mesh(new THREE.BoxGeometry(.7,.1,.6),M(0x1b1b1b,.4)); c3.position.set(-.4,.1,0); tx.add(c3);
+const mpu=new THREE.Mesh(new THREE.BoxGeometry(.6,.06,.5),M(0x2b5fd9,.4)); mpu.position.set(.45,.09,0); tx.add(mpu);
+const mchip=new THREE.Mesh(new THREE.BoxGeometry(.2,.05,.2),M(0x0b0b0b)); mchip.position.set(.45,.14,0); tx.add(mchip);
+const lTX=L('ESP32-C3 + MPU-6050');
+const pk=[0,1,2,3,4,5].map(()=>{ const m=new THREE.Mesh(new THREE.SphereGeometry(.09,10,10),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true})); world.add(m); return m; });
+// ---- oscilloscope trace (PWM) ----
+const scope=new THREE.Group(); world.add(scope);
+const sFrame=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(3.2,1.4)),new THREE.LineBasicMaterial({color:0x777777})); scope.add(sFrame);
+const sBg=new THREE.Mesh(new THREE.PlaneGeometry(3.2,1.4),new THREE.MeshBasicMaterial({color:0x050505,transparent:true,opacity:.85})); sBg.position.z=-.01; scope.add(sBg);
+const wGeo=new THREE.BufferGeometry(); const wLine=new THREE.Line(wGeo,new THREE.LineBasicMaterial({color:0xffe14d})); scope.add(wLine);
+const lScope=L('PWM · 50 HZ');
+function wave(widthMs){ const pts=[]; const per=1.45; for(let c=0;c<2;c++){ const x0=-1.5+c*per, hw=widthMs/20*per*5; pts.push(V(x0,-.45,0),V(x0,.45,0),V(x0+hw,.45,0),V(x0+hw,-.45,0),V(x0+per,-.45,0)); } wGeo.setFromPoints(pts); }
+// ---- tape roll ----
+const PICK=V(3.3,.12,1.9), PLACE=V(-3.3,.12,1.9);
+const tape=new THREE.Mesh(new THREE.TorusGeometry(.26,.12,16,40),M(0x2a2a2a,.6)); tape.rotation.x=Math.PI/2; tape.castShadow=true; tape.position.copy(PICK); world.add(tape);
+const padMark=(p)=>{ const r=new THREE.Mesh(new THREE.RingGeometry(.5,.53,48).rotateX(-Math.PI/2),new THREE.MeshBasicMaterial({color:0x9a9a96})); r.position.set(p.x,.004,p.z); world.add(r); }; padMark(PICK); padMark(PLACE);
+const lTape=L('TAPE ROLL');
+const pad=document.getElementById('pad'), padB=pad?[...pad.querySelectorAll('.b')]:[], padT=pad?[...pad.querySelectorAll('.t')]:[], padS=pad?pad.querySelector('.st'):null;
+const hudMode=document.querySelector('#bigHud .mode');
+
+// ---- pose ----
+const HOME=ik(0,2.2,3.0);
+const Pz=Object.assign({wr:0,g:0},HOME), T=Object.assign({},Pz);
+const lerp=(a,b,t)=>a+(b-a)*t, ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+const set=(o,extra)=>{ Object.assign(T,o); if(extra) for(const n in extra) T[n]+=extra[n]; };
+let ex=0, held=false, smooth=true, lcdT0=0;
+const camT=V(0,0,0), camP=V(9,7,14), tmp=V(0,0,0);
+// cylindrical interpolation between two grasp points (keeps the swing natural)
+const cyl=(a,b,u,lift)=>{ const ra=Math.hypot(a.x,a.z), rb=Math.hypot(b.x,b.z), aa=Math.atan2(a.x,a.z), ab=Math.atan2(b.x,b.z), r=lerp(ra,rb,u), an=lerp(aa,ab,u); return V(Math.sin(an)*r, lerp(a.y,b.y,u)+(lift||0)*Math.sin(u*Math.PI), Math.cos(an)*r); };
+st.run((dt,t)=>{
+  const mobile=st.w<900, hp=window.HERO_P||0, story=hp>.5, k=story?cur:-1;
+  // camera: three-quarter front view — the arm reaches toward the viewer
+  const benchView=k===3||k===4||k===5, orbit=(benchView?-.2:.3)+stepper.prog*.15+st.mx*.25, dist=(mobile?29:(k<0?27:24.5))+(benchView?4:0);
+  camP.set(Math.sin(orbit)*dist, (benchView?10:11)+st.my*-1.5, Math.cos(orbit)*dist); cam.position.lerp(camP,.05);
+  camT.lerp(benchView?V(-3.2,2.6,2.2):V(0,mobile?3.8:3.2,1.6),.05); cam.lookAt(camT);
+  padB.forEach(b=>b.classList.remove('hot')); padT.forEach(b=>b.classList.remove('hot'));
+  let jitter=0, activeServo=-1, grip=null;
+  if(k<0){ set(ik(Math.sin(t*.5)*1.4,2.0+Math.sin(t*.9)*.6,3.0)); T.wr=Math.sin(t*1.5)*.6; T.g=.2; }
+  else if(k===0){ set(ik(Math.sin(t*.6)*.8,3.0,2.4)); T.wp-=.9; T.wr=Math.sin(t*5)*.7; T.g=.5+.5*Math.sin(t*5); }
+  else if(k===1){ activeServo=Math.floor(t/1.4)%6; const s=Math.sin(t*Math.PI/.7); set(HOME);
+    if(activeServo===0) T.yaw=s*.8; if(activeServo===1) T.sh+=s*.3; if(activeServo===2) T.el+=s*.35; if(activeServo===3) T.wp+=s*.5; T.wr=activeServo===4?s*1.2:0; T.g=activeServo===5?(s>0?1:0):.2;
+    wave(1.5+s*.5); }
+  else if(k===2){ set(HOME); T.yaw=t*.25; T.wr=0; T.g=0; }
+  else if(k===3){ set(ik(Math.sin(t*.7)*1.2,2.2+Math.sin(t*.9)*.4,3.0)); T.wr=0; T.g=.3; }
+  else if(k===4){ const r=Math.sin(t*1.1)*.5, pch=Math.sin(t*.8+1)*.45, y=Math.sin(t*.5)*.7; tx.rotation.set(pch,y*.4,r);
+    set(ik(Math.sin(y)*3.2,2.2-pch*1.2,Math.cos(y)*3.2)); T.wr=r*1.4; T.g=.3; }
+  else if(k===5){ smooth=(Math.floor(t/2.6)%2)===1; jitter=smooth?0:.24;
+    set(ik(Math.sin(t*.7)*1.4,2.2,3.0),{yaw:(Math.random()-.5)*jitter,sh:(Math.random()-.5)*jitter,el:(Math.random()-.5)*jitter,wp:(Math.random()-.5)*jitter*1.5}); T.wr=0; T.g=.3;
+    if(hudMode) hudMode.textContent=smooth?'SMOOTHED · CLAMPED':'RAW · JITTER';
+    if(t-lcdT0>.15){ lcdT0=t; drawLCD(smooth?5.0:4.2+Math.random()*.9, smooth?.70:1.1+Math.random()*.9); } }
+  else if(k===6){ const ph=Math.floor(t/1.4)%6, map=[[3,0],[0,0],[4,0],[1,0],[-1,1],[2,0]], [b,tt]=map[ph];
+    if(b>=0&&padB[b]) padB[b].classList.add('hot'); if(tt&&padT[1]) padT[1].classList.add('hot');
+    if(T.yaw===undefined) set(HOME);
+    if(ph===0) T.yaw=Math.min(.9,T.yaw+dt*.6); if(ph===2) T.yaw=Math.max(-.9,T.yaw-dt*.6);
+    if(ph===1) T.sh=Math.max(HOME.sh-.35,T.sh-dt*.3); if(ph===3) T.sh=Math.min(HOME.sh+.25,T.sh+dt*.3);
+    if(ph===4) T.g=(Math.floor(t/1.4)%12<6)?1:0; if(ph===5) T.wr=Math.sin(t*2)*.8;
+    T.wp=Math.PI/2-T.sh-T.el;
+    if(padS) padS.textContent='Mode:1 | Grip:'+(T.g>.5?'Closed':'Open'); }
+  else if(k===7){ // pick the tape roll, carry it across, set it down — 10 s loop, IK on a wrist-down grasp
+    const c=(t%10)/10, seg=(a,b)=>Math.max(0,Math.min(1,(c-a)/(b-a))), up=1.4;
+    const aboveP=PICK.clone().add(V(0,up,0)), aboveQ=PLACE.clone().add(V(0,up,0)), home=V(0,2.2,3.0);
+    let p, g;
+    if(c<.12){ p=cyl(home,aboveP,ease(seg(0,.12))); g=0; }
+    else if(c<.22){ p=aboveP.clone().lerp(PICK,ease(seg(.12,.22))); g=0; }
+    else if(c<.3){ p=PICK.clone(); g=ease(seg(.22,.3)); }
+    else if(c<.4){ p=PICK.clone().lerp(aboveP,ease(seg(.3,.4))); g=1; }
+    else if(c<.58){ p=cyl(aboveP,aboveQ,ease(seg(.4,.58)),.4); g=1; }
+    else if(c<.68){ p=aboveQ.clone().lerp(PLACE,ease(seg(.58,.68))); g=1; }
+    else if(c<.76){ p=PLACE.clone(); g=1-ease(seg(.68,.76)); }
+    else if(c<.86){ p=PLACE.clone().lerp(aboveQ,ease(seg(.76,.86))); g=0; }
+    else { p=cyl(aboveQ,home,ease(seg(.86,1))); g=0; }
+    set(ik(p.x,p.y,p.z)); T.wr=-T.yaw; T.g=g; grip=g; held=c>=.27&&c<.73;
+    if(c<.02){ tape.position.copy(PICK); } }
+  if(k!==5){ if(hudMode) hudMode.textContent='SMOOTHED · CLAMPED'; if(t-lcdT0>1){ lcdT0=t; drawLCD(5.0,.70); } }
+  // apply pose — smoothed, like the firmware (pick & place follows the plan tightly)
+  const a=Math.min(1,dt*(k===7?14:(k===5&&smooth?3:9))); for(const n in Pz) Pz[n]=lerp(Pz[n],T[n],a);
+  yaw.rotation.y=Pz.yaw; sh.rotation.x=Pz.sh; el.rotation.x=Pz.el; wp.rotation.x=Pz.wp; wr.rotation.z=Pz.wr;
+  const closed=k===7?.37:.14, open=lerp(.44,closed,Pz.g); fL.userData.home.x=-open; fR.userData.home.x=open; gA.rotation.y=Pz.g*1.2; gB.rotation.y=-Pz.g*1.2;
+  // exploded view: printed parts and servos pull apart
+  ex=lerp(ex,k===2?1:0,Math.min(1,dt*3));
+  parts.forEach(p=>{ p.position.copy(p.userData.home).addScaledVector(p.userData.ex,ex*1.3); });
+  printed.forEach(p=>{ const on=k===2&&ex>.7; p.e.classList.toggle('on',on); if(on) st.label(p.e,p.m.getWorldPosition(V(0,0,0)).add(V(0,.6,0))); });
+  // servo highlight + labels
+  SERVOS.forEach((s,i)=>{ const on=k===1&&i===activeServo; s.e.classList.toggle('on',on); if(on) st.label(s.e,s.g.getWorldPosition(tmp).clone().add(V(0,.5,0))); });
+  // oscilloscope
+  scope.visible=k===1; if(scope.visible&&activeServo>=0){ const sp=SERVOS[activeServo].g.getWorldPosition(V(0,0,0)); scope.position.lerp(sp.add(V(2.6,1.0,.5)),.15); scope.lookAt(cam.position); lScope.classList.add('on'); st.label(lScope,scope.position.clone().add(V(0,.9,0))); } else lScope.classList.remove('on');
+  // wiring: signal lines breadboard -> servos
+  const wiring=k===3||k===5;
+  [pRed,pBlk].forEach(w=>w.m.visible=k>=3&&k<=5);
+  sig.forEach((w,i)=>{ w.line.material.opacity=wiring?.85:0; if(!wiring){ sigPk[i].visible=false; return; }
+    const a2=bench.localToWorld(V(.7,.28,-.3+i*.12)), b2=SERVOS[i].g.getWorldPosition(V(0,0,0)); world.worldToLocal(a2); world.worldToLocal(b2);
+    const m=a2.clone().lerp(b2,.5); m.y=Math.max(a2.y,b2.y)+1.2; const c=new THREE.QuadraticBezierCurve3(a2,m,b2); w.line.geometry.setFromPoints(c.getPoints(24));
+    const drop=k===5&&!smooth&&((Math.floor(t*3)+i)%3===0); sigPk[i].visible=!drop; sigPk[i].position.copy(c.getPoint(((t*.7)+i/6)%1)); });
+  [[lMCU,mcu,V(0,.5,0)],[lPSU,pbox,V(0,1.1,0)]].forEach(([e,m,o])=>{ const on=k===3||(k===4&&e===lMCU); e.classList.toggle('on',on); if(on) st.label(e,m.getWorldPosition(V(0,0,0)).add(o)); });
+  lGND.classList.toggle('on',k===3); if(k===3) st.label(lGND,pBlk.c.getPoint(.55).applyMatrix4(world.matrixWorld));
+  // transmitter + ESP-NOW packets (to the NodeMCU)
+  tx.visible=k===4||k===5; if(!tx.visible) tx.rotation.set(0,0,0);
+  lTX.classList.toggle('on',tx.visible); if(tx.visible) st.label(lTX,tx.getWorldPosition(V(0,0,0)).add(V(0,.5,0)));
+  const dest=bench.localToWorld(V(-.3,.4,0)); world.worldToLocal(dest);
+  pk.forEach((p,i)=>{ p.visible=tx.visible; if(!p.visible) return; const u=((t*.8)+i/6)%1; p.position.lerpVectors(tx.position,dest,u); p.position.y+=Math.sin(u*Math.PI)*1.2; p.material.opacity=(k===5&&!smooth&&i%2)?.12:1; });
+  // tape: rides between the fingers while held, otherwise sits on its pad
+  arm.updateMatrixWorld(true);
+  if(k===7&&held){ const g=V(0,0,.72); wr.localToWorld(g); world.worldToLocal(g); tape.position.copy(g); }
+  else if(k===7){ if(tape.position.y>.13) tape.position.y=Math.max(.12,tape.position.y-dt*4); }
+  else tape.position.lerp(PICK,.1);
+  tape.rotation.set(Math.PI/2,0,0);
+  lTape.classList.toggle('on',k===7); if(k===7) st.label(lTape,tape.getWorldPosition(V(0,0,0)).add(V(0,.6,0)));
+  pad&&pad.classList.toggle('on',k===6);
+  bench.visible=psu.visible=k>=0;
+});
+
+})();
+</script></body></html>

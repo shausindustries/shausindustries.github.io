@@ -1,41 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title>Shau's Industries</title>
-   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-   <link rel="stylesheet" typ="text/css" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Shau's Industries</title>
+<meta name="description" content="Projects by Shaurya Gupta: MIPS32 core, M32 microcontroller SoC, 6T SRAM bitcell, Toy Processor and YouTube builds.">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>.pj-hero{padding-top:170px;padding-bottom:70px}
+.pj-hero .h-xl{margin:22px 0 34px}
+.pj-row{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;border-top:1px solid var(--ink);padding-top:24px}
+.pj-row p{max-width:520px;font-size:19px;color:var(--ink-2)}
+.pj-count{text-align:right}
+.pj-count b{display:inline-flex;font:800 clamp(48px,6vw,84px)/1 var(--f-head);font-stretch:118%}
+.pj-count>span{display:block;font:11px var(--f-mono);letter-spacing:.16em;color:var(--grey);margin-top:6px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+.filters button{font:11px var(--f-mono);letter-spacing:.16em;text-transform:uppercase;padding:10px 16px;background:none;border:1px solid var(--ink);cursor:pointer;transition:.3s}
+.filters button.on,.filters button:hover{background:var(--ink);color:var(--white)}
+#pjGrid{transition:opacity .35s,transform .5s var(--ease)}
+</style>
 </head>
-<body>
-   <header>
-<div class="projecthead">
-  <h1>PROJECTS</h1>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="logo" viewBox="0 0 100 100"><path fill-rule="evenodd" d="M44.77 0.00 L39.46 0.85 L31.54 3.23 L26.46 5.54 L21.69 8.62 L16.77 12.46 L13.23 15.77 L11.15 18.23 L7.85 22.77 L5.54 26.69 L3.23 31.62 L1.69 36.15 L0.85 39.46 L0.00 45.00 L0.08 54.92 L0.85 60.15 L2.38 65.85 L3.92 69.85 L6.31 74.54 L8.69 78.38 L10.92 81.38 L15.08 85.85 L18.62 89.00 L22.77 92.00 L26.69 94.31 L31.92 96.69 L36.31 98.23 L37.77 98.46 L39.31 99.08 L45.31 99.85 L55.31 99.77 L60.46 99.08 L63.31 98.31 L69.85 95.92 L74.31 93.69 L78.08 91.38 L81.85 88.54 L84.85 85.85 L89.08 81.31 L92.08 77.15 L96.00 70.00 L98.23 63.69 L98.54 61.85 L99.08 60.46 L99.92 55.00 L99.85 44.92 L99.00 39.38 L97.54 34.08 L96.00 30.00 L94.31 26.62 L92.00 22.69 L88.92 18.46 L86.15 15.23 L81.77 11.31 L78.23 8.62 L73.46 5.54 L70.15 3.92 L65.85 2.38 L60.54 0.85 L56.08 0.08ZM68.15 89.31 L68.15 89.69 L67.15 90.38 L62.31 92.23 L59.38 93.00 L54.15 93.69 L53.69 93.15 L53.85 91.69 L55.92 84.15 L56.69 83.62 L60.08 82.85 L61.31 82.31 L62.15 82.38 L63.08 83.23ZM31.62 89.31 L37.38 82.38 L38.38 82.31 L43.69 84.00 L44.46 86.23 L46.08 93.23 L45.85 93.62 L45.31 93.77 L40.15 92.92 L33.38 90.69 L31.85 89.92ZM85.15 74.85 L85.46 75.23 L85.31 76.08 L81.62 80.38 L77.15 84.46 L75.54 85.54 L74.92 85.54 L72.23 78.77 L72.23 75.54 L72.62 74.77 L75.62 71.69 L76.54 71.54ZM14.77 74.69 L23.54 71.54 L24.38 72.08 L27.08 74.77 L27.69 75.69 L27.69 78.15 L25.23 84.77 L24.77 85.31 L24.08 85.38 L22.62 84.38 L18.15 80.23 L14.62 76.08 L14.38 75.08ZM6.62 53.85 L7.69 53.85 L15.69 56.00 L16.15 56.46 L17.54 60.23 L17.15 61.23 L10.31 67.85 L9.31 66.85 L7.77 62.46 L6.23 54.31ZM93.15 53.69 L93.69 54.08 L93.77 54.85 L92.23 62.38 L90.46 67.23 L89.77 68.00 L89.38 68.00 L82.54 61.23 L82.23 60.00 L83.31 56.85 L84.08 56.00ZM10.38 32.08 L17.08 38.62 L17.54 39.69 L16.15 43.46 L15.69 43.92 L7.69 46.08 L6.62 46.15 L6.15 45.62 L7.69 37.54 L9.23 33.15 L9.92 32.23ZM89.46 31.92 L89.85 32.00 L90.54 32.92 L92.15 37.54 L93.69 45.62 L93.23 46.15 L92.08 46.08 L87.31 44.69 L85.62 44.46 L83.85 43.77 L83.31 43.08 L82.23 39.92 L82.54 38.69ZM24.69 42.38 L26.38 38.23 L29.31 33.54 L32.92 30.00 L36.92 27.08 L42.62 24.69 L47.38 23.85 L52.23 23.85 L57.08 24.69 L62.62 27.00 L66.08 29.38 L70.46 33.69 L72.92 37.54 L75.23 43.31 L75.92 47.31 L76.00 51.69 L75.38 55.62 L74.77 56.23 L67.38 56.15 L66.85 55.62 L66.85 50.77 L66.38 49.62 L65.69 49.23 L61.69 49.23 L61.15 48.92 L61.08 48.62 L63.08 45.00 L63.54 44.62 L64.62 44.85 L70.15 48.08 L70.85 48.08 L72.08 46.77 L73.62 43.92 L73.69 43.31 L71.77 40.77 L65.46 34.54 L61.62 31.62 L57.38 29.31 L56.31 29.46 L55.54 30.38 L52.08 36.77 L52.31 37.62 L52.77 38.08 L56.08 40.08 L56.15 41.00 L50.54 50.77 L49.62 51.85 L48.54 50.92 L41.54 40.23 L41.15 38.23 L37.92 33.77 L37.08 33.62 L31.69 37.08 L30.92 37.92 L30.92 38.69 L34.00 43.23 L36.54 45.38 L43.23 55.23 L43.31 55.85 L43.00 56.08 L39.62 56.15 L38.69 55.54 L34.38 46.54 L33.62 46.08 L32.54 46.38 L32.38 47.69 L36.23 55.31 L36.15 55.85 L35.69 56.15 L34.00 56.15 L33.46 55.92 L31.31 51.62 L30.31 51.31 L29.54 51.92 L29.46 52.69 L30.69 55.23 L30.54 56.00 L24.77 56.08 L24.31 55.46 L23.92 53.85 L23.69 50.54 L23.85 46.46ZM24.85 14.69 L25.23 15.15 L28.23 23.31 L27.85 24.38 L23.54 28.38 L14.62 25.15 L14.38 24.77 L14.62 23.92 L18.31 19.54 L22.77 15.46 L23.92 14.62ZM74.92 14.38 L75.54 14.38 L77.15 15.46 L80.92 18.85 L83.54 21.62 L85.31 23.92 L85.46 24.62 L85.15 25.08 L76.77 28.31 L75.92 28.38 L71.62 24.15 L71.54 22.92ZM53.69 6.69 L54.15 6.23 L54.92 6.23 L62.46 7.77 L66.69 9.31 L67.92 10.00 L68.15 10.54 L62.31 17.46 L61.31 17.62 L60.15 17.08 L56.46 16.23 L55.92 15.77 L53.85 8.31ZM46.08 6.69 L43.77 15.85 L43.00 16.31 L39.85 17.00 L38.38 17.62 L37.38 17.54 L31.69 10.62 L31.92 10.00 L33.46 9.23 L37.54 7.77 L45.62 6.23Z"/></symbol></defs></svg>
+
+<div class="shutter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <svg class="mark" viewBox="0 0 100 100"><use href="#logo"/></svg>
+  <svg class="wordmark mark-wm" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg>
 </div>
-      <div class="cards" data-tilt  data-tilt-max="30"  data-tilt-glare  data-tilt-max-glare="0.55">
-        <div class="cardimg">
-          <img src="project1.jpg">
-        </div>
-<div class="cdtitle">
-  <h3>Project #1</h3>
-</div>
-<div class="desbut">
-  <p>This coding project is really basic and beginner friendly</p>
-  <div class="view">
-    <a href="https://youtu.be/OIeZvUHqatc">
-      <button>VIEW...</button>
-    </a>
+<nav class="nav">
+  <a href="index.html" class="brand"><svg viewBox="0 0 100 100"><use href="#logo"/></svg><svg class="wordmark" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg></a>
+  <button class="nav-toggle" aria-label="Menu">MENU</button>
+  <ul><li><a href="index.html">Home</a></li><li><a href="#all">Projects</a></li><li><a href="broadcast.html">Broadcast ↗</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+</nav>
+
+<main>
+<section class="pj-hero">
+  <div class="wrap">
+    <div class="label">Shau's Industries · Index</div>
+    <h1 class="h-xl" data-split>Pro<span class="outline">jects</span></h1>
+    <div class="pj-row">
+      <p>Silicon from RTL to layout, and builds from the YouTube channel. Open any project for its own 3D walkthrough.</p>
+      <div class="pj-count"><b data-odo>06</b><span>PROJECTS ON FILE</span></div>
+    </div>
   </div>
-</div>
-    </header>
-   <a href="#" class="gotop"><i class="fa fa-chevron-up"></i></a>
-   <style>
-   body {
-     background-image: url('blegh.jpg');
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-size: cover;
-   }
-   </style>
-</body>
-</html>
+</section>
+<section id="all" style="padding-top:0">
+  <div class="wrap">
+    <div class="filters" id="pjFilters"><button class="on" data-f="all">All</button><button data-f="silicon">Silicon</button><button data-f="youtube">YouTube</button></div>
+    <div id="pjGrid"></div>
+  </div>
+</section>
+</main><footer class=""><span>© <span class="yr"></span> SHAU'S INDUSTRIES</span><span>DESIGNED &amp; BUILT BY SHAURYA GUPTA</span><a href="index.html#contact">CONTACT →</a></footer>
+<script>document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/projects.js"></script>
+<script>
+SITE_particles();
+const grid=document.getElementById('pjGrid');
+renderProjects(grid,'','all');
+document.querySelectorAll('#pjFilters button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#pjFilters button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  grid.style.opacity=0; grid.style.transform='perspective(1200px) rotateX(-8deg) translateY(20px)';
+  setTimeout(()=>{ renderProjects(grid,'',b.dataset.f); grid.style.opacity=1; grid.style.transform=''; },350);
+});
+</script></body></html>

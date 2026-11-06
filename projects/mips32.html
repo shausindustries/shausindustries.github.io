@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIPS32 Core — Shau's Industries</title>
+<meta name="description" content="MIPS32 Core by Shaurya Gupta — a 32-bit Verilog processor from single-cycle to Tomasulo out-of-order with SIMD and L1 cache.">
+<link rel="icon" type="image/png" href="../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"><link rel="stylesheet" href="../assets/proj.css">
+<style></style>
+</head>
+<body class="proj darkbody">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="logo" viewBox="0 0 100 100"><path fill-rule="evenodd" d="M44.77 0.00 L39.46 0.85 L31.54 3.23 L26.46 5.54 L21.69 8.62 L16.77 12.46 L13.23 15.77 L11.15 18.23 L7.85 22.77 L5.54 26.69 L3.23 31.62 L1.69 36.15 L0.85 39.46 L0.00 45.00 L0.08 54.92 L0.85 60.15 L2.38 65.85 L3.92 69.85 L6.31 74.54 L8.69 78.38 L10.92 81.38 L15.08 85.85 L18.62 89.00 L22.77 92.00 L26.69 94.31 L31.92 96.69 L36.31 98.23 L37.77 98.46 L39.31 99.08 L45.31 99.85 L55.31 99.77 L60.46 99.08 L63.31 98.31 L69.85 95.92 L74.31 93.69 L78.08 91.38 L81.85 88.54 L84.85 85.85 L89.08 81.31 L92.08 77.15 L96.00 70.00 L98.23 63.69 L98.54 61.85 L99.08 60.46 L99.92 55.00 L99.85 44.92 L99.00 39.38 L97.54 34.08 L96.00 30.00 L94.31 26.62 L92.00 22.69 L88.92 18.46 L86.15 15.23 L81.77 11.31 L78.23 8.62 L73.46 5.54 L70.15 3.92 L65.85 2.38 L60.54 0.85 L56.08 0.08ZM68.15 89.31 L68.15 89.69 L67.15 90.38 L62.31 92.23 L59.38 93.00 L54.15 93.69 L53.69 93.15 L53.85 91.69 L55.92 84.15 L56.69 83.62 L60.08 82.85 L61.31 82.31 L62.15 82.38 L63.08 83.23ZM31.62 89.31 L37.38 82.38 L38.38 82.31 L43.69 84.00 L44.46 86.23 L46.08 93.23 L45.85 93.62 L45.31 93.77 L40.15 92.92 L33.38 90.69 L31.85 89.92ZM85.15 74.85 L85.46 75.23 L85.31 76.08 L81.62 80.38 L77.15 84.46 L75.54 85.54 L74.92 85.54 L72.23 78.77 L72.23 75.54 L72.62 74.77 L75.62 71.69 L76.54 71.54ZM14.77 74.69 L23.54 71.54 L24.38 72.08 L27.08 74.77 L27.69 75.69 L27.69 78.15 L25.23 84.77 L24.77 85.31 L24.08 85.38 L22.62 84.38 L18.15 80.23 L14.62 76.08 L14.38 75.08ZM6.62 53.85 L7.69 53.85 L15.69 56.00 L16.15 56.46 L17.54 60.23 L17.15 61.23 L10.31 67.85 L9.31 66.85 L7.77 62.46 L6.23 54.31ZM93.15 53.69 L93.69 54.08 L93.77 54.85 L92.23 62.38 L90.46 67.23 L89.77 68.00 L89.38 68.00 L82.54 61.23 L82.23 60.00 L83.31 56.85 L84.08 56.00ZM10.38 32.08 L17.08 38.62 L17.54 39.69 L16.15 43.46 L15.69 43.92 L7.69 46.08 L6.62 46.15 L6.15 45.62 L7.69 37.54 L9.23 33.15 L9.92 32.23ZM89.46 31.92 L89.85 32.00 L90.54 32.92 L92.15 37.54 L93.69 45.62 L93.23 46.15 L92.08 46.08 L87.31 44.69 L85.62 44.46 L83.85 43.77 L83.31 43.08 L82.23 39.92 L82.54 38.69ZM24.69 42.38 L26.38 38.23 L29.31 33.54 L32.92 30.00 L36.92 27.08 L42.62 24.69 L47.38 23.85 L52.23 23.85 L57.08 24.69 L62.62 27.00 L66.08 29.38 L70.46 33.69 L72.92 37.54 L75.23 43.31 L75.92 47.31 L76.00 51.69 L75.38 55.62 L74.77 56.23 L67.38 56.15 L66.85 55.62 L66.85 50.77 L66.38 49.62 L65.69 49.23 L61.69 49.23 L61.15 48.92 L61.08 48.62 L63.08 45.00 L63.54 44.62 L64.62 44.85 L70.15 48.08 L70.85 48.08 L72.08 46.77 L73.62 43.92 L73.69 43.31 L71.77 40.77 L65.46 34.54 L61.62 31.62 L57.38 29.31 L56.31 29.46 L55.54 30.38 L52.08 36.77 L52.31 37.62 L52.77 38.08 L56.08 40.08 L56.15 41.00 L50.54 50.77 L49.62 51.85 L48.54 50.92 L41.54 40.23 L41.15 38.23 L37.92 33.77 L37.08 33.62 L31.69 37.08 L30.92 37.92 L30.92 38.69 L34.00 43.23 L36.54 45.38 L43.23 55.23 L43.31 55.85 L43.00 56.08 L39.62 56.15 L38.69 55.54 L34.38 46.54 L33.62 46.08 L32.54 46.38 L32.38 47.69 L36.23 55.31 L36.15 55.85 L35.69 56.15 L34.00 56.15 L33.46 55.92 L31.31 51.62 L30.31 51.31 L29.54 51.92 L29.46 52.69 L30.69 55.23 L30.54 56.00 L24.77 56.08 L24.31 55.46 L23.92 53.85 L23.69 50.54 L23.85 46.46ZM24.85 14.69 L25.23 15.15 L28.23 23.31 L27.85 24.38 L23.54 28.38 L14.62 25.15 L14.38 24.77 L14.62 23.92 L18.31 19.54 L22.77 15.46 L23.92 14.62ZM74.92 14.38 L75.54 14.38 L77.15 15.46 L80.92 18.85 L83.54 21.62 L85.31 23.92 L85.46 24.62 L85.15 25.08 L76.77 28.31 L75.92 28.38 L71.62 24.15 L71.54 22.92ZM53.69 6.69 L54.15 6.23 L54.92 6.23 L62.46 7.77 L66.69 9.31 L67.92 10.00 L68.15 10.54 L62.31 17.46 L61.31 17.62 L60.15 17.08 L56.46 16.23 L55.92 15.77 L53.85 8.31ZM46.08 6.69 L43.77 15.85 L43.00 16.31 L39.85 17.00 L38.38 17.62 L37.38 17.54 L31.69 10.62 L31.92 10.00 L33.46 9.23 L37.54 7.77 L45.62 6.23Z"/></symbol></defs></svg>
+
+<div class="shutter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <svg class="mark" viewBox="0 0 100 100"><use href="#logo"/></svg>
+  <svg class="wordmark mark-wm" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg>
+</div>
+<nav class="nav">
+  <a href="../index.html" class="brand"><svg viewBox="0 0 100 100"><use href="#logo"/></svg><svg class="wordmark" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg></a>
+  <button class="nav-toggle" aria-label="Menu">MENU</button>
+  <ul><li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../broadcast.html">Broadcast ↗</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+</nav>
+<main>
+<section class="big" id="story" style="height:740vh">
+  <div class="big-sticky">
+    <canvas id="bigCanvas"></canvas>
+    <div class="chip-labels" id="stLabels"></div>
+    <div class="big-hud" id="bigHud">PKG // <b>QFP-64</b> · DIE // <b>SKY130</b><br>SIGNALS // <b>LIVE</b></div>
+    
+    <div class="big-hero" id="bigHero">
+      <div class="kicker"><a href="../projects.html">← Projects</a><span>P-01 · Silicon</span></div>
+      <h1 data-split>MIPS<span class="outline">32</span> Core</h1>
+      <p class="vt">A synthesizable 32-bit processor in Verilog that evolves across six generations — from a single-cycle baseline to a Tomasulo out-of-order engine with SIMD lanes and an L1 cache.</p>
+      <div class="p-tools"><span class="tag">VERILOG / SV</span><span class="tag">ICARUS VERILOG</span><span class="tag">GTKWAVE</span><span class="tag">YOSYS</span><span class="tag">SKYWATER 130NM</span></div>
+      <div class="p-cta"><a class="btn solid" href="https://github.com/shausindustries/Mips_32_processor" target=_blank rel=noopener>View on GitHub <span class="arr">↗</span></a><a class="btn" href="#details">Details <span class="arr">↓</span></a></div>
+    </div>
+    <div class="big-cue" id="bigCue">SCROLL TO EXPLORE<i></i></div>
+    <div class="big-panel" id="bigPanel">
+      <div class="gen-info">
+        <div class="count"><span id="stCount"></span><span class="leds" id="stLeds"></span></div>
+        <div class="gen-body"><div class="gen-card" id="stCard"></div></div>
+        <div class="gen-hint">SCROLL — 6 CHAPTERS</div>
+      </div>
+    </div>
+  </div>
+  <div id="stScroll" style="position:absolute;left:0;top:100vh;bottom:0;width:1px;pointer-events:none"></div>
+</section>
+<section id="details" style="padding-top:clamp(70px,10vh,120px)">
+  <div class="wrap">
+    <div class="sec-head stage3d"><span class="idx">02</span><div class="label" style="color:#8c8c88">Under the hood</div><h2 class="h-lg" data-split>The <span class="outline">details</span></h2></div>
+  </div>
+  <div class="wrap"><div class="specs" data-stagger="90">
+    <div class="spec" data-r3d="drop"><b data-odo>32</b><span>bit datapath</span></div>
+    <div class="spec" data-r3d="drop"><b data-odo>5</b><span>pipeline stages</span></div>
+    <div class="spec" data-r3d="drop"><b data-odo>32×32</b><span>register file</span></div>
+    <div class="spec" data-r3d="drop"><b data-odo>47</b><span>RTL modules</span></div>
+    <div class="spec" data-r3d="drop"><b data-odo>4×8</b><span>SIMD byte lanes</span></div>
+    <div class="spec" data-r3d="drop"><b data-odo>130</b><span>nm Sky130 target</span></div>
+  </div>
+
+  <div class="visuals">
+    <div class="vis silicon stage3d">
+      <div class="img"><img src="../assets/img/cells.jpg" alt="Standard-cell layout render of the processor"></div>
+      <div class="cap"><b>Standard-cell layout</b><span>SKY130 · viz/</span></div>
+    </div>
+    <div class="vis-col">
+      <div class="vis wave stage3d">
+        <div class="img"><img src="../assets/img/wave.png" alt="GTKWave simulation showing PC, instruction, stall, flush and mispredict signals"></div>
+        <div class="cap"><b>GTKWave — stall, flush, mispredict</b><span>0–120 NS</span></div>
+      </div>
+      <div class="verify stage3d">
+        <h4>Verified in simulation</h4>
+        <ul data-stagger="90">
+          <li data-r3d="left">EX→EX and MEM→EX forwarding on back-to-back dependencies</li>
+          <li data-r3d="left">Load-use interlock inserts exactly one bubble</li>
+          <li data-r3d="left">BHT transitions and flush penalty on mispredicts</li>
+          <li data-r3d="left">Out-of-order issue with in-order ROB commit</li>
+          <li data-r3d="left">SIMD carry containment at 0xFF + 0x01</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="wrap"><a class="p-next" href="m32-mcu.html" style="margin-top:80px"><span class="label">Next project · 02 / 06</span><b>M32 Microcontroller</b></a></div>
+</section></main><footer class="dark"><span>© <span class="yr"></span> SHAU'S INDUSTRIES</span><span>DESIGNED &amp; BUILT BY SHAURYA GUPTA</span><a href="../index.html#contact">CONTACT →</a></footer>
+<script>document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../assets/site.js"></script>
+<script src="../assets/proj.js"></script>
+<script>
+SITE_particles();
+(function(){ /* hero fades out, chapter panel fades in */
+  const sec=document.getElementById('story'), hero=document.getElementById('bigHero'), panel=document.getElementById('bigPanel'), hud=document.getElementById('bigHud'), cue=document.getElementById('bigCue');
+  function f(){ const p=Math.max(0,Math.min(1,-sec.getBoundingClientRect().top/innerHeight));
+    hero.style.opacity=1-p*1.6; hero.style.transform=`translateY(${-p*80}px) perspective(800px) rotateX(${p*25}deg)`; hero.style.pointerEvents=p>.4?'none':'auto';
+    cue.style.opacity=1-p*3; panel.style.opacity=Math.max(0,(p-.55)/.45); hud.style.opacity=Math.max(0,(p-.55)/.45); const lb=document.getElementById('stLabels'); if(lb) lb.style.opacity=Math.max(0,(p-.45)/.3); window.HERO_P=p; }
+  addEventListener('scroll',f,{passive:true}); f();
+})();
+</script><script>
+(function(){
+const STEPS=[{"k": "V1", "name": "Single-cycle baseline", "sub": "In-order \u00b7 CPI 1.0", "text": "An unpipelined Harvard core. Every instruction finishes in one cycle \u2014 at the cost of one long critical path through instruction memory, decode, ALU, data memory and the register file.", "tags": ["pc.v", "reg_file.v", "alu_behaviour.v"]}, {"k": "V2", "name": "5-stage pipeline", "sub": "IF \u00b7 ID \u00b7 EX \u00b7 MEM \u00b7 WB", "text": "Fetch, decode, execute, memory and write-back split by pipeline registers, cutting the critical path so the clock can run faster.", "tags": ["if_id.v", "id_ex.v", "ex_mem.v", "mem_wb.v"]}, {"k": "V3", "name": "Hazards & forwarding", "sub": "RAW resolution", "text": "EX/MEM and MEM/WB bypassing resolves read-after-write hazards without stalls; a load-use interlock inserts a single bubble only when it has to.", "tags": ["fwd_unit.v", "stall_unit.v"]}, {"k": "V4", "name": "Branch prediction", "sub": "2-bit BHT + BTB", "text": "A 2-bit saturating-counter history table and branch target buffer predict branches at fetch. A mispredict flushes IF/ID and restores the correct PC.", "tags": ["bht.v", "bu.v", "budecoder.v", "jdecoder.v"]}, {"k": "V5", "name": "Tomasulo out-of-order", "sub": "IQ \u00b7 RS \u00b7 RAT \u00b7 CDB \u00b7 ROB", "text": "Instructions execute as soon as their operands are ready. Register renaming removes false dependencies, the common data bus wakes waiting stations, and the reorder buffer commits in order.", "tags": ["issue_logic.v", "reservation_station.v", "im_rs.v", "br_rs.v", "rob.v"]}, {"k": "V6", "name": "SIMD + L1 cache", "sub": "Data-level parallelism", "text": "Sub-word SIMD \u2014 four byte lanes or two half-word lanes per register \u2014 with its own decode and issue, plus a direct-mapped L1 data cache with tag matching and miss handling.", "tags": ["simd_decoder.v", "simd_issue.v", "addb.v", "addh.v", "dm_cache.v"]}];
+const wrap=document.querySelector('.big-sticky'), canvas=document.getElementById('bigCanvas'), labelBox=document.getElementById('stLabels');
+let cur=0;
+const stepper=Stepper({steps:STEPS, card:document.getElementById('stCard'), count:document.getElementById('stCount'), leds:document.getElementById('stLeds'), scroller:document.getElementById('stScroll'), forceScroll:true, onChange:i=>{cur=i; if(window.onStep) onStep(i);}});
+const G = [
+    ['V1','Single-cycle baseline','In-order · CPI 1.0','An unpipelined Harvard core. Every instruction finishes in one cycle — at the cost of one long critical path through instruction memory, decode, ALU, data memory and the register file.',['pc.v','reg_file.v','alu_behaviour.v']],
+    ['V2','5-stage pipeline','IF · ID · EX · MEM · WB','Fetch, decode, execute, memory and write-back split by pipeline registers, cutting the critical path so the clock can run faster.',['if_id.v','id_ex.v','ex_mem.v','mem_wb.v']],
+    ['V3','Hazards & forwarding','RAW resolution','EX/MEM and MEM/WB bypassing resolves read-after-write hazards without stalls; a load-use interlock inserts a single bubble only when it has to.',['fwd_unit.v','stall_unit.v']],
+    ['V4','Branch prediction','2-bit BHT + BTB','A 2-bit saturating-counter history table and branch target buffer predict branches at fetch. A mispredict flushes IF/ID and restores the correct PC.',['bht.v','bu.v','budecoder.v','jdecoder.v']],
+    ['V5','Tomasulo out-of-order','IQ · RS · RAT · CDB · ROB','Instructions execute as soon as their operands are ready. Register renaming removes false dependencies, the common data bus wakes waiting stations, and the reorder buffer commits in order.',['issue_logic.v','reservation_station.v','im_rs.v','br_rs.v','rob.v']],
+    ['V6','SIMD + L1 cache','Data-level parallelism','Sub-word SIMD — four byte lanes or two half-word lanes per register — with its own decode and issue, plus a direct-mapped L1 data cache with tag matching and miss handling.',['simd_decoder.v','simd_issue.v','addb.v','addh.v','dm_cache.v']]
+  ];
+const B = [
+    [0,'PC',-3.9,-3.3,1.0,1.2,.35],[0,'IMEM',-2.35,-3.3,1.5,1.6,.5],[0,'REG FILE',-.35,-3.3,1.6,1.6,.55],[0,'ALU',1.65,-3.3,1.4,1.6,.75],[0,'DMEM',3.6,-3.3,1.6,1.6,.5],
+    [1,'IF/ID',-1.38,-3.3,.16,2.1,.95],[1,'ID/EX',.7,-3.3,.16,2.1,.95],[1,'EX/MEM',2.58,-3.3,.16,2.1,.95],[1,'MEM/WB',4.52,-3.3,.16,2.1,.95],
+    [2,'STALL',-1.2,-1.45,1.8,.9,.4],[2,'FWD',1.4,-1.45,2.0,.9,.45],
+    [3,'BHT',-3.7,-1.45,1.6,.9,.45],[3,'BTB',-3.7,-.2,1.6,.9,.35],
+    [4,'CDB',.9,-.2,7.0,.22,.22],[4,'IQ',-3.7,1.3,1.6,1.3,.5],[4,'RAT',-1.65,1.3,1.4,1.3,.45],[4,'RS',.1,1.3,.95,1.3,.6],[4,'',1.15,1.3,.95,1.3,.6],[4,'ROB',3.25,1.3,2.3,1.3,.65],
+    [5,'SIMD ×4',-4.05,3.45,.65,1.4,.55],[5,'',-3.25,3.45,.65,1.4,.55],[5,'',-2.45,3.45,.65,1.4,.55],[5,'',-1.65,3.45,.65,1.4,.55],[5,'L1 D$',2.25,3.45,4.2,1.4,.5]
+  ];
+const st=Stage(canvas,wrap,{shift:.17,fov:32,fog:[0x0b0b0b,30,56],onResize:s=>{s.cam.fov=s.w<700?46:30;}});
+if(!st) return;
+const {scene,cam}=st; cam.position.set(0,23.5,25.5); cam.lookAt(0,-1.2,0);
+scene.add(new THREE.AmbientLight(0xffffff,.55)); { const dl=new THREE.DirectionalLight(0xffffff,.9); dl.position.set(-8,20,10); scene.add(dl); }
+let blocks=[], labels=[], board, pulses=[], flow, cdbPulse;
+    board=new THREE.Group(); scene.add(board);
+    const edges=(mesh,c,o)=>{ const l=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry),new THREE.LineBasicMaterial({color:c,transparent:true,opacity:o})); mesh.add(l); return l; };
+    const box=(w,h,d,c)=>new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color:c,roughness:.75,metalness:.1}));
+
+    // PCB + grid
+    const pcb=box(21,.3,21,0x0e0e0e); pcb.position.y=-1.05; board.add(pcb); edges(pcb,0xffffff,.12);
+    const grid=new THREE.GridHelper(21,21,0x262626,0x1a1a1a); grid.position.y=-.89; board.add(grid);
+    // package + die
+    const pkg=box(13,.7,13,0x161616); pkg.position.y=-.55; board.add(pkg); edges(pkg,0xffffff,.45);
+    const die=box(9.6,.14,9.6,0x202020); die.position.y=-.13; board.add(die); edges(die,0xffffff,.7);
+    // die seal ring
+    const ring=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(9.2,9.2).rotateX(-Math.PI/2)),new THREE.LineDashedMaterial({color:0xffffff,dashSize:.15,gapSize:.12,transparent:true,opacity:.35}));
+    ring.computeLineDistances(); ring.position.y=-.05; board.add(ring);
+
+    // gull-wing pins + PCB traces with travelling signals
+    const pinM=new THREE.MeshStandardMaterial({color:0xa8a8a4,roughness:.4,metalness:.6});
+    const trM=new THREE.LineBasicMaterial({color:0x6a6a66,transparent:true,opacity:.55});
+    const N=16, traces=[];
+    for(let s=0;s<4;s++){
+      for(let k=0;k<N;k++){
+        const t=-5.6+k*(11.2/(N-1));
+        const pin=new THREE.Mesh(new THREE.BoxGeometry(.24,.1,1.1),pinM);
+        const rot=s*Math.PI/2, ca=Math.cos(rot), sa=Math.sin(rot);
+        const P=(u,v,y)=>new THREE.Vector3(u*ca - v*sa, y, u*sa + v*ca); // u: along side, v: outward
+        pin.position.copy(P(t,7.0,-.85)); pin.rotation.y=-rot; board.add(pin);
+        if(k%2===0){
+          const fan=t*1.45, pts=[P(t,7.6,-.88),P(t,8.4,-.88),P(fan*.92,9.3,-.88),P(fan*.92,10.1,-.88)];
+          const g=new THREE.BufferGeometry().setFromPoints(pts); board.add(new THREE.Line(g,trM));
+          const pad=new THREE.Mesh(new THREE.CircleGeometry(.16,12).rotateX(-Math.PI/2),new THREE.MeshBasicMaterial({color:0x8a8a86}));
+          pad.position.copy(pts[3]); board.add(pad);
+          traces.push(pts);
+        }
+        // bond wire: die edge → package pad
+        if(k%2===1){
+          const a=P(t*0.78,4.7,-.06), b=P(t,6.1,-.2), m=a.clone().lerp(b,.5); m.y=.55;
+          const curve=new THREE.QuadraticBezierCurve3(a,m,b);
+          board.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(curve.getPoints(10)),new THREE.LineBasicMaterial({color:0xb0b0aa,transparent:true,opacity:.5})));
+        }
+      }
+    }
+    const pulseGeo=new THREE.SphereGeometry(.11,10,10), pulseMat=new THREE.MeshBasicMaterial({color:0xffffff});
+    traces.forEach((pts,i)=>{ if(i%2) return; const m=new THREE.Mesh(pulseGeo,pulseMat); board.add(m); pulses.push({m,pts,t:Math.random(),v:.18+Math.random()*.2}); });
+
+    // floorplan blocks
+    B.forEach(b=>{
+      const [g,name,x,z,w,d,h]=b;
+      const geo=new THREE.BoxGeometry(w,h,d); geo.translate(0,h/2,0);
+      const mat=new THREE.MeshStandardMaterial({color:0xf4f4f1,roughness:.6,metalness:.05,transparent:true,opacity:1});
+      const m=new THREE.Mesh(geo,mat); m.position.set(x,-.06,z); m.scale.y=.001; m.visible=false;
+      const e=edges(m,0x0b0b0b,.9);
+      board.add(m);
+      blocks.push({g,m,mat,e,cur:0,tgt:0,h});
+      if(name){ const el=document.createElement('span'); el.textContent=name; labelBox.appendChild(el); labels.push({el,b:blocks[blocks.length-1]}); }
+    });
+    // on-die signal flowing through the datapath row
+    flow=new THREE.Mesh(new THREE.SphereGeometry(.13,10,10),new THREE.MeshBasicMaterial({color:0xffffff}));
+    board.add(flow);
+    cdbPulse=new THREE.Mesh(new THREE.BoxGeometry(.5,.08,.3),new THREE.MeshBasicMaterial({color:0xffffff})); board.add(cdbPulse);
+  
+let ry=-.7, rx=0;
+st.run((dt,t)=>{
+  const hero=(window.HERO_P||0)<.5, k=hero?5:cur;
+  ry+=((-.7+stepper.prog*1.3+st.mx*.35+(hero?Math.sin(t*.25)*.3:0))-ry)*.05; rx+=((st.my*.12)-rx)*.05; board.rotation.set(rx,ry,0);
+  blocks.forEach(b=>{ b.tgt=b.g<=k?1:0; b.cur+=(b.tgt-b.cur)*Math.min(1,dt*5.5); b.m.visible=b.cur>.01; b.m.scale.y=Math.max(.001,b.cur);
+    const active=hero||b.g===k; b.mat.color.setHex(active?0xf4f4f1:0x3a3a3a); b.e.material.color.setHex(active?0x0b0b0b:0x9a9a96); });
+  pulses.forEach(p=>{ p.t=(p.t+dt*p.v)%1; const seg=p.pts, f=(1-p.t)*(seg.length-1), i=Math.min(seg.length-2,Math.floor(f)); p.m.position.lerpVectors(seg[i],seg[i+1],f-i); p.m.position.y=-.8; });
+  const ft=(t*.35)%1; flow.position.set(-3.9+ft*7.5,.95,-3.3);
+  cdbPulse.visible=k>=4; const ct=(t*.5)%1; cdbPulse.position.set(-2.6+ct*7,.28,-.2);
+  labels.forEach(L=>{ const b=L.b, show=!hero&&b.g===k&&b.cur>.6; L.el.classList.toggle('on',show); if(show){ const v=new THREE.Vector3(0,b.h+.15,0); b.m.localToWorld(v); st.label(L.el,v); } });
+});
+
+})();
+</script></body></html>

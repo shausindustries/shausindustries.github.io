@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M32 Microcontroller — Shau's Industries</title>
+<meta name="description" content="M32 Microcontroller SoC by Shaurya Gupta — a tape-out-ready 32-bit MCU with UART, I2C, timers and GPIO, RTL to GDSII on Sky130.">
+<link rel="icon" type="image/png" href="../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"><link rel="stylesheet" href="../assets/proj.css">
+<style></style>
+</head>
+<body class="proj darkbody">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="logo" viewBox="0 0 100 100"><path fill-rule="evenodd" d="M44.77 0.00 L39.46 0.85 L31.54 3.23 L26.46 5.54 L21.69 8.62 L16.77 12.46 L13.23 15.77 L11.15 18.23 L7.85 22.77 L5.54 26.69 L3.23 31.62 L1.69 36.15 L0.85 39.46 L0.00 45.00 L0.08 54.92 L0.85 60.15 L2.38 65.85 L3.92 69.85 L6.31 74.54 L8.69 78.38 L10.92 81.38 L15.08 85.85 L18.62 89.00 L22.77 92.00 L26.69 94.31 L31.92 96.69 L36.31 98.23 L37.77 98.46 L39.31 99.08 L45.31 99.85 L55.31 99.77 L60.46 99.08 L63.31 98.31 L69.85 95.92 L74.31 93.69 L78.08 91.38 L81.85 88.54 L84.85 85.85 L89.08 81.31 L92.08 77.15 L96.00 70.00 L98.23 63.69 L98.54 61.85 L99.08 60.46 L99.92 55.00 L99.85 44.92 L99.00 39.38 L97.54 34.08 L96.00 30.00 L94.31 26.62 L92.00 22.69 L88.92 18.46 L86.15 15.23 L81.77 11.31 L78.23 8.62 L73.46 5.54 L70.15 3.92 L65.85 2.38 L60.54 0.85 L56.08 0.08ZM68.15 89.31 L68.15 89.69 L67.15 90.38 L62.31 92.23 L59.38 93.00 L54.15 93.69 L53.69 93.15 L53.85 91.69 L55.92 84.15 L56.69 83.62 L60.08 82.85 L61.31 82.31 L62.15 82.38 L63.08 83.23ZM31.62 89.31 L37.38 82.38 L38.38 82.31 L43.69 84.00 L44.46 86.23 L46.08 93.23 L45.85 93.62 L45.31 93.77 L40.15 92.92 L33.38 90.69 L31.85 89.92ZM85.15 74.85 L85.46 75.23 L85.31 76.08 L81.62 80.38 L77.15 84.46 L75.54 85.54 L74.92 85.54 L72.23 78.77 L72.23 75.54 L72.62 74.77 L75.62 71.69 L76.54 71.54ZM14.77 74.69 L23.54 71.54 L24.38 72.08 L27.08 74.77 L27.69 75.69 L27.69 78.15 L25.23 84.77 L24.77 85.31 L24.08 85.38 L22.62 84.38 L18.15 80.23 L14.62 76.08 L14.38 75.08ZM6.62 53.85 L7.69 53.85 L15.69 56.00 L16.15 56.46 L17.54 60.23 L17.15 61.23 L10.31 67.85 L9.31 66.85 L7.77 62.46 L6.23 54.31ZM93.15 53.69 L93.69 54.08 L93.77 54.85 L92.23 62.38 L90.46 67.23 L89.77 68.00 L89.38 68.00 L82.54 61.23 L82.23 60.00 L83.31 56.85 L84.08 56.00ZM10.38 32.08 L17.08 38.62 L17.54 39.69 L16.15 43.46 L15.69 43.92 L7.69 46.08 L6.62 46.15 L6.15 45.62 L7.69 37.54 L9.23 33.15 L9.92 32.23ZM89.46 31.92 L89.85 32.00 L90.54 32.92 L92.15 37.54 L93.69 45.62 L93.23 46.15 L92.08 46.08 L87.31 44.69 L85.62 44.46 L83.85 43.77 L83.31 43.08 L82.23 39.92 L82.54 38.69ZM24.69 42.38 L26.38 38.23 L29.31 33.54 L32.92 30.00 L36.92 27.08 L42.62 24.69 L47.38 23.85 L52.23 23.85 L57.08 24.69 L62.62 27.00 L66.08 29.38 L70.46 33.69 L72.92 37.54 L75.23 43.31 L75.92 47.31 L76.00 51.69 L75.38 55.62 L74.77 56.23 L67.38 56.15 L66.85 55.62 L66.85 50.77 L66.38 49.62 L65.69 49.23 L61.69 49.23 L61.15 48.92 L61.08 48.62 L63.08 45.00 L63.54 44.62 L64.62 44.85 L70.15 48.08 L70.85 48.08 L72.08 46.77 L73.62 43.92 L73.69 43.31 L71.77 40.77 L65.46 34.54 L61.62 31.62 L57.38 29.31 L56.31 29.46 L55.54 30.38 L52.08 36.77 L52.31 37.62 L52.77 38.08 L56.08 40.08 L56.15 41.00 L50.54 50.77 L49.62 51.85 L48.54 50.92 L41.54 40.23 L41.15 38.23 L37.92 33.77 L37.08 33.62 L31.69 37.08 L30.92 37.92 L30.92 38.69 L34.00 43.23 L36.54 45.38 L43.23 55.23 L43.31 55.85 L43.00 56.08 L39.62 56.15 L38.69 55.54 L34.38 46.54 L33.62 46.08 L32.54 46.38 L32.38 47.69 L36.23 55.31 L36.15 55.85 L35.69 56.15 L34.00 56.15 L33.46 55.92 L31.31 51.62 L30.31 51.31 L29.54 51.92 L29.46 52.69 L30.69 55.23 L30.54 56.00 L24.77 56.08 L24.31 55.46 L23.92 53.85 L23.69 50.54 L23.85 46.46ZM24.85 14.69 L25.23 15.15 L28.23 23.31 L27.85 24.38 L23.54 28.38 L14.62 25.15 L14.38 24.77 L14.62 23.92 L18.31 19.54 L22.77 15.46 L23.92 14.62ZM74.92 14.38 L75.54 14.38 L77.15 15.46 L80.92 18.85 L83.54 21.62 L85.31 23.92 L85.46 24.62 L85.15 25.08 L76.77 28.31 L75.92 28.38 L71.62 24.15 L71.54 22.92ZM53.69 6.69 L54.15 6.23 L54.92 6.23 L62.46 7.77 L66.69 9.31 L67.92 10.00 L68.15 10.54 L62.31 17.46 L61.31 17.62 L60.15 17.08 L56.46 16.23 L55.92 15.77 L53.85 8.31ZM46.08 6.69 L43.77 15.85 L43.00 16.31 L39.85 17.00 L38.38 17.62 L37.38 17.54 L31.69 10.62 L31.92 10.00 L33.46 9.23 L37.54 7.77 L45.62 6.23Z"/></symbol></defs></svg>
+
+<div class="shutter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  <svg class="mark" viewBox="0 0 100 100"><use href="#logo"/></svg>
+  <svg class="wordmark mark-wm" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg>
+</div>
+<nav class="nav">
+  <a href="../index.html" class="brand"><svg viewBox="0 0 100 100"><use href="#logo"/></svg><svg class="wordmark" viewBox="0 0 770 56" role="img" aria-label="Shau's Industries"><g fill="currentColor"><rect x="0" y="0" width="44" height="7" rx="1.4"/><rect x="37" y="7" width="7" height="9" rx="1.4"/><rect x="0" y="0" width="7" height="31" rx="1.4"/><rect x="0" y="24" width="44" height="7" rx="1.4"/><rect x="30" y="24" width="14" height="32" rx="1.4"/><rect x="0" y="49" width="44" height="7" rx="1.4"/><rect x="0" y="40" width="7" height="16" rx="1.4"/><rect x="55" y="0" width="7" height="56" rx="1.4"/><rect x="92" y="0" width="7" height="56" rx="1.4"/><rect x="55" y="24" width="44" height="7" rx="1.4"/><rect x="55" y="24" width="14" height="32" rx="1.4"/><rect x="110" y="0" width="44" height="7" rx="1.4"/><rect x="110" y="0" width="7" height="56" rx="1.4"/><rect x="147" y="0" width="7" height="56" rx="1.4"/><rect x="110" y="24" width="44" height="7" rx="1.4"/><rect x="110" y="24" width="14" height="32" rx="1.4"/><rect x="165" y="0" width="7" height="56" rx="1.4"/><rect x="202" y="0" width="7" height="56" rx="1.4"/><rect x="165" y="49" width="44" height="7" rx="1.4"/><rect x="165" y="34" width="14" height="22" rx="1.4"/><rect x="220" y="0" width="7" height="16" rx="1.4"/><rect x="238" y="0" width="44" height="7" rx="1.4"/><rect x="275" y="7" width="7" height="9" rx="1.4"/><rect x="238" y="0" width="7" height="31" rx="1.4"/><rect x="238" y="24" width="44" height="7" rx="1.4"/><rect x="268" y="24" width="14" height="32" rx="1.4"/><rect x="238" y="49" width="44" height="7" rx="1.4"/><rect x="238" y="40" width="7" height="16" rx="1.4"/><rect x="319" y="0" width="7" height="56" rx="1.4"/><rect x="319" y="40" width="7" height="16" rx="1.4"/><rect x="337" y="0" width="44" height="7" rx="1.4"/><rect x="337" y="0" width="7" height="56" rx="1.4"/><rect x="374" y="0" width="7" height="56" rx="1.4"/><rect x="337" y="34" width="14" height="22" rx="1.4"/><rect x="392" y="0" width="44" height="7" rx="1.4"/><rect x="392" y="0" width="7" height="56" rx="1.4"/><rect x="429" y="0" width="7" height="56" rx="1.4"/><rect x="392" y="49" width="44" height="7" rx="1.4"/><polygon points="392,32 399,32 406,40 406,56 392,56"/><rect x="447" y="0" width="7" height="56" rx="1.4"/><rect x="484" y="0" width="7" height="56" rx="1.4"/><rect x="447" y="49" width="44" height="7" rx="1.4"/><rect x="447" y="34" width="14" height="22" rx="1.4"/><rect x="502" y="0" width="44" height="7" rx="1.4"/><rect x="539" y="7" width="7" height="9" rx="1.4"/><rect x="502" y="0" width="7" height="31" rx="1.4"/><rect x="502" y="24" width="44" height="7" rx="1.4"/><rect x="532" y="24" width="14" height="32" rx="1.4"/><rect x="502" y="49" width="44" height="7" rx="1.4"/><rect x="502" y="40" width="7" height="16" rx="1.4"/><rect x="557" y="0" width="44" height="7" rx="1.4"/><rect x="572" y="0" width="14" height="56" rx="1.4"/><rect x="612" y="0" width="44" height="7" rx="1.4"/><rect x="612" y="0" width="7" height="56" rx="1.4"/><rect x="649" y="0" width="7" height="31" rx="1.4"/><rect x="612" y="24" width="44" height="7" rx="1.4"/><rect x="642" y="35" width="14" height="21" rx="1.4"/><rect x="667" y="0" width="7" height="56" rx="1.4"/><rect x="667" y="40" width="7" height="16" rx="1.4"/><rect x="685" y="0" width="30" height="7" rx="1.4"/><rect x="685" y="0" width="7" height="56" rx="1.4"/><rect x="685" y="24" width="30" height="7" rx="1.4"/><rect x="685" y="24" width="14" height="32" rx="1.4"/><rect x="685" y="49" width="30" height="7" rx="1.4"/><rect x="726" y="0" width="44" height="7" rx="1.4"/><rect x="763" y="7" width="7" height="9" rx="1.4"/><rect x="726" y="0" width="7" height="31" rx="1.4"/><rect x="726" y="24" width="44" height="7" rx="1.4"/><rect x="756" y="24" width="14" height="32" rx="1.4"/><rect x="726" y="49" width="44" height="7" rx="1.4"/><rect x="726" y="40" width="7" height="16" rx="1.4"/></g></svg></a>
+  <button class="nav-toggle" aria-label="Menu">MENU</button>
+  <ul><li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../broadcast.html">Broadcast ↗</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+</nav>
+<main>
+<section class="big" id="story" style="height:940vh">
+  <div class="big-sticky">
+    <canvas id="bigCanvas"></canvas>
+    <div class="chip-labels" id="stLabels"></div>
+    <div class="big-hud" id="bigHud">PKG // <b>QFN</b> · DIE // <b>SKY130</b><br>CLOCK // <b>100 MHZ</b></div>
+    
+    <div class="big-hero" id="bigHero">
+      <div class="kicker"><a href="../projects.html">← Projects</a><span>P-02 · Silicon</span></div>
+      <h1 data-split>M32 <span class="outline">MCU</span></h1>
+      <p class="vt">A tape-out-ready 32-bit microcontroller system-on-chip: a pipelined core with memory-mapped UART, I2C, timers and GPIO, hardened through OpenLane down to GDSII on SkyWater 130nm.</p>
+      <div class="p-tools"><span class="tag">VERILOG</span><span class="tag">OPENLANE / OPENROAD</span><span class="tag">SKYWATER 130NM</span><span class="tag">RTL → GDSII</span><span class="tag">100 MHZ</span></div>
+      <div class="p-cta"><a class="btn solid" href="https://github.com/shausindustries/M32_MCU" target=_blank rel=noopener>View on GitHub <span class="arr">↗</span></a><a class="btn" href="#details">Details <span class="arr">↓</span></a></div>
+    </div>
+    <div class="big-cue" id="bigCue">SCROLL TO EXPLORE<i></i></div>
+    <div class="big-panel" id="bigPanel">
+      <div class="gen-info">
+        <div class="count"><span id="stCount"></span><span class="leds" id="stLeds"></span></div>
+        <div class="gen-body"><div class="gen-card" id="stCard"></div></div>
+        <div class="gen-hint">SCROLL — 8 CHAPTERS</div>
+      </div>
+    </div>
+  </div>
+  <div id="stScroll" style="position:absolute;left:0;top:100vh;bottom:0;width:1px;pointer-events:none"></div>
+</section>
+<section id="details" style="padding-top:clamp(70px,10vh,120px)">
+  <div class="wrap">
+    <div class="sec-head stage3d"><span class="idx">02</span><div class="label" style="color:#8c8c88">Under the hood</div><h2 class="h-lg" data-split>The <span class="outline">details</span></h2></div>
+  </div>
+  <div class="wrap">
+    <div class="specs" data-stagger="90" style="margin-bottom:80px">
+      <div class="spec" data-r3d="drop"><b data-odo>10476</b><span>standard cells</span></div>
+      <div class="spec" data-r3d="drop"><b data-odo>10447</b><span>routed nets</span></div>
+      <div class="spec" data-r3d="drop"><b data-odo>100</b><span>MHz target</span></div>
+      <div class="spec" data-r3d="drop"><b data-odo>16</b><span>KB data RAM</span></div>
+      <div class="spec" data-r3d="drop"><b data-odo>32</b><span>GPIO pins</span></div>
+      <div class="spec" data-r3d="drop"><b data-odo>41</b><span>RTL modules</span></div>
+    </div>
+    <div class="prose stage3d"><h3>Memory map</h3><div>
+      <table class="table"><tr><th>Address range</th><th>Block</th><th>What it does</th></tr>
+      <tr><td><code>0x0000_0000 – 0x0000_3FFF</code></td><td>Data RAM · 16 KB</td><td>Synchronous on-chip scratchpad</td></tr>
+      <tr><td><code>0x0000_0010 – 0x0000_001F</code></td><td>GPIO</td><td>32-bit bidirectional I/O, direction masks, input/output registers</td></tr>
+      <tr><td><code>0x0000_0020 – 0x0000_002F</code></td><td>Prescaled timer</td><td>32-bit down-counter, prescaler, overflow interrupts</td></tr>
+      <tr><td><code>0x0000_0040 – 0x0000_004F</code></td><td>UART</td><td>Full-duplex TX/RX, programmable baud-rate division</td></tr>
+      <tr><td><code>0x0000_0060 – 0x0000_006F</code></td><td>I2C master</td><td>Two-wire serial master, address and data controllers</td></tr></table>
+    </div></div>
+    <div class="prose stage3d"><h3>The flow</h3><div>
+      <p><b>Simulate</b> the SoC and its peripherals in Icarus Verilog and check waveforms in GTKWave.</p>
+      <p><b>Synthesise</b> with Yosys, then run the automated <b>OpenLane / OpenROAD</b> flow on SkyWater 130nm (<code class="code">sky130_fd_sc_hd</code>) to a placed, routed, tape-out-ready GDSII.</p>
+    </div></div>
+    <div class="vis-grid" style="margin:50px 0 90px" data-stagger="120">
+      <div class="vis" data-r3d="up"><div class="img" style="aspect-ratio:1/0.88"><img class="gray" src="../assets/img/m32-die.jpg" alt="M32 SoC die layout on SkyWater 130nm"></div><div class="cap"><b>Die layout</b><span>SKY130</span></div></div>
+      <div class="vis" data-r3d="up"><div class="img" style="aspect-ratio:1/0.88"><img class="gray" src="../assets/img/m32-route.jpg" alt="Detailed routing and cell placement"></div><div class="cap"><b>Routing &amp; placement</b><span>OPENROAD</span></div></div>
+      <div class="vis" data-r3d="up"><div class="img paper" style="aspect-ratio:1/0.88"><img src="../assets/img/m32-blocks.png" alt="SoC block diagram"></div><div class="cap"><b>Block diagram</b><span>TOP.V</span></div></div>
+    </div>
+  </div>
+
+  <div class="wrap"><a class="p-next" href="sram-6t.html" style="margin-top:80px"><span class="label">Next project · 03 / 06</span><b>6T SRAM Bitcell</b></a></div>
+</section></main><footer class="dark"><span>© <span class="yr"></span> SHAU'S INDUSTRIES</span><span>DESIGNED &amp; BUILT BY SHAURYA GUPTA</span><a href="../index.html#contact">CONTACT →</a></footer>
+<script>document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../assets/site.js"></script>
+<script src="../assets/proj.js"></script>
+<script>
+SITE_particles();
+(function(){ /* hero fades out, chapter panel fades in */
+  const sec=document.getElementById('story'), hero=document.getElementById('bigHero'), panel=document.getElementById('bigPanel'), hud=document.getElementById('bigHud'), cue=document.getElementById('bigCue');
+  function f(){ const p=Math.max(0,Math.min(1,-sec.getBoundingClientRect().top/innerHeight));
+    hero.style.opacity=1-p*1.6; hero.style.transform=`translateY(${-p*80}px) perspective(800px) rotateX(${p*25}deg)`; hero.style.pointerEvents=p>.4?'none':'auto';
+    cue.style.opacity=1-p*3; panel.style.opacity=Math.max(0,(p-.55)/.45); hud.style.opacity=Math.max(0,(p-.55)/.45); const lb=document.getElementById('stLabels'); if(lb) lb.style.opacity=Math.max(0,(p-.45)/.3); window.HERO_P=p; }
+  addEventListener('scroll',f,{passive:true}); f();
+})();
+</script><script>
+(function(){
+const STEPS=[{"k": "01", "name": "Pipelined core", "sub": "32-bit \u00b7 forwarding \u00b7 2-bit BHT", "text": "A pipelined 32-bit datapath with forwarding, load-use stalls and a 2-bit branch history table. Every load and store leaves the core as an address on the bus.", "tags": ["prog_counter.v", "control_unit.v", "fwd_unit.v", "bht.v"]}, {"k": "02", "name": "Address decoder", "sub": "One memory map for everything", "text": "A single decoder turns each 32-bit address into a select line, so the core reaches RAM and every peripheral through one unified memory map.", "tags": ["addr_decoder.v", "main_decoder.v"]}, {"k": "03", "name": "Data RAM", "sub": "0x0000_0000 \u2013 0x0000_3FFF \u00b7 16 KB", "text": "Sixteen kilobytes of synchronous on-chip scratchpad memory for the program's data.", "tags": ["data_mem.v"]}, {"k": "04", "name": "GPIO", "sub": "0x0000_0010 \u2013 0x0000_001F \u00b7 32 pins", "text": "Thirty-two bidirectional pins, each with a direction mask, an input register and an output register behind tri-state control.", "tags": ["gpio_controller.v", "gpio_dir.v", "gpio_in.v", "gpio_out.v", "gpio_en.v"]}, {"k": "05", "name": "Prescaled timer", "sub": "0x0000_0020 \u2013 0x0000_002F", "text": "A 32-bit down-counter behind a programmable clock prescaler, raising an overflow interrupt every period.", "tags": ["prescale_timer.v", "timer_prescale.v", "timer_config.v", "timer.v"]}, {"k": "06", "name": "UART", "sub": "0x0000_0040 \u2013 0x0000_004F \u00b7 full duplex", "text": "Asynchronous serial with TX and RX buffers, programmable baud-rate division, framing and status registers.", "tags": ["uart_tx.v", "uart_rx.v", "uart_en.v"]}, {"k": "07", "name": "I2C master", "sub": "0x0000_0060 \u2013 0x0000_006F \u00b7 two-wire", "text": "Generates start and stop conditions, sends the slave address and checks the acknowledge on every byte.", "tags": ["I2C_addr.v", "I2C_data.v"]}, {"k": "08", "name": "RTL to GDSII", "sub": "OpenLane \u00b7 OpenROAD \u00b7 Sky130", "text": "The whole SoC synthesised to 10,476 standard cells and routed to a tape-out-ready GDSII, with LEF, SDF and SPEF sign-off outputs.", "tags": ["config.json", "clock.sdc", "top.gds", "top.lef"]}];
+const wrap=document.querySelector('.big-sticky'), canvas=document.getElementById('bigCanvas'), labelBox=document.getElementById('stLabels');
+let cur=0;
+const stepper=Stepper({steps:STEPS, card:document.getElementById('stCard'), count:document.getElementById('stCount'), leds:document.getElementById('stLeds'), scroller:document.getElementById('stScroll'), forceScroll:true, onChange:i=>{cur=i; if(window.onStep) onStep(i);}});
+
+const st=Stage(canvas,wrap,{shift:.17,fov:32,fog:[0x0b0b0b,32,58],onResize:s=>{s.cam.fov=s.w<520?44:32;}});
+if(!st) return;
+const {scene,cam,box,edges}=st; cam.position.set(0,27,29); cam.lookAt(0,-1.2,0);
+scene.add(new THREE.AmbientLight(0xffffff,.55)); const dl=new THREE.DirectionalLight(0xffffff,.9); dl.position.set(-8,20,10); scene.add(dl);
+const board=new THREE.Group(); scene.add(board);
+const pcb=box(23,.3,23,0x0e0e0e); pcb.position.y=-1.05; board.add(pcb); edges(pcb,0xffffff,.12);
+const grid=new THREE.GridHelper(23,23,0x262626,0x1a1a1a); grid.position.y=-.89; board.add(grid);
+const pkg=box(14,.6,14,0x161616); pkg.position.y=-.6; board.add(pkg); edges(pkg,0xffffff,.45);
+const die=box(11.6,.14,11.6,0x1d1d1d); die.position.y=-.23; board.add(die); edges(die,0xffffff,.7);
+const Y=-.16;
+// blocks: key -> [x,z,w,d,h,label]
+const B={CPU:[-3,-2.6,4.2,3.6,.8,'CPU CORE'],RAM:[3,-2.6,4,3.6,.6,'RAM 16 KB'],DEC:[0,.65,2.6,1.3,.45,'ADDR DEC'],
+  GPIO:[-3.75,3.2,1.9,2.2,.5,'GPIO'],TMR:[-1.25,3.2,1.9,2.2,.5,'TIMER'],UART:[1.25,3.2,1.9,2.2,.5,'UART'],I2C:[3.75,3.2,1.9,2.2,.5,'I2C']};
+const STEPKEY=['CPU','DEC','RAM','GPIO','TMR','UART','I2C',null];
+const blocks={}, labels=[];
+Object.entries(B).forEach(([k,[x,z,w,d,h,name]])=>{
+  const g=new THREE.BoxGeometry(w,h,d); g.translate(0,h/2,0);
+  const mat=new THREE.MeshStandardMaterial({color:0x2e2e2e,roughness:.6}); const m=new THREE.Mesh(g,mat); m.position.set(x,Y,z);
+  const e=edges(m,0x9a9a96,.9); board.add(m); blocks[k]={m,mat,e,h,lift:0,show:1};
+  const el=document.createElement('span'); el.textContent=name; labelBox.appendChild(el); labels.push({el,k});
+});
+// BHT inside the core
+const bht=box(1.2,.25,1,0x4a4a4a); bht.position.set(-4.4,.8,-3.6); blocks.CPU.m.add(bht); bht.position.set(-1.4,.92,-1); edges(bht,0x0b0b0b,.8);
+// RAM cell rows
+for(let i=0;i<9;i++){ const l=box(3.4,.04,.16,0x555555); l.position.set(0,.62,-1.4+i*.35); blocks.RAM.m.add(l); }
+// bus wiring on the die
+const busM=new THREE.LineBasicMaterial({color:0x7a7a76,transparent:true,opacity:.8});
+const path=(pts)=>{ const v=pts.map(p=>new THREE.Vector3(p[0],Y+.03,p[1])); board.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(v),busM)); return v; };
+const P_CPU=path([[-3,-.8],[-3,.65],[-1.3,.65]]), P_RAM=path([[1.3,.65],[3,.65],[3,-.8]]);
+const P_PER={GPIO:path([[-.6,1.3],[-.6,1.75],[-3.75,1.75],[-3.75,2.1]]),TMR:path([[-.3,1.3],[-.3,1.85],[-1.25,1.85],[-1.25,2.1]]),UART:path([[.3,1.3],[.3,1.85],[1.25,1.85],[1.25,2.1]]),I2C:path([[.6,1.3],[.6,1.75],[3.75,1.75],[3.75,2.1]])};
+// pins: 32 GPIO along the front edge, UART + I2C on the right edge
+const pinM=new THREE.MeshStandardMaterial({color:0xa8a8a4,roughness:.4,metalness:.6});
+const gpio=[]; for(let i=0;i<32;i++){ const p=new THREE.Mesh(new THREE.BoxGeometry(.2,.1,.9),pinM.clone()); p.position.set(-6.2+i*.4,-.82,7.4); board.add(p); gpio.push(p); }
+const sidePins={}; [['TX',-1.5],['RX',-.9],['SDA',.9],['SCL',1.5]].forEach(([n,z])=>{ const p=new THREE.Mesh(new THREE.BoxGeometry(.9,.1,.24),pinM.clone()); p.position.set(7.4,-.82,z); board.add(p); sidePins[n]=p; });
+for(let i=0;i<14;i++){ const p=new THREE.Mesh(new THREE.BoxGeometry(.9,.1,.2),pinM); p.position.set(-7.4,-.82,-5.6+i*.86); board.add(p); const q=new THREE.Mesh(new THREE.BoxGeometry(.2,.1,.9),pinM); q.position.set(-5.6+i*.86,-.82,-7.4); board.add(q); }
+const trM=new THREE.LineBasicMaterial({color:0x6a6a66,transparent:true,opacity:.6});
+const trace=(z)=>{ const v=[new THREE.Vector3(7.9,-.88,z),new THREE.Vector3(9.4,-.88,z),new THREE.Vector3(10.4,-.88,z*2.2),new THREE.Vector3(11.4,-.88,z*2.2)]; board.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(v),trM)); return v; };
+const TR={TX:trace(-1.5),RX:trace(-.9),SDA:trace(.9),SCL:trace(1.5)};
+// signal packets
+const pk=(s)=>new THREE.Mesh(new THREE.BoxGeometry(s,.12,s),new THREE.MeshBasicMaterial({color:0xffffff}));
+const packet=pk(.32); board.add(packet);
+const serial=[]; for(let i=0;i<10;i++){ const b=pk(.18); board.add(b); serial.push(b); }
+// timer ring
+const ring=new THREE.Mesh(new THREE.TorusGeometry(.75,.05,8,48,Math.PI*1.6),new THREE.MeshBasicMaterial({color:0xffffff})); ring.rotation.x=-Math.PI/2; ring.position.set(-1.25,Y+1.1,3.2); board.add(ring);
+// standard cells for the GDS step (instanced)
+const N=1400, cellG=new THREE.BoxGeometry(1,1,1), cellM=new THREE.MeshStandardMaterial({color:0xd9d9d4,roughness:.7});
+const cells=new THREE.InstancedMesh(cellG,cellM,N); board.add(cells);
+const CD=[]; for(let i=0;i<N;i++){ const row=i%38, col=Math.floor(i/38); CD.push({x:-5.4+col*.3+Math.random()*.08,z:-5.3+row*.285,w:.12+Math.random()*.16,h:.08+Math.random()*.28,t:Math.random()}); }
+const dm=new THREE.Object3D();
+const walk=(pts,t)=>{ const segs=[]; let L=0; for(let i=0;i<pts.length-1;i++){ const d=pts[i].distanceTo(pts[i+1]); segs.push(d); L+=d; } let s=t*L; for(let i=0;i<segs.length;i++){ if(s<=segs[i]) return pts[i].clone().lerp(pts[i+1],s/segs[i]); s-=segs[i]; } return pts[pts.length-1].clone(); };
+let gds=0, ry=-.6, rx=0;
+st.run((dt,t)=>{
+  const k=STEPKEY[cur];
+  ry+=((-.6+stepper.prog*1.2+st.mx*.35)-ry)*.05; rx+=((st.my*.12)-rx)*.05; board.rotation.set(rx,ry,0);
+  gds+=(((cur===7)?1:0)-gds)*Math.min(1,dt*3);
+  Object.entries(blocks).forEach(([key,b])=>{
+    const on = key===k || (cur===1 && key==='DEC');
+    b.lift+=((on?.45:0)-b.lift)*Math.min(1,dt*6); b.m.position.y=Y+b.lift;
+    b.mat.color.setHex(on?0xf4f4f1:0x2e2e2e); b.e.material.color.setHex(on?0x0b0b0b:0x9a9a96);
+    b.m.scale.y=Math.max(.05,1-gds*.85);
+  });
+  // bus packet: CPU -> DEC -> target
+  let route=null;
+  if(cur===0) route=null; else if(cur===1){ const ks=['RAM','GPIO','TMR','UART','I2C']; const kk=ks[Math.floor(t/1.6)%5]; route=P_CPU.concat(kk==='RAM'?P_RAM:P_PER[kk]); }
+  else if(k==='RAM') route=P_CPU.concat(P_RAM); else if(k && P_PER[k]) route=P_CPU.concat(P_PER[k]);
+  packet.visible=!!route||cur===0;
+  if(route){ const p=walk(route,(t*.6)%1); packet.position.set(p.x,Y+.12,p.z); }
+  else if(cur===0){ const a=t*2; packet.position.set(-3+Math.cos(a)*1.6,Y+.95,-2.6+Math.sin(a)*1.2); }
+  // GPIO pins toggle
+  gpio.forEach((p,i)=>{ const live=cur===3 && Math.sin(t*6+i*1.7)>0; p.material.color.setHex(live?0xffffff:0xa8a8a4); p.scale.y=live?2.4:1; });
+  // serial streams
+  serial.forEach((s,i)=>{ let pts=null, off=i/serial.length;
+    if(cur===5) pts=i%2?TR.RX:TR.TX; if(cur===6) pts=i%2?TR.SCL:TR.SDA;
+    s.visible=!!pts && (cur!==5 || ((i*7+Math.floor(t*3))%3)!==0);
+    if(pts){ const dir = (cur===5 && i%2) ? 1-((t*.5+off)%1) : (t*.5+off)%1; const p=walk(pts,dir); s.position.set(p.x,-.78,p.z); }
+  });
+  ['TX','RX','SDA','SCL'].forEach(n=>sidePins[n].material.color.setHex(((cur===5&&(n==='TX'||n==='RX'))||(cur===6&&(n==='SDA'||n==='SCL')))?0xffffff:0xa8a8a4));
+  ring.visible=cur===4; ring.rotation.z=-t*3;
+  // standard cells rise for RTL->GDSII
+  cells.visible=gds>.02;
+  if(cells.visible){ CD.forEach((c,i)=>{ const g=Math.max(0,Math.min(1,gds*1.6-c.t*.6)); dm.position.set(c.x,Y+c.h*g/2,c.z); dm.scale.set(c.w,Math.max(.001,c.h*g),.2); dm.updateMatrix(); cells.setMatrixAt(i,dm.matrix); }); cells.instanceMatrix.needsUpdate=true; }
+  labels.forEach(L=>{ const b=blocks[L.k]; const show=(L.k===k||(cur===1&&L.k==='DEC'))&&cur!==7; L.el.classList.toggle('on',show); if(show){ const v=new THREE.Vector3(0,b.h+.2,0); b.m.localToWorld(v); st.label(L.el,v); } });
+});
+
+})();
+</script></body></html>
